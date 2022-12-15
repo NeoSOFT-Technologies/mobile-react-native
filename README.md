@@ -73,6 +73,13 @@ The architecture of the template facilitates separation of concerns and avoids t
    - QA - [main_qa.ts](#)
    - Prod - [main.prod.ts](#)
 
+# Entities
+The layers ```core``` and ```services provider``` within infrastructure each have an ```model``` directory.
+
+ - [app layer](#): We consume the same models used from core/domain as domain wont change in the case of frontend apps.
+ - [core layer](#): Model classes for performing business logic manipulations. They act as an abstraction to hide the local and remote data models.
+ - [infrastructure](#): Respective service provider contains local models (data classes for the database) and remote models (data classes for the api).   
+
 # Features
   - [Hexagonal Clean Architecture](#)
   - Adhering to SOLID Principles
@@ -95,7 +102,7 @@ The architecture of the template facilitates separation of concerns and avoids t
   - Code Analysis 
   - Crashlytics - [Firebase](#)
   - Continuous Integration - Github Action
-  - Navigation
+  - Navigation - [stack,bottom_tabs,Drawer](#)
   - Localisation
   - Responsive Farmework
 
