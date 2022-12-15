@@ -49,11 +49,11 @@ After cloning the repo and follow these steps to setup the project
 The architecture of the template facilitates separation of concerns and avoids tight coupling between it's various layers. The goal is to have the ability to make changes to individual layers without affecting the entire app. This architecture is an adaptation of concepts from [Hexagonal Architecture](#) & [Clean Architecture](#)
 
 # Monorepo
-<img src="images/monorepo-v2.png" alt="Monorepo" title="Monorepo"   />
+<img src="wiki/images/monorepo-v2.png" alt="Monorepo" title="Monorepo"   />
 The monorepo package consists of the above. The domain area, adapter area, and framework area are each configured as a package and designed to be more clearly distinguished. New services can be configured by adding packages from the framework area.
 
 ## Communitaction Flow
-<img src="images/communication-flow-v8.png" alt="communication-flow" title="communication-flow"   />
+<img src="wiki/images/communication-flow-v8.png" alt="communication-flow" title="communication-flow"   />
 communication-flow-v8
 in simple diagram, it is as above.
 
@@ -63,7 +63,7 @@ in 'Components', 'Entity' data or 'View Model' encapsulated data is stored in th
 
 
 # Inversion of Control
-<img src="images/inversion-of-control-v2.png" alt="inversion-of-control" title="inversion-of-control"   />
+<img src="wiki/images/inversion-of-control-v2.png" alt="inversion-of-control" title="inversion-of-control"   />
 In the case of 'Repository', it is an adapter layer, so you should not know about 'Repository' in 'Use Case'. Therefore, in 'Use Case', it is implemented through the Repository Interface located in the domain layer, which is then operated through Dependency Injection.
 
 ## Settings
