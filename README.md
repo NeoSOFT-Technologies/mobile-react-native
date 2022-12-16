@@ -11,7 +11,7 @@ This project is open source, we welcome any contributions.
 # Getting Started 
 
 - Node [install](https://nodejs.org/en/download/)
-- HomeBrew [install](https://brew.sh/) (for mac os)v
+- HomeBrew [install](https://brew.sh/) (for mac os)
 - brew install node (for mac os)
 - brew install watchman (for mac os)
 - Android Studio [install](https://developer.android.com/studio?gclid=CjwKCAiAheacBhB8EiwAItVO24q1KSBqPUAUZSTnyRqnyI5ksz6VHo9xELBTH2QpdRbsw8L8Z7F3vxoCGjEQAvD_BwE&gclsrc=aw.ds)
@@ -47,6 +47,24 @@ After cloning the repo and follow these steps to setup the project
 # Architecture
 
 The architecture of the template facilitates separation of concerns and avoids tight coupling between it's various layers. The goal is to have the ability to make changes to individual layers without affecting the entire app. This architecture is an adaptation of concepts from [Hexagonal Architecture](#) & [Clean Architecture](#)
+
+ ## Hexagonal Architecture 
+The idea of representing this architecture with a hexagon is due to the ease of associating the theoretical concept with the visual concept. Inside this hexagon is where our base code is located. This part is called ```domain```.
+
+Each side of this hexagon represent an interaction with an external service, for example: http services, db, rendering..
+
+<img src="images/hexagonal_architecture.png" alt="hexagonal_architecture" title="Hexagonal Architecture"   />
+
+The communication between ```domain``` and the rest of actors is performed in the ```infrastructure``` layer. In this layer we implement a specific code for each of these technologies.
+
+ ## Clean Architecture
+<img src="wiki/images/clean-architecture.png" alt="clean-architecture" title="clean-architecture"/>
+As with various architectures, the primary purpose of a clean architecture is to separate concerns. Divide the hierarchy according to each interest, design domain-centric rather than detailed implementation, and make sure that the internal area does not depend on external elements such as the framework or database UI.
+
+- Distinguish between detailed implementation areas and domain areas.
+- Architecture does not depend on the framework.
+- The outer zone can depend on the inner zone, but the inner zone cannot depend on the outer zone.
+- Both high-level and low-level modules rely on abstraction..
 
 # Monorepo
 <img src="wiki/images/monorepo-v2.png" alt="Monorepo" title="Monorepo"   />
