@@ -53,7 +53,7 @@ The idea of representing this architecture with a hexagon is due to the ease of 
 
 Each side of this hexagon represent an interaction with an external service, for example: http services, db, rendering..
 
-<img src="images/hexagonal_architecture.png" alt="hexagonal_architecture" title="Hexagonal Architecture"   />
+<img src="wiki/images/hexagonal_architecture.png" alt="hexagonal_architecture" title="Hexagonal Architecture"   />
 
 The communication between ```domain``` and the rest of actors is performed in the ```infrastructure``` layer. In this layer we implement a specific code for each of these technologies.
 
