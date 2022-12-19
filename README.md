@@ -180,20 +180,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
 ```shell
 $ yarn install
 ```
-
-### 2. Mock Server
-#### Start
-```shell
-$ yarn run mock-server
-```
-
-### 3. Web
-#### Start
-```shell
-$ yarn run web
-```
-
-### 4-1. Mobile(iOS)
+### 2-1. Mobile(iOS)
 #### Install
 ```shell
 # $ cd /packages/mobile/ios
@@ -205,12 +192,11 @@ $ pod install
 $ yarn run ios
 ```
 
-### 4-2. Mobile(Android)
+### 2-2. Mobile(Android)
 #### Start
 ```shell
 $ yarn run android
 ```
-
 
 # Modules
   ## List of Default Modules
