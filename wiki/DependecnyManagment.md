@@ -13,6 +13,8 @@ It's often cumbersome to keep track of object instances (like the logger above),
  - Does not require a mocking/stubbing library because it’s native to JavaScript
  - Works for all your stubbing needs, such as components, classes, and regular functions
 
+# Conclusion
+Dependency Injection is being used by many popular libraries in the React ecosystem, such as React Navigation  and Redux. Additionally, React also has direct support for dependency injection.
 
 
 

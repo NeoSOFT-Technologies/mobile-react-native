@@ -115,6 +115,37 @@ In the case of 'Repository', it is an adapter layer, so you should not know abou
 }
 ```
 
+### lerna bootstap command
+```js 
+npx lerna bootsrap 
+```
+
+### lerna command to create package
+```js
+npx lerna create @packagename
+```
+
+
+### lerna command to add package to another module 
+```js
+# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
+lerna add module-1 packages/prefix-*
+
+# Install module-1 to module-2
+lerna add module-1 --scope=module-2
+
+# Install module-1 to module-2 in devDependencies
+lerna add module-1 --scope=module-2 --dev
+
+# Install module-1 to module-2 in peerDependencies
+lerna add module-1 --scope=module-2 --peer
+
+# Install module-1 in all modules except module-1
+lerna add module-1
+
+# Install babel-core in all modules
+lerna add babel-core
+```
  ## Layers
 
  The architecture is separated into the following layers
