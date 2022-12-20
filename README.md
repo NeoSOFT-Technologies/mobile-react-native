@@ -70,6 +70,25 @@ As with various architectures, the primary purpose of a clean architecture is to
 <img src="wiki/images/monorepo-v2.png" alt="Monorepo" title="Monorepo"   />
 The monorepo package consists of the above. The domain area, adapter area, and framework area are each configured as a package and designed to be more clearly distinguished. New services can be configured by adding packages from the framework area.
 
+## What is Monorepo?
+In this article, what we call "Monorepo" is a way to manage multiple npm packages in a single repository.
+
+typescript and react native app Monorepo using Lerna, a tool I will later introduce in this article. React is also managing multiple packages in a single repository, but without Lerna.
+
+## Following are the Pros and Cons of Monorepo.
+
+### Pros
+
+- You can make it easy to develop multiple packages dependent on each other
+- You don't need to link each package using npm link
+- You can manage npm package dependencies in a single repository
+- This is especially useful when you are using a dependency management tool like Renovate
+
+### Cons
+
+- You need to manage issues and pull requests in a single repository
+- You need to understand a workflow using Monorepo tools
+
 ## Communitaction Flow
 <img src="wiki/images/communication-flow-v8.png" alt="communication-flow" title="communication-flow"   />
 communication-flow-v8
@@ -87,6 +106,18 @@ In the case of 'Repository', it is an adapter layer, so you should not know abou
 ## Settings
 ### Package
 #### Lerna
+```Lerna ```is "a tool for managing JavaScript projects with multiple packages", as the official website says, which is a tool to manage multiple npm packages in a single repository.
+
+Lerna provides the following features.
+
+- Manage multiple npm packages in a single repository
+- ```lerna bootstrap``` command installs all package's dependencies
+- Hoist duplicated dependencies
+   - "Hoist" means to install duplicated dependencies into the root directory rather than each package directory
+- lerna publish command publishes npm packages that have changes
+   - You can choose to manage all your packages as a single version, or manage each version separately
+- lerna run command runs the same npm-scripts in each npm package at once
+- Import existing git repositories to a Monorepo
 > /lerna.json
 ```js
 {
@@ -114,38 +145,8 @@ In the case of 'Repository', it is an adapter layer, so you should not know abou
   ...
 }
 ```
+learn more about [lerna](#) commands
 
-### lerna bootstap command
-```js 
-npx lerna bootstrap 
-```
-
-### lerna command to create package
-```js
-npx lerna create @packagename
-```
-
-
-### lerna command to add package to another module 
-```js
-# Adds the module-1 package to the packages in the 'prefix-' prefixed folders
-lerna add module-1 packages/prefix-*
-
-# Install module-1 to module-2
-lerna add module-1 --scope=module-2
-
-# Install module-1 to module-2 in devDependencies
-lerna add module-1 --scope=module-2 --dev
-
-# Install module-1 to module-2 in peerDependencies
-lerna add module-1 --scope=module-2 --peer
-
-# Install module-1 in all modules except module-1
-lerna add module-1
-
-# Install babel-core in all modules
-lerna add babel-core
-```
  ## Layers
 
  The architecture is separated into the following layers
