@@ -117,7 +117,7 @@ In the case of 'Repository', it is an adapter layer, so you should not know abou
 
 ### lerna bootstap command
 ```js 
-npx lerna bootsrap 
+npx lerna bootstrap 
 ```
 
 ### lerna command to create package
