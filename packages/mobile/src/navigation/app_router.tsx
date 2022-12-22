@@ -1,8 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import ScreenOne from '../screen/screen';
-import ScreenTwo from '../screen/screen2';
+import Screen from '../screen';
 import RoutePaths from './router_path';
 
 const AppRouter = () => {
@@ -10,8 +9,7 @@ const AppRouter = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name={RoutePaths.screenOne} component={ScreenOne} />
-        <Stack.Screen name={RoutePaths.screenTwo} component={ScreenTwo} />
+        <Stack.Screen name={RoutePaths.screen} component={Screen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,7 +1,6 @@
 /// Define application navigation path constants to avoid duplication
 class RoutePaths {
-  static screenOne: string = 'screenOne';
-  static screenTwo: string = 'screenTwo';
+  static screen: string = 'screen';
 }
 
 export default RoutePaths;
