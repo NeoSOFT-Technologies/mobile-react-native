@@ -1,3 +1,20 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "react-i18n-joj.sourceLocale": "en",
+    "react-i18n-joj.i18nPaths": "",
+    "i18n-ally.localesPaths": [
+        "packages/localisation/lib",
+        "packages/mobile/ios/Pods/Flipper-Folly/folly/lang",
+        "packages/mobile/ios/Pods/Flipper-Boost-iOSX/boost/locale",
+        "packages/mobile/ios/Pods/RCT-Folly/folly/lang",
+        "packages/mobile/ios/Pods/boost/boost/locale",
+        "packages/mobile/ios/Pods/Flipper-Boost-iOSX/boost/predef/language",
+        "packages/mobile/ios/Pods/boost/boost/predef/language",
+        "packages/mobile/ios/Pods/Headers/Private/Flipper-Folly/folly/lang",
+        "packages/mobile/ios/Pods/Headers/Private/RCT-Folly/folly/lang",
+        "packages/mobile/ios/Pods/Headers/Public/RCT-Folly/folly/lang",
+        "packages/mobile/ios/Pods/Headers/Public/Flipper-Folly/folly/lang"
+    ],
+    "i18n-ally.extract.autoDetect": true,
+    "i18n-ally.keystyle": "nested"
 }
