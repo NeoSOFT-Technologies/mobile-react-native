@@ -18,6 +18,7 @@
     "url": "git+https://github.com/NeoSOFT-Technologies/mobile-react-native.git"
   },
   "scripts": {
+    "tsc": "tsc",
     "test": "node ./__tests__/localisation.test.js"
   },
   "bugs": {
