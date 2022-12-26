@@ -6,6 +6,34 @@ Lerna has two modes: fixed and independent. Fixed mode keeps all versions of pac
 Independent mode allows us to have different versions per package.
 If you have a large or complex project, using a single repository for all its packages can help in organization and maintenance. Thankfully, it is quite easy with Lerna.
 
+> /lerna.json
+```js
+{
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "version": "0.0.1"
+}
+
+```
+#### Package
+> /package.json
+```js
+{
+  ...
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ],
+    "nohoist": [
+      "**/mobile",
+      "**/mobile/**"
+    ]
+  }
+  ...
+}
+```
+
 ## Building our packages with lerna create
 
 As this is a demo project, we will assume that we will have a few modules: foundation, domain , and adapter.
@@ -21,16 +49,6 @@ npx lerna create foundation
 We will repeat the same process for the domain and adapter packages.
 
 ## Linking packages
-With TypeScript compiled, let’s create a test integration package to see how Lerna handles linking packages.
-
-```sh
-cd packages
-mkdir integration
-cd integration
-npm init -y
-cd ../..
-``` 
-
 To install necessary dependencies from npm, or link ones from the monorepo, use the lerna add command from the root of the project. In case of any naming conflicts, local packages will always take precedence over remote ones.
 
 ```js
@@ -62,3 +80,8 @@ The unfortunate limitation of the lerna add command is that it can only add one 
 ```js 
 npx lerna bootstrap 
 ```
+
+# References
+- https://github.com/lerna/lerna
+- https://blog.kintone.io/entry/2020/07/14/103322#:~:text=lerna%20create%20is%20a%20command,to%20be%20managed%20in%20Monorepo.&text=To%20install%20an%20npm%20package,like%20to%20install%20the%20package.&text=Yarn%20updates%20package.,for%20the%20package%20and%20yarn.
+- https://blog.logrocket.com/setting-up-monorepo-with-lerna-typescript/

@@ -12,8 +12,8 @@ This project is open source, we welcome any contributions.
 
 - Node [install](https://nodejs.org/en/download/)
 - HomeBrew [install](https://brew.sh/) (for mac os)
-- brew install node (for mac os)
-- brew install watchman (for mac os)
+- ``` brew install node  ``` (for mac os)
+- ``` brew install watchman  ``` (for mac os)
 - Android Studio [install](https://developer.android.com/studio?gclid=CjwKCAiAheacBhB8EiwAItVO24q1KSBqPUAUZSTnyRqnyI5ksz6VHo9xELBTH2QpdRbsw8L8Z7F3vxoCGjEQAvD_BwE&gclsrc=aw.ds)
 - Xcode [install](https://developer.apple.com/xcode/)
 
@@ -89,14 +89,15 @@ typescript and react native app Monorepo using Lerna, a tool I will later introd
 - You need to manage issues and pull requests in a single repository
 - You need to understand a workflow using Monorepo tools
 
+<!-- 
 ## Communitaction Flow
 <img src="wiki/images/communication-flow-v8.png" alt="communication-flow" title="communication-flow"   />
 communication-flow-v8
-in simple diagram, it is as above.
+in simple diagram, it is as above. -->
 
-### Board
+<!-- ### Board
 Board posts and comments are fetched through http communication from 'Infrastructures', encapsulated as Board Root Entity including Comment Entity in 'Use Case' and delivered to 'Presenter', and 'Presenter' returns Entity data.  
-in 'Components', 'Entity' data or 'View Model' encapsulated data is stored in the state management manager, and the view is redrawn according to the state change of the data.
+in 'Components', 'Entity' data or 'View Model' encapsulated data is stored in the state management manager, and the view is redrawn according to the state change of the data. -->
 
 
 # Inversion of Control
@@ -118,40 +119,14 @@ Lerna provides the following features.
    - You can choose to manage all your packages as a single version, or manage each version separately
 - lerna run command runs the same npm-scripts in each npm package at once
 - Import existing git repositories to a Monorepo
-> /lerna.json
-```js
-{
-  "packages": ["packages/*"],
-  "npmClient": "yarn",
-  "useWorkspaces": true,
-  "version": "0.0.1"
-}
 
-```
-#### Package
-> /package.json
-```js
-{
-  ...
-  "workspaces": {
-    "packages": [
-      "packages/**"
-    ],
-    "nohoist": [
-      "**/mobile",
-      "**/mobile/**"
-    ]
-  }
-  ...
-}
-```
-learn more about [lerna](#) commands
+learn more about [lerna](./wiki/lerna.md) commands
 
  ## Layers
 
  The architecture is separated into the following layers
  
- - [app](#) - All UI and state management elements like components, screen and view models.
+ - [mobile](#) - All UI and state management elements like components, screen and view models.
  - [core](#) - Core business implementation
    - [domain](#) - Use cases for individual pieces of work.
    - [data](#) - Repositories to manage various data sources.
@@ -175,44 +150,51 @@ learn more about [lerna](#) commands
 # Entities
 The layers ```core``` and ```services provider``` within infrastructure each have an ```model``` directory.
 
- - [app layer](#): We consume the same models used from core/domain as domain wont change in the case of frontend apps.
+ - [mobile layer](#): We consume the same models used from core/domain as domain wont change in the case of frontend apps.
  - [core layer](#): Model classes for performing business logic manipulations. They act as an abstraction to hide the local and remote data models.
  - [infrastructure](#): Respective service provider contains local models (data classes for the database) and remote models (data classes for the api).   
 
 # Features
-  - [Hexagonal Clean Architecture](#)
+  - [Hexagonal Clean Architecture](./wiki//HexagonalArchitecture.md)
   - Monorepo
   - Adhering to SOLID Principles
   - Repository Pattern for code separations
-  - [Dependency Injection](#)
-  - Network Layer
+  - [Dependency Injection](./wiki//DependecnyManagment.md)
+  - Network Layer 
   - Data Layer
   - Built-in support for 3 [flavors](#) - ``` dev ```, ``` qa ``` and ``` prod ```.
   - Unit & Integration Tests
   - CI for build release
-  - Crashlytics/Analytics
   - [Localisation](#)
   - Routing/Navigations
   - [Responsive Framework](#)
 
 # Libraries & Tools Used
-  - Dependency Injection 
+  - Dependency Injection - Obsidian
   - Network - [axios](#)
   - Database
   - Code Analysis 
-  - Crashlytics - [Firebase](#)
   - Continuous Integration - Github Action
-  - Navigation - [stack,bottom_tabs,Drawer](#)
+  - Navigation - [React Navigaiton](#)
   - Localisation
-  - Responsive Farmework
 
   ## Run Projects
 ### 1. install
 #### Install
 ```shell
-$ yarn install
+$ yarn 
 ```
-### 2-1. Mobile(iOS)
+#### lerna bootstrap
+```shell
+$ npx lerna bootstrap
+```
+
+### start metro 
+```shell
+$ npx lerna run start
+```
+
+### 3-1. Mobile(iOS)
 #### Install
 ```shell
 # $ cd /packages/mobile/ios
@@ -221,13 +203,13 @@ $ pod install
 ```
 #### Start
 ```shell
-$ yarn run ios
+$ npx lerna run ios
 ```
 
-### 2-2. Mobile(Android)
+### 3-2. Mobile(Android)
 #### Start
 ```shell
-$ yarn run android
+$ npx lerna run andorid 
 ```
 
 # Modules
@@ -236,7 +218,7 @@ $ yarn run android
 
   | Name | Description |
   | ------ | ------ |
-  | [app](#)| A module containing boilerplate app view implementation |
+  | [mobile](#)| A module containing boilerplate app view implementation |
   | [core](#)| A module containing core business implementation of the product which includes data,domain & shared modules|
   | [dependency-injection](#) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
   | [infrastructure](#) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
