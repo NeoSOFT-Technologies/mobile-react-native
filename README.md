@@ -178,6 +178,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - Continuous Integration - Github Action
   - Navigation - [React Navigaiton](./wiki/navigation.md)
   - Localisation - i18n, react-i18next
+  - Obfuscation- [Javascript Obfuscation](./wiki/OBFUSCATION.md)
 
   ## Run Projects
 ### 1. install

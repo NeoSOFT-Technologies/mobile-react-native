@@ -19,16 +19,16 @@ Navigation is use to navigate from one screen to diffrent screen
            <Stack.Screen name={RoutePaths.screenname} component={your_screen_name} />
       </Stack.Navigator>
 ```
-3. To navigate to diffrent screen 
-import file 
+3. To navigate to diffrent screen. 
+ 1. import useNavigaiton from @react-navigation/native
 ```sh 
 import {useNavigation} from '@react-navigation/native';
 ```
-and use as
+ 2. create const for navigaiton as below. 
 ```sh
 const navigation = useNavigation()
 ```
-and to navigate 
+ 3. To navigate to diffrent screen on any event. 
 ```sh 
 navigation.navigate("screen_name")
 ```
