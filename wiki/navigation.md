@@ -20,15 +20,15 @@ Navigation is use to navigate from one screen to diffrent screen
       </Stack.Navigator>
 ```
 3. To navigate to diffrent screen. 
- 1. import useNavigaiton from @react-navigation/native
+ - import useNavigaiton from @react-navigation/native
 ```sh 
 import {useNavigation} from '@react-navigation/native';
 ```
- 2. create const for navigaiton as below. 
+ - create const for navigaiton as below. 
 ```sh
 const navigation = useNavigation()
 ```
- 3. To navigate to diffrent screen on any event. 
+ - To navigate to diffrent screen on any event. 
 ```sh 
 navigation.navigate("screen_name")
 ```
