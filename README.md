@@ -143,9 +143,9 @@ learn more about [lerna](./wiki/lerna.md) commands
   The template comes with built-in support for 3 flavors. Each flavor uses a different ``` 
   main.ts ``` file.
 
-   - Dev - [main_dev.ts](#)
-   - QA - [main_qa.ts](#)
-   - Prod - [main.prod.ts](#)
+   - Dev - 
+   - QA - 
+   - Prod -
 
 # Entities
 The layers ```core``` and ```services provider``` within infrastructure each have an ```model``` directory.
@@ -158,6 +158,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - [Hexagonal Clean Architecture](./wiki//HexagonalArchitecture.md)
   - Monorepo
   - Adhering to SOLID Principles
+  - [lerna](./wiki/lerna.md)
   - Repository Pattern for code separations
   - [Dependency Injection](./wiki//DependecnyManagment.md)
   - Network Layer 
