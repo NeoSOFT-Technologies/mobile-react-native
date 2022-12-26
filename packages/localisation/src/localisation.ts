@@ -1,9 +1,7 @@
-'use strict';
-
 import i18n, { t } from "i18next";
 import { initReactI18next } from "react-i18next";
-import hindi from "./hi.json";
-import english from "./en.json";
+import hindi from "../lib/hi.json";
+import english from "../lib/en.json";
 
 i18n.use(initReactI18next).init({
     compatibilityJSON: 'v3', 
