@@ -168,7 +168,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - CI for build release
   - [Localisation](./packages//localisation//Localisation.md)
   - Routing/Navigations
-  - [OBFUSCATION](./wiki/OBFUSCATION.md)
+  - [Obfuscation](./wiki/OBFUSCATION.md)
 
 # Libraries & Tools Used
   - Dependency Injection - Obsidian
