@@ -19,7 +19,7 @@ Go languages folder inside packages/localisation/lib
 You can add new file ```filename.json``` in this format and can write your corresponding string there.
     Edit ```localisation.ts``` file in src folder inside packages/localisation/lib
 
-    ```
+
       resources: {
         en: {
             translations: english,
@@ -32,4 +32,4 @@ You can add new file ```filename.json``` in this format and can write your corre
             translation: language_name
         }
     },
-    ```
+
