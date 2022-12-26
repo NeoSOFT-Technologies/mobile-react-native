@@ -158,7 +158,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - [Hexagonal Clean Architecture](./wiki//HexagonalArchitecture.md)
   - Monorepo
   - Adhering to SOLID Principles
-  - [lerna](./wiki/lerna.md)
+  - [Lerna](./wiki/lerna.md)
   - Repository Pattern for code separations
   - [Dependency Injection](./wiki//DependecnyManagment.md)
   - Network Layer 
@@ -166,9 +166,9 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - Built-in support for 3 [flavors](#) - ``` dev ```, ``` qa ``` and ``` prod ```.
   - Unit & Integration Tests
   - CI for build release
-  - [Localisation](#)
+  - [Localisation](./packages//localisation//Localisation.md)
   - Routing/Navigations
-  - [Responsive Framework](#)
+  - [Obfuscation](./wiki/OBFUSCATION.md)
 
 # Libraries & Tools Used
   - Dependency Injection - Obsidian
@@ -176,8 +176,9 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - Database
   - Code Analysis 
   - Continuous Integration - Github Action
-  - Navigation - [React Navigaiton](#)
-  - Localisation
+  - Navigation - [React Navigaiton](./wiki/navigation.md)
+  - Localisation - i18n, react-i18next
+  - Obfuscation- [Javascript Obfuscation](./wiki/OBFUSCATION.md)
 
   ## Run Projects
 ### 1. install
@@ -223,4 +224,4 @@ $ npx lerna run andorid
   | [core](#)| A module containing core business implementation of the product which includes data,domain & shared modules|
   | [dependency-injection](#) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
   | [infrastructure](#) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
-|[localisation](#)| A module containing translation data |
+|[localisation](./packages//localisation//Localisation.md)| A module containing translation data |
