@@ -19,7 +19,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "node ./__tests__/foundation.test.js"
+    "test": "jest --verbose ./__tests__/foundation.test.ts"
   },
   "bugs": {
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
