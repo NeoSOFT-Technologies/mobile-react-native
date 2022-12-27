@@ -8,7 +8,15 @@
     "ios": "yarn workspace mobile ios",
     "android": "yarn workspace mobile android",
     "clean-android": "yarn workspace mobile clean-android",
-    "build-android": "yarn workspace mobile build-android"
+    "build-android": "yarn workspace mobile build-android",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,css,scss}\"",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "lint": "eslint . --ext js,jsx,mjs,ts,tsx ",
+    "lint:fix": "eslint . --ext js,jsx,mjs,ts,tsx --fix",
+    "lint:quiet": "eslint . --ext js,jsx,mjs,ts,tsx --quiet",
+    "prepare": "husky install",
+    "precommit": "npm run lint:fix && npm run format",
+    "prepush": "npm run lint"
   },
   "workspaces": {
     "packages": [
@@ -20,6 +28,11 @@
     ]
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
     "react": "^18.2.0",
     "typescript": "^4.9.4"
   },
@@ -27,6 +40,7 @@
     "@babel/core": "^7.20.5",
     "@babel/runtime": "^7.20.6",
     "@types/react": "^18.0.21",
+    "husky": "^8.0.0",
     "lerna": "^6.1.0"
   }
 }

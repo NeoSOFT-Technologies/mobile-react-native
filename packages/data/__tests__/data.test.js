@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
 'use strict';
 
-const data = require('..');
+import data from '../lib/data';
 const assert = require('assert').strict;
 
 assert.strictEqual(data(), 'Hello from data');
-console.info("data tests passed");
+console.log("data tests passed");
