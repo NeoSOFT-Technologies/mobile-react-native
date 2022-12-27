@@ -179,6 +179,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - Navigation - [React Navigaiton](./wiki/navigation.md)
   - Localisation - i18n, react-i18next
   - Obfuscation- [Javascript Obfuscation](./wiki/OBFUSCATION.md)
+  - [Dependabot](#dependabot)
 
   ## Run Projects
 ### 1. install
@@ -225,3 +226,8 @@ $ npx lerna run andorid
   | [dependency-injection](#) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
   | [infrastructure](#) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
 |[localisation](./packages//localisation//Localisation.md)| A module containing translation data |
+
+# Dependabot
+[Dependabot](https://github.com/dependabot) creates pull requests to keep your dependencies secure and up-to-date.
+
+You can opt out at any time by removing the [.github/dependabot.yml](.github/dependabot.yml) config file.
