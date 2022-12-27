@@ -81,6 +81,14 @@ The unfortunate limitation of the lerna add command is that it can only add one 
 npx lerna bootstrap 
 ```
 
+## To add new package to module 
+```js
+# Add package to specific module 
+  lerna add package_name --scope=module_name
+# Add to all module 
+   lerna add package_name 
+```
+
 # References
 - https://github.com/lerna/lerna
 - https://blog.kintone.io/entry/2020/07/14/103322#:~:text=lerna%20create%20is%20a%20command,to%20be%20managed%20in%20Monorepo.&text=To%20install%20an%20npm%20package,like%20to%20install%20the%20package.&text=Yarn%20updates%20package.,for%20the%20package%20and%20yarn.

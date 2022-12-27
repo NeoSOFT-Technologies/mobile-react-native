@@ -160,6 +160,7 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - Adhering to SOLID Principles
   - [Lerna](./wiki/lerna.md)
   - Repository Pattern for code separations
+  - Integrated ESLint, Prettier and Husky
   - [Dependency Injection](./wiki//DependecnyManagment.md)
   - Network Layer 
   - Data Layer
@@ -169,6 +170,8 @@ The layers ```core``` and ```services provider``` within infrastructure each hav
   - [Localisation](./packages//localisation//Localisation.md)
   - Routing/Navigations
   - [Obfuscation](./wiki/OBFUSCATION.md)
+  - Git hooks: with [husky](https://github.com/typicode/husky)
+  - Linting: with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 
 # Libraries & Tools Used
   - Dependency Injection - Obsidian
