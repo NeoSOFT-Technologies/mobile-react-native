@@ -184,7 +184,7 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - Continuous Integration - Github Action
   - Navigation - [React Navigaiton](./wiki/navigation.md)
   - Localisation - i18n, react-i18next
-  - Obfuscation- [Javascript Obfuscation](./wiki/OBFUSCATION.md)
+  - Obfuscation- [Javascript scrambler](./wiki/OBFUSCATION.md)
   - [Dependabot](#dependabot)
 
   ## Run Projects
@@ -232,4 +232,16 @@ $ npx lerna run andorid
   | [dependency-injection](#) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
   | [infrastructure](#) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
 |[localisation](./packages//localisation//Localisation.md)| A module containing translation data |
+
+
+## Upcoming Improvements
+
+Checklist of all
+upcoming [enhancements](https://github.com/NeoSOFT-Technologies/mobile-react-native/issues)
+.
+
+## Contributing to this Project
+
+Contributions are welcome from anyone and everyone. We encourage you to review
+the [Guiding principles for contributing](./wiki/contribute.mds)
 
