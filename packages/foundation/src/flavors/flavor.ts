@@ -1,6 +1,5 @@
 export enum Flavor {
-    dev,
-    qa,
-    prod,
+  dev,
+  qa,
+  prod
 }
-  

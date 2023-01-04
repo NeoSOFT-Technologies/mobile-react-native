@@ -4,4 +4,4 @@ import { Flavor } from './flavors/flavor'
 
 import { AppSecrets } from './secrets/app_secrets'
 
-export { FlavorConfig, FlavorValues, Flavor, AppSecrets } 
+export { FlavorConfig, FlavorValues, Flavor, AppSecrets }
