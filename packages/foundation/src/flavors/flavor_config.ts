@@ -22,8 +22,8 @@ export class FlavorConfig {
     if (!this._initialized) {
       FlavorConfig.instance = new FlavorConfig(params)
       this._initialized = true
-      console.log("Falvor initliazed is ",this._initialized)
-      console.log("Falvor set is ",FlavorConfig.instance.flavorType)
+      console.log('Falvor initliazed is ', this._initialized)
+      console.log('Falvor set is ', FlavorConfig.instance.flavorType)
       return FlavorConfig._instance
     }
     return this._instance
