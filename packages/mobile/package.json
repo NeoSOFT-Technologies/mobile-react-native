@@ -3,17 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-   
     "android": "react-native run-android --variant devDebug",
     "ios": "react-native run-ios",
-    
     "run:android:dev": "react-native run-android --variant devDebug",
     "run:android:qa": "react-native run-android --variant qaDebug",
     "run:android:prod": "react-native run-android --variant prodDebug",
-
     "build:android:qa:release": "cd android && ./gradlew assembleQaRelease",
     "build:android:prod:release": "cd android && ./gradlew assembleProdRelease",
-
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
