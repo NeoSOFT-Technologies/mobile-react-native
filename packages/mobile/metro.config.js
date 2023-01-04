@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
 /**
  * Metro configuration for React Native
@@ -5,12 +6,12 @@
  *
  * @format
  */
-import { resolve } from 'path';
+const path = require('path');
 const watchFolders = [
-  resolve(__dirname + '/..'), //Relative path to packages directory
-  resolve(__dirname + '/../../node_modules'), //Relative path to packages directory
+  path.resolve(__dirname + '/..'), //Relative path to packages directory
+  path.resolve(__dirname + '/../../node_modules'), //Relative path to packages directory
 ];
-export default {
+module.exports = {
   transformer: {
     getTransformOptions: async () => ({
       transform: {
