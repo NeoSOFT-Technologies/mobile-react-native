@@ -5,7 +5,7 @@ import { SafeAreaView, Text } from 'react-native'
 import ApplicationGraph from '../di/applicationgraph'
 
 const Screen = () => {
-  ApplicationGraph
+  const a = new ApplicationGraph()
   return (
     <SafeAreaView>
       <Text>{`Hello ${''}`}</Text>
