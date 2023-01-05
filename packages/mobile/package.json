@@ -54,7 +54,9 @@
     "typescript": "^4.8.3"
   },
   "babel": {
-    "presets": ["module:metro-react-native-babel-preset"],
+    "presets": [
+      "module:metro-react-native-babel-preset"
+    ],
     "plugins": [
       [
         "@babel/plugin-proposal-decorators",
