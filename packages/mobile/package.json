@@ -53,6 +53,17 @@
     "react-test-renderer": "18.2.0",
     "typescript": "^4.8.3"
   },
+  "babel": {
+    "presets": ["module:metro-react-native-babel-preset"],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+  },
   "jest": {
     "preset": "react-native",
     "moduleFileExtensions": [
