@@ -1,3 +1,2 @@
-class FooService {
-  }
-  export default FooService;
+class FooService {}
+export default FooService

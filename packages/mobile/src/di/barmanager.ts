@@ -1,4 +1,2 @@
-class BarManager {
-
-}
-  export default BarManager;
+class BarManager {}
+export default BarManager
