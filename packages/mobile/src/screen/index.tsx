@@ -1,9 +1,11 @@
 import i18n from 'localisation';
-import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
+import ClassComponent from '../di/component';
 
 const Screen = () => {
-  return (
+     const a = new ClassComponent('test')
+     
+    return (
     <SafeAreaView>
       <Text>HEllo World</Text>
       <Text>Hello {i18n.t('appName')}</Text>
