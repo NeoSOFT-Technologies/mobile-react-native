@@ -5,7 +5,7 @@
   "author": "faiyyazs <faiyyazshaikh2010@gmail.com>",
   "homepage": "https://github.com/NeoSOFT-Technologies/mobile-react-native#readme",
   "license": "ISC",
-  "main": "lib/foundation.js",
+  "main": "src/foundation.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

@@ -27,3 +27,7 @@ yarn-error.log*
 package-lock.json
 *.lock
 
+# Secrets
+!src/secrets/
+src/secrets/*
+!src/secrets/app_secrets.skeleton.ts
