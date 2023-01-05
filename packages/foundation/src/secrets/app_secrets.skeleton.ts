@@ -28,5 +28,3 @@ export class AppSecrets {
   }
 }
  */
-
-export class AppSecrets {}
