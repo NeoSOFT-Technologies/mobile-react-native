@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "react-native run-android --variant devDebug",
+    "run:android:dev": "react-native run-android --variant devDebug",
+    "run:android:qa": "react-native run-android --variant qaDebug",
+    "run:android:prod": "react-native run-android --variant prodDebug",
+    "build:android:qa:release": "cd android && ./gradlew assembleQaRelease",
+    "build:android:prod:release": "cd android && ./gradlew assembleProdRelease",
     "ios": "react-native run-ios",
+    "run:ios:qa": "react-native run-ios --scheme qa.mobile --configuration qa.Debug",
+    "run:ios:prod": "react-native run-ios --scheme prod.mobile --configuration prod.Debug",
+    "build:ios:qa:release": "cd ios && xcodebuild -scheme qa.mobile build",
+    "build:ios:prod:release": "cd ios && xcodebuild -scheme prod.mobile build",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
@@ -34,7 +43,7 @@
     "@typescript-eslint/parser": "^5.37.0",
     "babel-jest": "^29.3.1",
     "eslint": "^7.32.0",
-    "jest": "^26.6.3",
+    "jest": "^29.3.1",
     "metro-react-native-babel-preset": "0.73.6",
     "react-test-renderer": "18.2.0",
     "typescript": "^4.8.3"

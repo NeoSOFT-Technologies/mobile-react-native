@@ -1,4 +1,4 @@
-import i18n, { t } from 'i18next'
+import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import hindi from '../lib/hi.json'
 import english from '../lib/en.json'

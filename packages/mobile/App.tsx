@@ -8,12 +8,12 @@
  * @format
  */
 
-import React, {Component} from 'react';
-import AppRouter from './src/navigation/app_router';
+import React, { Component } from 'react'
+import AppRouter from './src/navigation/app_router'
 
 class App extends Component {
   render() {
-    return <AppRouter />;
+    return <AppRouter />
   }
 }
-export default App;
+export default App
