@@ -2,7 +2,7 @@ import { Flavor } from './flavor'
 import { FlavorValues } from './flavor_values'
 
 export interface IFlavorConfig {
-  flavorObj: Flavor
+  flavor: Flavor
   values: FlavorValues
 }
 
@@ -14,7 +14,7 @@ export class FlavorConfig {
   private static _initialized = false
 
   constructor(params: IFlavorConfig) {
-    this.flavorType = params.flavorObj
+    this.flavorType = params.flavor
     this.values = params.values
   }
 
