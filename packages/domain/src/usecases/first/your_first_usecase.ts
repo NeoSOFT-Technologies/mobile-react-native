@@ -3,16 +3,16 @@ import { FutureUseCase } from '../base/base_usecase'
 import { Params } from '../base/params'
 
 export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, boolean> {
-  private readonly userRepository: FirstRepository
+  private readonly yourFirstRepository: FirstRepository
 
-  constructor(userRepository: FirstRepository) {
+  constructor(yourFirstRepository: FirstRepository) {
     super()
-    this.userRepository = userRepository
+    this.yourFirstRepository = yourFirstRepository
   }
 
   async execute(params: YourFirstUseCaseParams): Promise<boolean> {
     if (params.verify) {
-      return await this.userRepository.yourFirstFunction({ userName: params.emailOrPhone, password: params.password })
+      return await this.yourFirstRepository.yourFirstFunction({ userName: params.emailOrPhone, password: params.password })
     }
   }
 }
