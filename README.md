@@ -46,7 +46,7 @@ The next step is to open the folder that has been downloaded / cloned into a cli
 Sensitive information like api keys, credentials, etc should not be checked into git repos,
 especially public ones. To keep such data safe the template uses `app_secrets.ts` file. If you
 want to run the app locally, you will need to create a new file `app_secrets.ts`
-under [`lib/secrets`](./packages/foundation/src/secrets). To help with setting up the secrets file, the template
+under [`src/secrets`](./packages/foundation/src/secrets). To help with setting up the secrets file, the template
 inclued a skeleton secrets file.
 
 # Architecture
