@@ -1,3 +1,3 @@
-export interface NetworkPort{
-    yourFirstNetworkCall():Promise<boolean>
+export interface NetworkPort {
+  yourFirstNetworkCall(): Promise<boolean>
 }

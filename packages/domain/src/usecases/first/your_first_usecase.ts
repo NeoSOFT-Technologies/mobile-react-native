@@ -12,7 +12,10 @@ export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, bool
 
   async execute(params: YourFirstUseCaseParams): Promise<boolean> {
     if (params.verify) {
-      return await this.yourFirstRepository.yourFirstFunction({ userName: params.emailOrPhone, password: params.password })
+      return await this.yourFirstRepository.yourFirstFunction({
+        userName: params.emailOrPhone,
+        password: params.password
+      })
     }
   }
 }

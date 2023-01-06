@@ -1,3 +1,3 @@
-export interface DatabasePort{
-    yourFirstDatabaseCall(status:boolean):Promise<boolean>
+export interface DatabasePort {
+  yourFirstDatabaseCall(status: boolean): Promise<boolean>
 }
