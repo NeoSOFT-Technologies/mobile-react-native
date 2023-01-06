@@ -28,7 +28,7 @@ export class LoginUseCaseParams extends Params {
   }
 
   verify(): boolean {
-    return true;
+    return true
   }
 }
 
