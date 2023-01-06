@@ -1,19 +1,14 @@
 0 silly argv {
-0 silly argv   _: [ 'create' ],
-0 silly argv   lernaVersion: '6.1.0',
+0 silly argv   _: [ 'add' ],
+0 silly argv   scope: 'data',
+0 silly argv   globs: [],
+0 silly argv   lernaVersion: '6.4.0',
 0 silly argv   '$0': '/Users/faiyyaz/Documents/Workspace/React/react-boilerplate/node_modules/.bin/lerna',
-0 silly argv   name: 'domain',
-0 silly argv   loc: 'core'
+0 silly argv   pkg: 'dependency_injection'
 0 silly argv }
-1 notice cli v6.1.0
+1 notice cli v6.4.0
 2 verbose rootPath /Users/faiyyaz/Documents/Workspace/React/react-boilerplate
-3 error Error: canceled
-3 error     at Interface.<anonymous> (/Users/faiyyaz/Documents/Workspace/React/react-boilerplate/node_modules/read/lib/read.js:66:13)
-3 error     at Interface.emit (node:events:513:28)
-3 error     at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1125:18)
-3 error     at ReadStream.onkeypress (node:internal/readline/interface:274:20)
-3 error     at ReadStream.emit (node:events:513:28)
-3 error     at emitKeys (node:internal/readline/utils:357:14)
-3 error     at emitKeys.next (<anonymous>)
-3 error     at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
-3 error     at ReadStream.emit (node:events:513:28)
+3 error HttpErrorGeneral: 404 Not Found - GET https://registry.npmjs.org/dependency_injection - Not found
+3 error     at /Users/faiyyaz/Documents/Workspace/React/react-boilerplate/node_modules/npm-registry-fetch/lib/check-response.js:95:15
+3 error     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+3 error     at async RegistryFetcher.packument (/Users/faiyyaz/Documents/Workspace/React/react-boilerplate/node_modules/pacote/lib/registry.js:92:19)
