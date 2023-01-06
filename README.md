@@ -41,6 +41,14 @@ git clone git@github.com:NeoSOFT-Technologies/mobile-react-native.git
 
 The next step is to open the folder that has been downloaded / cloned into a cli application such as bash, cmd, terminal .
 
+#### App Secrets
+
+Sensitive information like api keys, credentials, etc should not be checked into git repos,
+especially public ones. To keep such data safe the template uses `app_secrets.ts` file. If you
+want to run the app locally, you will need to create a new file `app_secrets.ts`
+under [`src/secrets`](./packages/foundation/src/secrets). To help with setting up the secrets file, the template
+inclued a skeleton secrets file.
+
 # Architecture
 
 The architecture of the template facilitates separation of concerns and avoids tight coupling between it's various layers. The goal is to have the ability to make changes to individual layers without affecting the entire app. This architecture is an adaptation of concepts from ```Hexagonal Architecture``` & ```Clean Architecture```
@@ -140,9 +148,15 @@ learn more about [lerna](./wiki/lerna.md) commands
   The template comes with built-in support for 3 flavors. Each flavor uses a different ``` 
   main.ts ``` file.
 
-   - Dev  
-   - QA  
-   - Prod 
+   - Dev - [main_dev.ts](./packages/mobile/src/entrypoints/main_dev.ts)
+   - QA  - [main_qa.ts](./packages/mobile/src/entrypoints/main_qa.ts)
+   - Prod - [main_prod.ts](./packages/mobile/src/entrypoints/main_prod.ts)
+
+   You can setup any environment specific values in the respective index.js files.
+
+   To run a specific flavor you need to specify the flavor and target file.
+
+
 
 # Entities
 The layers ```core``` and ```services provider``` within infrastructure each have an ```model``` directory.
@@ -172,7 +186,7 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - CI for build release
   - [Localisation](./packages//localisation//Localisation.md)
   - Routing/Navigations
-  - [Obfuscation](./wiki/OBFUSCATION.md)
+  - [Obfuscation](./wiki/obfuscation.md)
   - Git hooks: with [husky](https://github.com/typicode/husky)
   - Linting: with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 
@@ -184,7 +198,7 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - Continuous Integration - Github Action
   - Navigation - [React Navigaiton](./wiki/navigation.md)
   - Localisation - i18n, react-i18next
-  - Obfuscation- [Javascript scrambler](./wiki/OBFUSCATION.md)
+  - Obfuscation- [Javascript scrambler](./wiki/obfuscation.md)
   - [Dependabot](#dependabot)
 
   ## Run Projects
@@ -243,5 +257,5 @@ upcoming [enhancements](https://github.com/NeoSOFT-Technologies/mobile-react-nat
 ## Contributing to this Project
 
 Contributions are welcome from anyone and everyone. We encourage you to review
-the [Guiding principles for contributing](./wiki/contribute.mds)
+the [Guiding principles for contributing](./wiki//contribute.md)
 
