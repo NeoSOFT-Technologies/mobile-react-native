@@ -19,7 +19,7 @@ This project is open source, we welcome any contributions.
 
 # Setup
 
-To set up your project based on this boilerplate, you need to do some of the steps you need to do.
+To set up your project based on this boilerplate, you need to do some of the steps.
 
 Here are the steps for setting up a Project with this React Native boilerplate:
 
@@ -78,7 +78,7 @@ The monorepo package consists of the above. The domain area, adapter area, and f
 ## What is Monorepo?
 In this article, what we call "Monorepo" is a way to manage multiple npm packages in a single repository.
 
-typescript and react native app Monorepo using Lerna, a tool I will later introduce in this article. React is also managing multiple packages in a single repository, but without Lerna.
+Here there is a typescript project and react native app with Monorepo using Lerna, a  tool I will later introduce in this article. React is also managing multiple packages in a single repository, but without Lerna.
 
 ## Following are the Pros and Cons of Monorepo.
 
@@ -131,18 +131,18 @@ learn more about [lerna](./wiki/lerna.md) commands
 
  The architecture is separated into the following layers
  
- - [mobile](#) - All UI and state management elements like components, screen and view models.
- - [core](#) - Core business implementation
-   - [domain](#) - Use cases for individual pieces of work.
-   - [data](#) - Repositories to manage various data sources.
-   - [shared](#) - Common items for core module shared between domain & data.
+ - [mobile](./packages/mobile/) - All ```UI``` and state management elements like components, screen and view models.
+ - [core](./packages/) - Core business implementation
+   - [domain](./packages/domain/) - Use cases for individual pieces of work.
+   - [data](./packages/data/) - Repositories to manage various data sources.
+   - [shared](./packages/shared/) - Common items for core module shared between domain & data.
 
- - [infrastructure](#) - Services provide access to external elements such as databases,apis, etc.
+ - [infrastructure](./packages/) - Services provide access to external elements such as databases,apis, etc.
    - [database](#) - Database Provider
    - [network](#) - Axios for network setup
+ - [Dependency Injection](./packages/dependency_injection/) - Each layer has a di directory to manage Dependency Injection for that layer.
 
-   Each layer has a di directory to manage Dependency Injection for that layer.
-   Read the [dependency management documentation](#) to learn about all the scripts used in the project.
+   Read the [dependency management documentation](./wiki/DependecnyManagment.md) to learn about all the scripts used in the project.
 
 # Flavors
   The template comes with built-in support for 3 flavors. Each flavor uses a different ``` 
@@ -161,9 +161,9 @@ learn more about [lerna](./wiki/lerna.md) commands
 # Entities
 The layers ```core``` and ```services provider``` within infrastructure each have an ```model``` directory.
 
- - [mobile layer](#): We consume the same models used from core/domain as domain wont change in the case of frontend apps.
- - [core layer](#): Model classes for performing business logic manipulations. They act as an abstraction to hide the local and remote data models.
- - [infrastructure](#): Respective service provider contains local models (data classes for the database) and remote models (data classes for the api).   
+ - [mobile layer](./packages/mobile/): We consume the same models used from core/domain as domain wont change in the case of frontend apps.
+ - [core layer](./packages/): Model classes for performing business logic manipulations. They act as an abstraction to hide the local and remote data models.
+ - [infrastructure](./packages/): Respective service provider contains local models (data classes for the database) and remote models (data classes for the api).   
 
 
 # Dependabot
@@ -241,10 +241,10 @@ $ npx lerna run andorid
 
   | Name | Description |
   | ------ | ------ |
-  | [mobile](#)| A module containing boilerplate app view implementation |
-  | [core](#)| A module containing core business implementation of the product which includes data,domain & shared modules|
-  | [dependency-injection](#) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
-  | [infrastructure](#) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
+  | [mobile](./packages/mobile/)| A module containing boilerplate app view implementation |
+  | [core](./packages/)| A module containing core business implementation of the product which includes data,domain & shared modules|
+  | [dependency-injection](./packages/dependency_injection/) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
+  | [infrastructure](./packages/) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
 |[localisation](./packages//localisation//Localisation.md)| A module containing translation data |
 
 

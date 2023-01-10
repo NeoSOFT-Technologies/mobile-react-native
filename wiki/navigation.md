@@ -7,7 +7,7 @@ Navigation is use to navigate from one screen to diffrent screen
  ```sh 
  class RoutePaths {
   static screen: string = 'screen';
-  ### new name
+  ### New name to add here 
   static name : type = 'name'
 }
 ```
@@ -15,7 +15,7 @@ Navigation is use to navigate from one screen to diffrent screen
 ``` sh
  <Stack.Navigator>
         <Stack.Screen name={RoutePaths.screen} component={Screen} />
-         ### new Screen 
+         ### New Screen you want to add
            <Stack.Screen name={RoutePaths.screenname} component={your_screen_name} />
       </Stack.Navigator>
 ```
