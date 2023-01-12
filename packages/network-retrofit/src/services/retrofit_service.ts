@@ -52,7 +52,7 @@ class RetrofitService extends BaseService {
     return <Response>{}
   }
 }
-;(async () => {
+(async () => {
   const authorization = ''
   const userService = new ServiceBuilder().setEndpoint('').build(RetrofitService)
   const response = await userService.get(authorization)
