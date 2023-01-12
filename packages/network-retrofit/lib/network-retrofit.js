@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-'use strict';
+'use strict'
 
-module.exports = networkRetrofit;
+module.exports = networkRetrofit
 
 function networkRetrofit() {
-    return "Hello from networkRetrofit";
+  return 'Hello from networkRetrofit'
 }
