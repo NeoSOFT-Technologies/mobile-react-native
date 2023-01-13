@@ -42,6 +42,6 @@
     "@types/react": "^18.0.26",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lerna": "^6.4.0"
+    "lerna": "^6.4.1"
   }
 }
