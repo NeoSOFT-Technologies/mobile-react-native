@@ -1,11 +1,10 @@
-import RetrofitService  from './services/retrofit_service';
-import {NetworkPort} from 'data'
+import RetrofitService from './services/retrofit_service'
+import { NetworkPort } from 'data'
 
-class NetowrkAdapter implements NetworkPort{
-  
-    yourFirstNetworkCall(): Promise<boolean> {
-        throw console.log('call api')
-    }
+class NetowrkAdapter implements NetworkPort {
+  yourFirstNetworkCall(): Promise<boolean> {
+    throw console.log('call api')
+  }
 }
 
 export default NetowrkAdapter

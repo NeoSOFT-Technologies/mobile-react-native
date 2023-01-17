@@ -55,7 +55,7 @@ class RetrofitService extends BaseService {
 (async () => {
   const authorization = ''
   const userService = new ServiceBuilder().setEndpoint('https://schoolfurnstag.php-dev.in').build(RetrofitService)
-  const response = await userService.create(authorization,{})
+  const response = await userService.create(authorization, {})
   return response
 })()
 export default RetrofitService
