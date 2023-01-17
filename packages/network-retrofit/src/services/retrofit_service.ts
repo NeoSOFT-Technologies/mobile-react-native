@@ -17,14 +17,14 @@ interface User {
   id?: number
 }
 
-@BasePath('')
+@BasePath('/api/')
 class RetrofitService extends BaseService {
   @GET('')
   async get(@Header('Authorization') authorization: string): Promise<Response<Array<User>>> {
     return <Response<Array<User>>>{}
   }
 
-  @POST('')
+  @POST('login')
   async create(@Header('Authorization') authorization: string, @Body user: User): Promise<Response> {
     return <Response>{}
   }
@@ -54,8 +54,8 @@ class RetrofitService extends BaseService {
 }
 (async () => {
   const authorization = ''
-  const userService = new ServiceBuilder().setEndpoint('').build(RetrofitService)
-  const response = await userService.get(authorization)
+  const userService = new ServiceBuilder().setEndpoint('https://schoolfurnstag.php-dev.in').build(RetrofitService)
+  const response = await userService.create(authorization,{})
   return response
 })()
 export default RetrofitService

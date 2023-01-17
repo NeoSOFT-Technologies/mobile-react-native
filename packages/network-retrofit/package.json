@@ -25,6 +25,7 @@
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
   },
   "dependencies": {
+    "data": "^0.0.1",
     "ts-retrofit": "^1.18.0"
   }
 }
