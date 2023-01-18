@@ -1,3 +1,3 @@
-import NetowrkAdapter from "./network_adapter";
+import NetowrkAdapter from './network_adapter'
 
-export default {NetowrkAdapter}
+export default { NetowrkAdapter }
