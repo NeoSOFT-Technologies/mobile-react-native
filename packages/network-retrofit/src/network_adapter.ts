@@ -1,4 +1,4 @@
-import { MyFirstModel } from './../../shared/src/model/myfirstmodel';
+import { MyFirstModel } from './../../shared/src/model/myfirstmodel'
 import RetrofitService from './services/retrofit_service'
 import { NetworkPort } from 'data'
 
