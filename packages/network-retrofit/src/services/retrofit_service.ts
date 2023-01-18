@@ -1,56 +1,20 @@
+import { MyLoginResponse } from './../model/my_login_response';
 import {
   BasePath,
   BaseService,
-  Body,
-  DELETE,
-  GET,
-  Header,
-  PATCH,
-  Path,
-  POST,
-  PUT,
-  Response,
-  ServiceBuilder
+  POST,  
+  Response
 } from 'ts-retrofit'
 
-interface User {
-  id?: number
-}
 
 @BasePath('/api/')
 class RetrofitService extends BaseService {
-  @GET('')
-  async get(@Header('Authorization') authorization: string): Promise<Response<Array<User>>> {
-    return <Response<Array<User>>>{}
-  }
-
+ 
   @POST('login')
-  async create(@Header('Authorization') authorization: string, @Body user: User): Promise<Response> {
-    return <Response>{}
+  async login(): Promise<Response<MyLoginResponse>> {
+    return <Response<MyLoginResponse>>{}
   }
-
-  @PUT('')
-  async update(
-    @Header('Authorization') authorization: string,
-    @Path('') userId: number,
-    @Body user: User
-  ): Promise<Response> {
-    return <Response>{}
-  }
-
-  @PATCH('')
-  async patch(
-    @Header('Authorization') authorization: string,
-    @Path('') userId: number,
-    @Body user: Partial<User>
-  ): Promise<Response> {
-    return <Response>{}
-  }
-
-  @DELETE('')
-  async delete(@Header('Authorization') authorization: string, @Path('') userId: number): Promise<Response> {
-    return <Response>{}
-  }
+ 
 }
 
 export default RetrofitService

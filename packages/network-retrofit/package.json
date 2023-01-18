@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "data": "^0.0.1",
+    "di": "^0.0.1",
+    "foundation": "^0.0.1",
     "ts-retrofit": "^1.18.0"
   }
 }
