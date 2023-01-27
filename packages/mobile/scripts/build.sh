@@ -35,9 +35,9 @@ case $1 in #apk, appbundle, ios
 
   ios) FILE_FORMAT="cd ios && xcodebuild -scheme "
     case $2 in #flavor
-      dev) FLAVOR="dev.mobile build";;
-      qa) FLAVOR="qa.mobile build";;
-      prod) FLAVOR="mobile build";;
+      dev) FLAVOR="mobile build -configuration dev.Debug";;
+      qa) FLAVOR="mobile build -configuration qa.Debug";;
+      prod) FLAVOR="mobile build -configuration prod.Debug";;
     esac
   ;;
 
