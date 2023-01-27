@@ -138,8 +138,8 @@ learn more about [lerna](./wiki/lerna.md) commands
    - [shared](./packages/shared/) - Common items for core module shared between domain & data.
 
  - [infrastructure](./packages/) - Services provide access to external elements such as databases,apis, etc.
-   - [database](#) - Database Provider
-   - [network](#) - Axios for network setup
+   - [database](./packages/database/) - Database Provider
+   - [network](./packages/network-retrofit/) - ts_retrofit for network setup which is internally depend on axios
  - [Dependency Injection](./packages/dependency_injection/) - Each layer has a di directory to manage Dependency Injection for that layer.
 
    Read the [dependency management documentation](./wiki/DependecnyManagment.md) to learn about all the scripts used in the project.
@@ -179,26 +179,26 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - Repository Pattern for code separations
   - [Dependabot](./wiki//dependabot.md)
   - [Dependency Injection](./wiki//DependecnyManagment.md)
-  - Network Layer 
-  - Data Layer
-  - Built-in support for 3 [flavors](#) - ``` dev ```, ``` qa ``` and ``` prod ```.
+  - [Network Layer](./packages/network-retrofit/) 
+  - [Data Layer](./packages/data/)
+  - Built-in support for 3 [flavors](#) - ``` [dev](./packages/mobile/src/entrypoints/main_dev.ts) ```, ``` [qa](./packages/mobile/src/entrypoints/main_qa.ts) ``` and ``` [prod](./packages/mobile/src/entrypoints/main_prod.ts) ```.
   - Unit & Integration Tests
   - CI for build release
   - [Localisation](./packages//localisation//Localisation.md)
-  - Routing/Navigations
+  - [Routing/Navigations](./wiki/navigation.md)
   - [Obfuscation](./wiki/obfuscation.md)
   - Git hooks: with [husky](https://github.com/typicode/husky)
   - Linting: with [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/)
 
 # Libraries & Tools Used
-  - Dependency Injection - Obsidian
-  - Network - [axios](#)
+  - Dependency Injection - [Obsidian](https://github.com/wix-incubator/obsidian)
+  - Network - [ts_retrofit](https://github.com/nullcc/ts-retrofit)
   - Database
   - Code Analysis 
   - Continuous Integration - Github Action
   - Navigation - [React Navigaiton](./wiki/navigation.md)
-  - Localisation - i18n, react-i18next
-  - Obfuscation- [Javascript scrambler](./wiki/obfuscation.md)
+  - Localisation - [i18n](https://www.i18next.com/), [react-i18next](https://react.i18next.com/)
+  - Obfuscation- [Javascript scrambler](https://jscrambler.com/products/code-integrity/javascript-obfuscation)
   - [Dependabot](#dependabot)
 
   ## Run Projects

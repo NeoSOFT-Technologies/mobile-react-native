@@ -1,11 +1,15 @@
 # `database`
 
-> TODO: description
+- Database Provider
 
-## Usage
 
+If you want to get import database layer in another package 
+```sh
+  npx  lerna add database --scope=package_name
 ```
-const database = require('database');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'database'
 ```
+
+
