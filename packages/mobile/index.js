@@ -1,8 +1,4 @@
-/**
- * @format
- */
-import * as entrypoint from './src/entrypoints/main_dev'
+import * as entrypoint from './src/entrypoints/main_dev.ts'
 
-//function main() {
 entrypoint.main()
-//}
+

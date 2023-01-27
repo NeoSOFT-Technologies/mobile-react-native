@@ -1,16 +1,29 @@
 #!/bin/bash
-
 ENTRYPOINT=""
+APPSUFFIX=""
+OS=""
+
 case $1 in
-dev) ENTRYPOINT="entrypoints/main_dev.ts";;
-qa) ENTRYPOINT="entrypoints/main_qa.ts";;
+android)
+OS="android";;
+ios)
+OS="ios";;
+esac
+
+case $2 in
+dev) 
+ENTRYPOINT="entrypoints/main_dev.ts"
+APPSUFFIX="dev"
+;;
+qa) 
+ENTRYPOINT="entrypoints/main_qa.ts"
+APPSUFFIX="qa"
+;;
 prod) ENTRYPOINT="entrypoints/main_prod.ts";;
 esac
 
-# Uncomment if generated_main causes error on ios
-#if [ $2 == ios ]
-#then
-#  sed -i '' "s#.*entrypoints/main.*#import 'package:flutter_template/$ENTRYPOINT' as entrypoint;#" lib/main.dart
-#fi
+echo "************************************************************************************************************"
+echo "Running yarn run:$1:$2 --appIdSuffix=$APPSUFFIX"
+echo "************************************************************************************************************"
 
-yarn run:android:$1
+yarn run:$1:$2 --appIdSuffix=$APPSUFFIX
