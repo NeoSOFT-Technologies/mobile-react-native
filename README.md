@@ -181,7 +181,7 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - [Dependency Injection](./wiki//DependecnyManagment.md)
   - [Network Layer](./packages/network-retrofit/) 
   - [Data Layer](./packages/data/)
-  - Built-in support for 3 [flavors](#) - ``` [dev](./packages/mobile/src/entrypoints/main_dev.ts) ```, ``` [qa](./packages/mobile/src/entrypoints/main_qa.ts) ``` and ``` [prod](./packages/mobile/src/entrypoints/main_prod.ts) ```.
+  - Built-in support for 3 [flavors](./packages/foundation/src/flavors/) - ``` dev ```, ``` qa ``` and ``` prod ```.
   - Unit & Integration Tests
   - CI for build release
   - [Localisation](./packages//localisation//Localisation.md)
