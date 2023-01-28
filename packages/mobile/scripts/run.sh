@@ -1,24 +1,24 @@
 #!/bin/bash
-ENTRYPOINT=""
 APPSUFFIX=""
 OS=""
 COMMAND="yarn run:"
+ENTRYPOINT=""
 
 case $2 in
 dev) 
-ENTRYPOINT="entrypoints/main_dev.ts"
 APPSUFFIX="dev"
 COMMAND="$COMMAND$1:$2"
+ENTRYPOINT="./src/entrypoints/main_dev.ts"
 ;;
 qa) 
-ENTRYPOINT="entrypoints/main_qa.ts"
 APPSUFFIX="qa"
 COMMAND="$COMMAND$1:$2"
+ENTRYPOINT="./src/entrypoints/main_qa.ts"
 ;;
 prod) 
-ENTRYPOINT="entrypoints/main_prod.ts"
 APPSUFFIX=""
 COMMAND="$COMMAND$1:$2"
+ENTRYPOINT="./src/entrypoints/main_prod.ts"
 ;;
 esac
 
@@ -33,6 +33,9 @@ OS="ios"
 COMMAND="$COMMAND"
 ;;
 esac
+
+sed -i '' "s#.*entrypoints/main.*#import * as entrypoint from '$ENTRYPOINT'#" index.js
+
 
 echo "************************************************************************************************************"
 echo "Running $COMMAND"
