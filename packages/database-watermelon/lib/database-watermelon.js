@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
 // eslint-disable-next-line no-undef
-module.exports = databaseWatermelon;
+module.exports = databaseWatermelon
 
 function databaseWatermelon() {
-    return "Hello from databaseWatermelon";
+  return 'Hello from databaseWatermelon'
 }

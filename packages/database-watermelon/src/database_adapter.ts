@@ -1,4 +1,4 @@
-import { MyDatabaseModel } from './../../shared/src/model/mydatabasemodel';
+import { MyDatabaseModel } from './../../shared/src/model/mydatabasemodel'
 import { Database } from '@nozbe/watermelondb'
 import { DatabasePort } from 'data'
 class DatabaseAdapter implements DatabasePort {
@@ -8,7 +8,7 @@ class DatabaseAdapter implements DatabasePort {
   }
 
   async yourFirstDatabaseCall(): Promise<MyDatabaseModel> {
-    return 
+    return
   }
 }
 export default DatabaseAdapter
