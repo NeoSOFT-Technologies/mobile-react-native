@@ -1,3 +1,4 @@
+import { MyDatabaseModel } from 'packages/shared/src/shared';
 export interface DatabasePort {
-  yourFirstDatabaseCall(status: boolean): Promise<boolean>
+  yourFirstDatabaseCall(): Promise<MyDatabaseModel>
 }

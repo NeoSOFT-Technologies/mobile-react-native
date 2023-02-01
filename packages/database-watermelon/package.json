@@ -1,11 +1,11 @@
 {
-  "name": "database",
+  "name": "database-watermelon",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Mohan29997 <kotakmohan33@gmail.com>",
   "homepage": "https://github.com/NeoSOFT-Technologies/mobile-react-native#readme",
   "license": "ISC",
-  "main": "src/database_adapter.js",
+  "main": "lib/database-watermelon.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -19,12 +19,13 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "node ./__tests__/database.test.js"
+    "test": "node ./__tests__/database-watermelon.test.js"
   },
   "bugs": {
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
   },
   "dependencies": {
-    "@nozbe/watermelondb": "^0.25.1"
+    "@nozbe/watermelondb": "^0.25.3",
+    "data": "^0.0.1"
   }
 }
