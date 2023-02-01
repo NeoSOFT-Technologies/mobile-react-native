@@ -10,7 +10,7 @@ class DatabaseAdapter implements DatabasePort {
   }
 
   async yourFirstDatabaseCall(): Promise<MyDatabaseModel> {
-     this.data = (this.databases.get('post').query().fetch())
+    this.data = this.databases.get('post').query().fetch()
     return this.data.transform()
   }
 }
