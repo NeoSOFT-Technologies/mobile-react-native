@@ -1,6 +1,6 @@
-import { FoundationModule } from './../../../foundation/src/di/foundation_module';
-import { MyModel } from './../model/my_model';
-import { AppDatabase } from './../app_database';
+import { FoundationModule } from './../../../foundation/src/di/foundation_module'
+import { MyModel } from './../model/my_model'
+import { AppDatabase } from './../app_database'
 import { DatabasePort } from './../../../data/src/out/database_port'
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite'
 import { Graph, Singleton, ObjectGraph, Provides } from 'di'
@@ -9,7 +9,7 @@ import schema from '../schema'
 import DatabaseAdapter from '../database_adapter'
 
 @Singleton()
-@Graph({subgraphs : [FoundationModule]})
+@Graph({ subgraphs: [FoundationModule] })
 export class DatabaseModule extends ObjectGraph {
   @Provides()
   databaseservice(provideDatabaseName: string): SQLiteAdapter {
@@ -24,9 +24,7 @@ export class DatabaseModule extends ObjectGraph {
   database(sql: SQLiteAdapter): AppDatabase {
     return new AppDatabase({
       adapter: sql,
-      modelClasses: [
-        MyModel
-      ]
+      modelClasses: [MyModel]
     })
   }
   @Provides()

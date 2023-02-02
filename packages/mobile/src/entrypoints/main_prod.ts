@@ -6,7 +6,7 @@ export function main() {
     flavor: Flavor.prod,
     values: new FlavorValues({
       apiBaseUrl: '',
-      databaseName:"",
+      databaseName: '',
       //secrets: AppSecrets.appSecretsDev,
       showLogs: true,
       logSqlStatements: true
