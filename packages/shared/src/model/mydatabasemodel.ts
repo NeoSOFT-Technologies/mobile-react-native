@@ -1,7 +1,10 @@
 export class MyDatabaseModel {
-  readonly databaseStatus: boolean
+  readonly title: string
+  readonly body: string
 
-  constructor(params: { databaseStatus: boolean }) {
-    this.databaseStatus = params.databaseStatus
+
+  constructor(params: { title: string,body: string }) {
+    this.title = params.title
+    this.body = params.body
   }
 }
