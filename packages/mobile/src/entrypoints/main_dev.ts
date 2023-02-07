@@ -2,7 +2,6 @@ import { Flavor, FlavorConfig, FlavorValues } from 'foundation'
 import { startApp } from '../../myApp'
 
 export function main() {
-  console.log("main dev")
   FlavorConfig.initialize({
     flavor: Flavor.dev,
     values: new FlavorValues({
