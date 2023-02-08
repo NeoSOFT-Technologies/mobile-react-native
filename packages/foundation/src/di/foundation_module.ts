@@ -8,4 +8,8 @@ export class FoundationModule extends ObjectGraph {
   provideApiURL(): string {
     return FlavorConfig.instance.values.apiBaseUrl
   }
+  @Provides()
+  provideDatabaseName(): string {
+    return FlavorConfig.instance.values.databaseName
+  }
 }
