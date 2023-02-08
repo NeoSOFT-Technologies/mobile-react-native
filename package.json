@@ -28,8 +28,8 @@
     ]
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.48.2",
-    "@typescript-eslint/parser": "^5.48.2",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
     "eslint": "^8.32.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.3",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@babel/runtime": "^7.20.7",
+    "@babel/runtime": "^7.20.13",
     "@types/react": "^18.0.27",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
