@@ -8,7 +8,7 @@ const Screen = () => {
   const a = new ApplicationGraph()
   return (
     <SafeAreaView>
-      <Text>{`Hello ${''}`}</Text>
+      <Text>{`Hello ${FlavorConfig.instance.flavorType}`}</Text>
       <Text>Hello {i18n.t('appName')}</Text>
     </SafeAreaView>
   )

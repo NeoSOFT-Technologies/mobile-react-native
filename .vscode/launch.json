@@ -1,0 +1,54 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start Metro",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "start"]
+    },
+    {
+      "name": "Android Dev",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:android:dev"]
+    },
+    {
+      "name": "Android QA",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:android:qa"]
+    },
+    {
+      "name": "Android Prod",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:android:prod"]
+    },
+    {
+      "name": "IOS Dev",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:ios:dev"]
+    },
+    {
+      "name": "IOS QA",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:ios:qa"]
+    },
+    {
+      "name": "IOS Prod",
+      "request": "launch",
+      "type": "node",
+      "runtimeExecutable": "npx",
+      "args": ["lerna", "run", "run:ios:prod"]
+    }
+  ]
+}
