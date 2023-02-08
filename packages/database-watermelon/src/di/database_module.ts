@@ -1,12 +1,12 @@
-import { FoundationModule } from './../../../foundation/src/di/foundation_module'
 import { MyModel } from './../model/my_model'
 import { AppDatabase } from './../app_database'
-import { DatabasePort } from './../../../data/src/out/database_port'
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite'
 import { Graph, Singleton, ObjectGraph, Provides } from 'di'
 import migration from '../migration'
 import schema from '../schema'
 import DatabaseAdapter from '../database_adapter'
+import { DatabasePort } from 'data'
+import { FoundationModule } from 'foundation'
 
 @Singleton()
 @Graph({ subgraphs: [FoundationModule] })
