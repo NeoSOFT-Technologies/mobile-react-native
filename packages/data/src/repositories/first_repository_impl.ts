@@ -1,4 +1,4 @@
-import { MyDatabaseModel } from 'packages/shared/src/shared'
+import { MyDatabaseModel } from 'shared'
 import { NetworkPort } from './../out/network_port'
 import { DatabasePort } from './../out/database_port'
 import { FirstRepository } from 'domain-layer'
