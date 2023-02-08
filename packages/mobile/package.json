@@ -19,7 +19,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "^7.20.7",
+    "@babel/plugin-proposal-decorators": "^7.20.13",
     "@jest/globals": "^29.4.2",
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
