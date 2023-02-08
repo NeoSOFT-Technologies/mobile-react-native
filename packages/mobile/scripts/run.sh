@@ -37,6 +37,12 @@ BUNDLE_COMMAND="npx react-native bundle --platform $OS --dev false --entry-file 
 ;;
 esac
 
+# Uncomment this line for IOS runtime entrfile changes if above doesnt work.
+# echo "************************************************************************************************************"
+# echo "Updating entry file for IOS only"
+# sed -i '' "s#.*entrypoints/main.*#import * as entrypoint from '$ENTRYPOINT'#" index.js
+# echo "************************************************************************************************************"
+
 echo "************************************************************************************************************"
 echo "Running $BUNDLE_COMMAND"
 echo "************************************************************************************************************"

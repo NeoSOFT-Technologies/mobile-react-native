@@ -63,4 +63,3 @@ buck-out/
 /ios/Pods/
 /vendor/bundle/
 *.lock
-/index.js
