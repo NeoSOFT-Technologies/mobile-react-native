@@ -33,7 +33,7 @@ BUNDLE_COMMAND="npx react-native bundle --platform $OS --dev false --entry-file 
 ios)
 OS="ios"
 RUN_COMMAND="$RUN_COMMAND"
-BUNDLE_COMMAND="npx react-native bundle --platform $OS --dev false --entry-file $ENTRYPOINT --bundle-output  ios/main.jsbundle --assets-dest ios"
+BUNDLE_COMMAND="npx react-native bundle --platform $OS --dev false --entry-file $ENTRYPOINT --bundle-output ios/main.jsbundle --assets-dest ios"
 ;;
 esac
 
