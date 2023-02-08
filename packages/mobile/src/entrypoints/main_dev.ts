@@ -14,3 +14,4 @@ export function main() {
   })
   startApp()
 }
+main()
