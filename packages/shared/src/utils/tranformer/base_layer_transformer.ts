@@ -1,4 +1,4 @@
-import 'layer_data_transformer.dart'
+import 'layer_data_transformer.ts'
 
 /// Implementation of the LayerDataTransformer.
 /// For example: Extend this abstract class to any of the entity classes<F> and provide their domain counterpart<T> as well.
