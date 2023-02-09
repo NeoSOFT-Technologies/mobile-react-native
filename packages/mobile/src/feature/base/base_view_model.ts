@@ -1,4 +1,1 @@
-export abstract class  BaseViewModel{
-
-}
-
+export abstract class BaseViewModel {}

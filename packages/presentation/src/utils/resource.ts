@@ -19,7 +19,7 @@ export class Resource<T> {
     return new Resource<T>({ status: Status.none, data: null })
   }
 
-  static loading<T>(params?: { data?: T, type:string }): Resource<T> {
+  static loading<T>(params?: { data?: T; type: string }): Resource<T> {
     return new Resource<T>({ status: Status.loading, data: params.data })
   }
 
