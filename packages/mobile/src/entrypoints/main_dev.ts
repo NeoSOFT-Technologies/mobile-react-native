@@ -6,6 +6,7 @@ export function main() {
     flavor: Flavor.dev,
     values: new FlavorValues({
       apiBaseUrl: '',
+      databaseName: '',
       //secrets: AppSecrets.appSecretsDev,
       showLogs: true,
       logSqlStatements: true
@@ -13,3 +14,4 @@ export function main() {
   })
   startApp()
 }
+main()

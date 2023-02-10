@@ -25,9 +25,9 @@
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
   },
   "dependencies": {
-    "@jest/globals": "^29.3.1",
+    "@jest/globals": "^29.4.2",
     "di": "^0.0.1",
-    "jest": "^29.3.1",
+    "jest": "^29.4.2",
     "shared": "^0.0.1"
   }
 }
