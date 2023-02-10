@@ -25,7 +25,7 @@
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
   },
   "dependencies": {
-    "@nozbe/watermelondb": "^0.25.3",
+    "@nozbe/watermelondb": "^0.25.5",
     "data": "^0.0.1"
   }
 }
