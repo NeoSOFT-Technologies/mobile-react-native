@@ -1,5 +1,3 @@
-
-
-export function* rootSaga(){
-    //TODO
+export function* rootSaga() {
+  //TODO
 }

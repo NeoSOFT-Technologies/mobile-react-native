@@ -15,12 +15,11 @@ import AppRouter from './src/navigation/app_router'
 
 class App extends Component {
   render() {
-
-    return (<Provider store={store}>
-      <AppRouter />
-    </Provider>)
-    
-    
+    return (
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
+    )
   }
 }
 export default App

@@ -5,9 +5,7 @@ import { signInReducer } from './getUser/reducer'
 import { signInSaga } from './getUser/saga'
 
 const sagaMiddleware = createSagaMiddleware()
-const store = configureStore({ reducer: combineReducers({}), middleware: [
-    sagaMiddleware
-] })
+const store = configureStore({ reducer: combineReducers({}), middleware: [sagaMiddleware] })
 sagaMiddleware.run(rootSaga)
 
 export default store
