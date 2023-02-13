@@ -1,4 +1,9 @@
 {
   "appName": "मेरा एपीपी",
-  "anotherString": "नमस्ते"
+  "anotherString": "नमस्ते",
+  "Log_in": "लॉग इन करें",
+  "username": "उपयोगकर्ता नाम",
+  "password": "पासवर्ड",
+  "Login": "लॉग इन करें",
+  "Forget_pass":"पासवर्ड भूल गए ?"
 }

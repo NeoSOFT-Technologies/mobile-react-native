@@ -1,4 +1,9 @@
 {
   "appName": "MY APP",
-  "anotherString": "Hello"
+  "anotherString": "Hello",
+  "Log_in": "Log In",
+  "username": "Username",
+  "password": "Password",
+  "Login": "Login",
+  "Forget_pass":"Forget Password ?"
 }
