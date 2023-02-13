@@ -45,9 +45,9 @@ export default StyleSheet.create({
     color: Colors.white,
     fontSize: 22
   },
-  forgetpass:{
-    color:Colors.white,
-    textAlign:'center',
-    marginTop:'5%'
+  forgetpass: {
+    color: Colors.white,
+    textAlign: 'center',
+    marginTop: '5%'
   }
 })

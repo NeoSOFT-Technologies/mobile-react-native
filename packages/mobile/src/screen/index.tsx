@@ -11,7 +11,7 @@ const Screen = () => {
     <SafeAreaView>
       {/* <Text>{`Hello ${FlavorConfig.instance.flavorType}`}</Text>
       <Text>Hello {i18n.t('appName')}</Text> */}
-      <LoginScreen/>
+      <LoginScreen />
     </SafeAreaView>
   )
 }
