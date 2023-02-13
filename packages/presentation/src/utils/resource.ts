@@ -1,3 +1,5 @@
+import { Status } from "./status"
+
 interface IResource<T> {
   readonly status: Status
   readonly data?: T
@@ -5,7 +7,7 @@ interface IResource<T> {
 }
 
 export class Resource<T> {
-  readonly status: Status
+  readonly status?: Status
   readonly data?: T
   readonly error?: any
 
@@ -19,7 +21,7 @@ export class Resource<T> {
     return new Resource<T>({ status: Status.none, data: null })
   }
 
-  static loading<T>(params?: { data?: T; type: string }): Resource<T> {
+  static loading<T>(params?: { data?: T; type?: string }): Resource<T> {
     return new Resource<T>({ status: Status.loading, data: params.data })
   }
 
