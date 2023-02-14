@@ -8,12 +8,18 @@
  * @format
  */
 
+import { store } from 'presentation'
 import React, { Component } from 'react'
+import { Provider } from 'react-redux'
 import AppRouter from './src/navigation/app_router'
 
 class App extends Component {
   render() {
-    return <AppRouter />
+    return (
+      <Provider store={store}>
+        <AppRouter />
+      </Provider>
+    )
   }
 }
 export default App
