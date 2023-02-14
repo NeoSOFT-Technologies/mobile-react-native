@@ -1,11 +1,15 @@
 # `database-watermelon`
 
-> TODO: description
+-  Watermelon library is used for the setup of database
 
-## Usage
-
+If you want to get import database-watermelon layer in another package 
+```sh
+  npx  lerna add database-watermelon --scope=package_name
 ```
-const databaseWatermelon = require('database-watermelon');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'database-watermelon'
 ```
+
+## refrence 
+- https://watermelondb.dev/

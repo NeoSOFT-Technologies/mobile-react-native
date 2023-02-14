@@ -185,6 +185,7 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
   - Unit & Integration Tests
   - CI for build release
   - [Localisation](./packages//localisation//Localisation.md)
+  - [Presentation](./packages/presentation//README.md)
   - [Routing/Navigations](./wiki/navigation.md)
   - [Obfuscation](./wiki/obfuscation.md)
   - Git hooks: with [husky](https://github.com/typicode/husky)
@@ -193,13 +194,14 @@ You can opt out at any time by removing the [.github/dependabot.yml](.github/dep
 # Libraries & Tools Used
   - Dependency Injection - [Obsidian](https://github.com/wix-incubator/obsidian)
   - Network - [ts_retrofit](https://github.com/nullcc/ts-retrofit)
-  - Database
+  - Database - [watermelon](https://watermelondb.dev/)
   - Code Analysis 
   - Continuous Integration - Github Action
   - Navigation - [React Navigaiton](./wiki/navigation.md)
   - Localisation - [i18n](https://www.i18next.com/), [react-i18next](https://react.i18next.com/)
   - Obfuscation- [Javascript scrambler](https://jscrambler.com/products/code-integrity/javascript-obfuscation)
   - [Dependabot](#dependabot)
+  - State Managment - [Redux](https://redux-toolkit.js.org/introduction/getting-started)
 
   ## Run Projects
 ### 1. install
@@ -242,10 +244,12 @@ $ npx lerna run andorid
   | Name | Description |
   | ------ | ------ |
   | [mobile](./packages/mobile/)| A module containing boilerplate app view implementation |
+  | [foundation](./packages/foundation/)| A module containing flavour which include three flavour and secrerts.|
   | [core](./packages/)| A module containing core business implementation of the product which includes data,domain & shared modules|
   | [dependency-injection](./packages/dependency_injection/) | A module that contains classes to achieve DI across multiple modules based on ```injectable ```
-  | [infrastructure](./packages/) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database``` & ```network``` external ports.|
+  | [infrastructure](./packages/) | A module that includes all external data providers/adapters which are outbound adapters to ```core``` module/ports. Further includes ```database-watermelon``` & ```network-retrofit``` external ports.|
 |[localisation](./packages//localisation//Localisation.md)| A module containing translation data |
+|[presentation](./packages/presentation/README.md)| A module containing the state managment which is done with the help of redux|
 
 
 ## Upcoming Improvements

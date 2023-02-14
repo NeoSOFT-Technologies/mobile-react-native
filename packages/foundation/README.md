@@ -1,11 +1,12 @@
 # `foundation`
 
-> TODO: description
+-  A module containing flavour which include three flavour and secrerts.
 
-## Usage
-
+If you want to get import foundation layer in another package 
+```sh
+  npx  lerna add foundation --scope=package_name
 ```
-const foundation = require('foundation');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'foundation'
 ```
