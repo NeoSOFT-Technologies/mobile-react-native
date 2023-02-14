@@ -22,18 +22,18 @@ export class Resource<T> {
   }
 
   static loading<T>(params?: { data?: T; type?: string }): Resource<T> {
-    return new Resource<T>({ status: Status.loading, data: params.data })
+    return new Resource<T>({ status: Status.loading, data: params?.data })
   }
 
   static reloading<T>(params?: { data?: T }): Resource<T> {
-    return new Resource<T>({ status: Status.reloading, data: params.data })
+    return new Resource<T>({ status: Status.reloading, data: params?.data })
   }
 
   static success<T>(params: { data?: T }): Resource<T> {
-    return new Resource<T>({ status: Status.success, data: params.data })
+    return new Resource<T>({ status: Status.success, data: params?.data })
   }
 
   static error<T>(params: { data?: T; error?: any }): Resource<T> {
-    return new Resource<T>({ status: Status.error, data: params.data, error: params.error })
+    return new Resource<T>({ status: Status.error, data: params?.data, error: params?.error })
   }
 }

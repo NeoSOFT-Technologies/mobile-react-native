@@ -4,15 +4,24 @@ import Images from '../../assets/images'
 import Colors from '../../utils/color'
 import style from './loginstyle'
 import i18n from 'localisation'
+import { useDispatch, useSelector } from 'react-redux'
+import { userRequest } from 'presentation'
 
 const LoginScreen = () => {
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
-  const [loadingState, setLodingState] = useState(false)
-
+  const [loadingState, setLodingState] = useState<boolean>(false)
+  const dispatch = useDispatch()
+  const data = useSelector<any>(state=>state.loginData)
+  console.log(data)
   const saveData = () => {
     setLodingState(true)
+    const data = {
+        email:username,
+        password:password
+    }
     // redux dispatch will call  here
+    dispatch(userRequest(data))
   }
 
   return (
