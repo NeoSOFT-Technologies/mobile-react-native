@@ -8,7 +8,11 @@ const AppRouter = () => {
   const Stack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}
+      >
         <Stack.Screen name={RoutePaths.screen} component={Screen} />
       </Stack.Navigator>
     </NavigationContainer>

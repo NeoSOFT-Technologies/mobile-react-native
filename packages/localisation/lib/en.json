@@ -1,4 +1,12 @@
 {
   "appName": "MY APP",
-  "anotherString": "Hello"
+  "anotherString": "Hello",
+  "logIn": "Log In",
+  "username": "Username",
+  "password": "Password",
+  "Login": "Login",
+  "forgetPassword": "Forget Password ?",
+  "Hi": "Hi",
+  "fitnessQuote": "Lets Setup Your Fitness Journey",
+  "getStarted": "Get Started"
 }
