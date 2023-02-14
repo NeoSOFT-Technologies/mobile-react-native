@@ -12,14 +12,12 @@ import { store } from 'presentation'
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import AppRouter from './src/navigation/app_router'
-import SplashScreen from 'react-native-splash-screen';
-
+import SplashScreen from 'react-native-splash-screen'
 
 class App extends Component {
-  
-componentDidMount(): void {
-  SplashScreen.hide()
-}
+  componentDidMount(): void {
+    SplashScreen.hide()
+  }
 
   render() {
     return (

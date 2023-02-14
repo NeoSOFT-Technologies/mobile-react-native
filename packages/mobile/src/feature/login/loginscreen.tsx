@@ -12,13 +12,13 @@ const LoginScreen = () => {
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
-  const data = useSelector<any>(state=>state.loginData)
+  const data = useSelector<any>(state => state.loginData)
   console.log(data)
   const saveData = () => {
     setLodingState(true)
     const data = {
-        email:username,
-        password:password
+      email: username,
+      password: password
     }
     // redux dispatch will call  here
     dispatch(userRequest(data))
