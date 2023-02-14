@@ -16,12 +16,10 @@ const DashboardScreen = () => {
         <Text style={style.uberText}>{i18n.t('uber')}</Text>
         <Text style={style.getText}>{i18n.t('getThere')}</Text>
 
-        <Image source={Images.car} style={style.carStyle} resizeMode='contain' />
+        <Image source={Images.car} style={style.carStyle} resizeMode="contain" />
       </View>
       <View style={style.thirdView}>
-     
         <AppButton loadingState={lodingState} value={'getStarted'} saveData={() => saveData()} />
-   
       </View>
     </View>
   )

@@ -6,10 +6,10 @@ export default StyleSheet.create({
     backgroundColor: Colors.ternaryColor,
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    justifyContent:'center'
+    justifyContent: 'center'
   },
   secView: {
-    width: '100%',
+    width: '100%'
   },
   loginText: {
     color: Colors.white,
@@ -18,8 +18,8 @@ export default StyleSheet.create({
     marginTop: '5%'
   },
   imgIcon: {
-    width:150,
-    height:150,
+    width: 150,
+    height: 150,
     alignSelf: 'center'
   },
   inputView: {
@@ -31,7 +31,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginTop: '5%'
   },
-  buttonVIew:{
-    marginTop:'10%'
+  buttonVIew: {
+    marginTop: '10%'
   }
 })

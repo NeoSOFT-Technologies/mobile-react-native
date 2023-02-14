@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import Colors from "../../utils/color";
+import { StyleSheet } from 'react-native'
+import Colors from '../../utils/color'
 
 export default StyleSheet.create({
   inputStyle: {
@@ -8,5 +8,5 @@ export default StyleSheet.create({
     borderBottomColor: Colors.white,
     borderBottomWidth: 1,
     paddingVertical: '4%'
-  },
+  }
 })

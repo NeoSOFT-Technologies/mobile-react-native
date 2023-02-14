@@ -7,7 +7,7 @@ export default StyleSheet.create({
     width: '80%',
     borderRadius: 15,
     justifyContent: 'center',
-    paddingVertical: '5%',
+    paddingVertical: '5%'
   },
   buttonText: {
     fontSize: 24,
