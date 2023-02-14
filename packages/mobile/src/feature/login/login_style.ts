@@ -37,7 +37,7 @@ export default StyleSheet.create({
     width: '80%',
     alignSelf: 'center',
     marginTop: '5%',
-    backgroundColor: Colors.secondarycolor,
+    backgroundColor: Colors.secondaryColor,
     alignItems: 'center',
     paddingVertical: '2%'
   },

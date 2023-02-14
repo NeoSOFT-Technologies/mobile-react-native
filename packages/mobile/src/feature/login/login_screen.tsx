@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { TouchableOpacity, View, Text, TextInput, Image, ActivityIndicator } from 'react-native'
 import Images from '../../assets/images'
 import Colors from '../../utils/color'
-import style from './loginstyle'
+import style from './login_style'
 import i18n from 'localisation'
 import { useDispatch, useSelector } from 'react-redux'
 import { userRequest } from 'presentation'
@@ -28,7 +28,7 @@ const LoginScreen = () => {
     <View style={style.mainView}>
       <View style={style.secView}>
         <Image source={Images.icon} style={style.imgIcon} />
-        <Text style={style.loginText}>{i18n.t('Log_in')}</Text>
+        <Text style={style.loginText}>{i18n.t('logIn')}</Text>
       </View>
       <View style={style.inputView}>
         <TextInput
@@ -56,7 +56,7 @@ const LoginScreen = () => {
         )}
       </TouchableOpacity>
       <TouchableOpacity>
-        <Text style={style.forgetpass}>{i18n.t('Forget_pass')}</Text>
+        <Text style={style.forgetpass}>{i18n.t('forgetPassword')}</Text>
       </TouchableOpacity>
     </View>
   )
