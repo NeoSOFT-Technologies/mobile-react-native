@@ -8,7 +8,7 @@ import Colors from '../../utils/color'
 export type AppButtonProps = {
   loadingState: boolean
   value: string
-  saveData?: () => void,
+  saveData?: () => void
 }
 
 export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
