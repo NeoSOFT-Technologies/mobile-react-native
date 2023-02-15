@@ -5,13 +5,13 @@ import i18n from 'localisation'
 import LinearGradient from 'react-native-linear-gradient'
 import Colors from '../../utils/color'
 
-export type APP_BUTTON_TYPE = {
+export type AppButtonProps = {
   loadingState: boolean
   value: string
-  saveData?: any
+  saveData?: () => void,
 }
 
-export const AppButton = ({ loadingState, value, saveData }: APP_BUTTON_TYPE) => {
+export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
   return (
     <LinearGradient colors={[Colors.mainColor, Colors.secondaryColor]} style={style.buttonView}>
       <TouchableOpacity onPress={saveData}>

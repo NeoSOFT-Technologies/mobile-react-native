@@ -29,7 +29,7 @@ export default StyleSheet.create({
   thirdView: {
     height: '25%',
     justifyContent: 'flex-end',
-    paddingBottom: 20
+    paddingBottom: 40
   },
   carStyle: {
     width: 350,
