@@ -22,4 +22,4 @@ i18n.use(initReactI18next).init({
 i18n.languages = ['en', 'hi']
 
 export { default } from 'i18next'
-export {Translation} from 'react-i18next'
+export { Translation } from 'react-i18next'

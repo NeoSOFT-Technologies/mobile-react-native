@@ -8,6 +8,6 @@ export default StyleSheet.create({
     borderBottomColor: Colors.white,
     borderBottomWidth: 1,
     paddingVertical: '4%',
-    fontFamily:'Poppins-Regular'
+    fontFamily: 'Poppins-Regular'
   }
 })

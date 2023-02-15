@@ -16,7 +16,7 @@ export default StyleSheet.create({
     fontSize: 24,
     alignSelf: 'center',
     marginTop: '5%',
-    fontFamily:'Poppins-Bold'
+    fontFamily: 'Poppins-Bold'
   },
   imgIcon: {
     width: 150,
@@ -31,7 +31,7 @@ export default StyleSheet.create({
     color: Colors.white,
     textAlign: 'center',
     marginTop: '5%',
-    fontFamily:'Poppins-Regular'
+    fontFamily: 'Poppins-Regular'
   },
   buttonVIew: {
     marginTop: '10%'

@@ -13,6 +13,6 @@ export default StyleSheet.create({
     fontSize: 24,
     color: Colors.white,
     textAlign: 'center',
-    fontFamily:'Poppins-Regular'
+    fontFamily: 'Poppins-Regular'
   }
 })
