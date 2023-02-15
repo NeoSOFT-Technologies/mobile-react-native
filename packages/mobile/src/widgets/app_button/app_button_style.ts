@@ -12,6 +12,7 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 24,
     color: Colors.white,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily:'Poppins-Regular'
   }
 })

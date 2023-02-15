@@ -15,7 +15,8 @@ export default StyleSheet.create({
     color: Colors.white,
     fontSize: 24,
     alignSelf: 'center',
-    marginTop: '5%'
+    marginTop: '5%',
+    fontFamily:'Poppins-Bold'
   },
   imgIcon: {
     width: 150,
@@ -29,7 +30,8 @@ export default StyleSheet.create({
   forgetpass: {
     color: Colors.white,
     textAlign: 'center',
-    marginTop: '5%'
+    marginTop: '5%',
+    fontFamily:'Poppins-Regular'
   },
   buttonVIew: {
     marginTop: '10%'

@@ -16,13 +16,15 @@ export default StyleSheet.create({
     fontSize: 40,
     color: Colors.white,
     textAlign: 'center',
-    marginTop: '30%'
+    marginTop: '30%',
+    fontFamily:'Poppins-Regular'
   },
   getText: {
     fontSize: 22,
     color: Colors.white,
     textAlign: 'center',
-    marginTop: '2%'
+    marginTop: '2%',
+    fontFamily:'Poppins-Regular'
   },
   thirdView: {
     height: '25%',

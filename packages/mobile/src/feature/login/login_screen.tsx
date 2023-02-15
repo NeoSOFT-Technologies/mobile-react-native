@@ -13,6 +13,7 @@ const LoginScreen = () => {
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
+  const [set,setset] = useState(false)
   const dispatch = useDispatch()
   const data = useSelector<any>(state => state.loginData)
   console.log(username)
