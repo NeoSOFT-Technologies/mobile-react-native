@@ -13,7 +13,7 @@ export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, boolean> 
   async execute(params?: LoginCheckParams): Promise<boolean> {
     if (params.verify) {
       return await this.userRepository.loginCheck({
-        userName : params.username
+        userName: params.username
       })
     }
   }
@@ -24,21 +24,19 @@ export class LoginCheckParams extends Params {
 
   constructor(params?: LoginCheckFirstParms) {
     super({})
-     this.username = params.username
+    this.username = params.username
   }
 
   verify(): boolean {
-    if(this.username){
-        if(this.username.trim.length > 0){
-            return true
-        }
-    }
-    else  return false
-    // (this.username?.trim.length > 0)?true:false ?? true 
+    if (this.username) {
+      if (this.username.trim.length > 0) {
+        return true
+      }
+    } else return false
+    // (this.username?.trim.length > 0)?true:false ?? true
 
-    
     // if(this.username?.trim.length > 0 ) return true
-    // else 
+    // else
   }
 }
 

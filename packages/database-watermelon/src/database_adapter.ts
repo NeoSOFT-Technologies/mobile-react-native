@@ -10,7 +10,7 @@ class DatabaseAdapter implements DatabasePort {
     this.databases = params.databases
   }
   userCheck(user: User): Promise<boolean> {
-    return this.databases.userDao.checkIfUserLoggedIn({email:user.email})
+    return this.databases.userDao.checkIfUserLoggedIn({ email: user.email })
   }
   yourFirstDatabaseCall(domain: MyDatabaseModel): Promise<MyDatabaseModel> {
     return this.databases.myModelDao.add(domain)

@@ -1,3 +1,3 @@
 export interface UserRepository {
-  loginCheck(params?: { userName: string}): Promise<boolean>
+  loginCheck(params?: { userName: string }): Promise<boolean>
 }

@@ -1,4 +1,4 @@
-import { TableName } from '@nozbe/watermelondb';
+import { TableName } from '@nozbe/watermelondb'
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { AppDatabase } from './../app_database'
 import { Collection, Database } from '@nozbe/watermelondb'

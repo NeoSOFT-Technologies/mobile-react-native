@@ -1,4 +1,4 @@
-import { UserDao } from './dao/user_dao';
+import { UserDao } from './dao/user_dao'
 import { Database, DatabaseAdapter, Model } from '@nozbe/watermelondb'
 import { Class } from '@nozbe/watermelondb/types'
 import { MyModelDao } from './dao/my_dao'

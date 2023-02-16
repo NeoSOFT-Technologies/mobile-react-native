@@ -1,25 +1,19 @@
-import { User } from './model/user_model';
+import { User } from './model/user_model'
 import { appSchema, tableSchema } from '@nozbe/watermelondb'
 
 export default appSchema({
   version: 1,
   tables: [
-    tableSchema(
-      {
+    tableSchema({
       name: 'MyTable',
       columns: [
         { name: 'title', type: 'string' },
         { name: 'body', type: 'string' }
       ]
-    }
-    ),
-    tableSchema(
-      {
-        name: User.table,
-        columns: [
-          { name: 'email', type: 'string' }
-        ]
-      },
-    )
+    }),
+    tableSchema({
+      name: User.table,
+      columns: [{ name: 'email', type: 'string' }]
+    })
   ]
 })
