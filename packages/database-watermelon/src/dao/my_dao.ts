@@ -4,6 +4,9 @@ import { AppDatabase } from './../app_database'
 import { BaseDao } from './base_dao'
 
 export class MyModelDao extends BaseDao<MyModel> {
+  tableName() {
+    return MyModel.table
+  }
   constructor(appdatabase: AppDatabase) {
     super(appdatabase)
   }
