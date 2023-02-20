@@ -26,8 +26,10 @@
   },
   "dependencies": {
     "data": "^0.0.1",
-    "di": "^0.0.1",
     "foundation": "^0.0.1",
-    "ts-retrofit": "^1.18.0"
+    "ts-retrofit": "^1.18.0",
+    "lodash": "^4.17.21",
+    "react-obsidian": "^0.0.36",
+    "reflect-metadata": "^0.1.13"
   }
 }

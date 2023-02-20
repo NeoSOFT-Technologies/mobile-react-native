@@ -1,2 +1,2 @@
-export * from 'react-obsidian'
-export * from 'reflect-metadata'
+// export * from 'react-obsidian'
+// export * from 'reflect-metadata'

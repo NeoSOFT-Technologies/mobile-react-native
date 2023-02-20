@@ -4,14 +4,17 @@ import { UserRepository } from './../../../domain/src/repository/user_repository
 import { DatabasePort } from '../out/database_port'
 
 export class UserRepositoryImpl implements UserRepository {
-  readonly database: DatabasePort
+  //readonly database: DatabasePort
   readonly network: NetworkPort
 
-  constructor(databasePort: DatabasePort, networkPort: NetworkPort) {
-    this.database = databasePort
-    this.network = networkPort
+  constructor(params: {databasePort?: DatabasePort, networkPort: NetworkPort}) {
+    //this.database = databasePort
+    this.network = params.networkPort
+    console.log("user_repo_epl")
   }
-  loginCheck(params?: { userName: string }): Promise<boolean> {
-    return this.database.userCheck({ email: params.userName })
+  async loginCheck(params?: { userName: string }): Promise<boolean> {
+    return true;
+    //return this.database.userCheck({ email: params.userName })
   }
 }
+

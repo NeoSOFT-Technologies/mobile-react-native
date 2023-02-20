@@ -15,7 +15,7 @@ export class DomainModule extends ObjectGraph {
 
   @Provides()
   providesLoginCheckUseCase(repo: UserRepository): LoginCheckUsecase {
-    alert('di,domain')
+    console.log('di,domain')
     return new LoginCheckUsecase(repo)
   }
 }

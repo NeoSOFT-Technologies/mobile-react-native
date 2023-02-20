@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "@jest/globals": "^29.4.2",
-    "jest": "^29.4.2"
+    "jest": "^29.4.2",
+    "lodash": "^4.17.21",
+    "react-obsidian": "^0.0.36",
+    "reflect-metadata": "^0.1.13"
   }
 }

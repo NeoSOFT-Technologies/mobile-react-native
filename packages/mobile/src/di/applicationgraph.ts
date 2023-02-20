@@ -1,6 +1,6 @@
-import { DomainModule } from './../../../domain/src/di/domain_module'
-import { Graph, ObjectGraph, Singleton } from 'di'
+import { Graph, ObjectGraph, Singleton } from 'react-obsidian'
+
 @Singleton()
-@Graph({ subgraphs: [DomainModule] })
+@Graph({ subgraphs: [] })
 class ApplicationGraph extends ObjectGraph {}
 export default ApplicationGraph
