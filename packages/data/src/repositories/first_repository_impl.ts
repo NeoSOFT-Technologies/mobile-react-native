@@ -4,11 +4,11 @@ import { DatabasePort } from './../out/database_port'
 import { FirstRepository } from 'domain-layer'
 
 export class FirstRepositoryImpl implements FirstRepository {
- // readonly database: DatabasePort
+  // readonly database: DatabasePort
   readonly network: NetworkPort
 
-  constructor(params:{databasePort?: DatabasePort, networkPort: NetworkPort}) {
-   // this.database = databasePort
+  constructor(params: { databasePort?: DatabasePort; networkPort: NetworkPort }) {
+    // this.database = databasePort
     this.network = params.networkPort
   }
 
@@ -22,6 +22,6 @@ export class FirstRepositoryImpl implements FirstRepository {
     //     body: 'extra data'
     //   })
     // )
-    return  true //status != null
+    return true //status != null
   }
 }

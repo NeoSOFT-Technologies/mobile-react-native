@@ -1,2 +1,2 @@
-import { DatabaseModule } from "./di/database_module";
-export {DatabaseModule}
+import { DatabaseModule } from './di/database_module'
+export { DatabaseModule }

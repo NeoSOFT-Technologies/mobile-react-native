@@ -1,4 +1,4 @@
-import { LoginCheckParams } from './../../../../domain/src/usecases/first/login_check_usecase';
+import { LoginCheckParams } from './../../../../domain/src/usecases/first/login_check_usecase'
 import { DomainModule } from './../../../../domain/src/di/domain_module'
 import { Inject, Injectable, injectComponent, Obsidian } from 'react-obsidian'
 import { YourFirstUseCase } from './../../../../domain/src/usecases/first/your_first_usecase'
@@ -7,7 +7,9 @@ import { REQUEST_USER } from './actions'
 import React from 'react'
 
 function* getUserSaga() {
-  const data = yield Obsidian.obtain(DomainModule).providesLoginCheckUseCase().execute(new LoginCheckParams({username:'moahn'}))
+  const data = yield Obsidian.obtain(DomainModule)
+    .providesLoginCheckUseCase()
+    .execute(new LoginCheckParams({ username: 'moahn' }))
   console.log(JSON.stringify(data))
   put({ type: REQUEST_USER.REQUEST_USER_SUCCESS, payload: data })
 }

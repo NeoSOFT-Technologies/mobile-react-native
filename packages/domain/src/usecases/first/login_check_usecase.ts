@@ -13,9 +13,9 @@ export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, boolean> 
   async execute(params?: LoginCheckParams): Promise<boolean> {
     console.log('execute')
 
-     console.log(`17 user${params?.username}`)
-     console.log('userrepo',this.userRepository)
-     if (params?.verify) {
+    console.log(`17 user${params?.username}`)
+    console.log('userrepo', this.userRepository)
+    if (params?.verify) {
       return await this.userRepository.loginCheck({
         userName: params.username
       })
@@ -26,7 +26,7 @@ export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, boolean> 
 export class LoginCheckParams extends Params {
   readonly username?: string
 
-  constructor(params?: {username:string}) {
+  constructor(params?: { username: string }) {
     super({})
     this.username = params.username
   }
@@ -45,5 +45,3 @@ export class LoginCheckParams extends Params {
     // else
   }
 }
-
-
