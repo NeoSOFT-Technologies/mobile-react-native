@@ -1,5 +1,5 @@
 import { FlavorConfig } from './../flavors/flavor_config'
-import { Singleton, Graph, ObjectGraph, Provides } from 'react-obsidian'
+import { Singleton, Graph, ObjectGraph, Provides } from 'di'
 
 @Singleton()
 @Graph()

@@ -27,8 +27,6 @@
   "dependencies": {
     "@nozbe/watermelondb": "^0.25.3",
     "data": "^0.0.1",
-    "lodash": "^4.17.21",
-    "react-obsidian": "^0.0.36",
-    "reflect-metadata": "^0.1.13"
+    "di": "^0.0.1"
   }
 }

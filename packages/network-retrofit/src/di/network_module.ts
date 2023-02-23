@@ -1,7 +1,7 @@
 import { FoundationModule } from './../../../foundation/src/di/foundation_module'
 import { ServiceBuilder } from 'ts-retrofit'
 
-import { Graph, ObjectGraph, Provides, Singleton } from 'react-obsidian'
+import { Graph, ObjectGraph, Provides, Singleton } from 'di'
 import RetrofitService from '../services/retrofit_service'
 import NetowrkAdapter from '../network_adapter'
 import { NetworkPort } from 'packages/data/src/data'
@@ -11,14 +11,13 @@ import { NetworkPort } from 'packages/data/src/data'
 export class NetworkModule extends ObjectGraph {
   @Provides()
   providesRetrofitNetworkService(provideApiURL: string): RetrofitService {
-    console.log('providesRetrofitNetworkService')
     return new ServiceBuilder().setEndpoint(provideApiURL).build(RetrofitService)
   }
 
   @Provides()
-  providesNetworkAdapter(retroService: RetrofitService): NetworkPort {
+  providesNetworkAdapter(providesRetrofitNetworkService: RetrofitService): NetworkPort {
     return new NetowrkAdapter({
-      retrofitService: retroService
+      retrofitService: providesRetrofitNetworkService
     })
   }
 }

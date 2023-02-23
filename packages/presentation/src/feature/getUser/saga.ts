@@ -1,6 +1,6 @@
 import { LoginCheckParams } from './../../../../domain/src/usecases/first/login_check_usecase'
 import { DomainModule } from './../../../../domain/src/di/domain_module'
-import { Inject, Injectable, injectComponent, Obsidian } from 'react-obsidian'
+import { Inject, Injectable, injectComponent, Obsidian } from 'di'
 import { YourFirstUseCase } from './../../../../domain/src/usecases/first/your_first_usecase'
 import { call, put } from 'redux-saga/effects'
 import { REQUEST_USER } from './actions'

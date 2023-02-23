@@ -1,4 +1,4 @@
-import { Graph, ObjectGraph, Singleton } from 'react-obsidian'
+import { Graph, ObjectGraph, Singleton } from 'di'
 
 @Singleton()
 @Graph({ subgraphs: [] })

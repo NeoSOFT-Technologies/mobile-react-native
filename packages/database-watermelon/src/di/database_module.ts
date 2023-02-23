@@ -1,7 +1,7 @@
 import { MyModel } from './../model/my_model'
 import { AppDatabase } from './../app_database'
 import SQLiteAdapter from '@nozbe/watermelondb/adapters/sqlite'
-import { Graph, Singleton, ObjectGraph, Provides } from 'react-obsidian'
+import { Graph, Singleton, ObjectGraph, Provides } from 'di'
 import migration from '../migration'
 import schema from '../schema'
 import DatabaseAdapter from '../database_adapter'
