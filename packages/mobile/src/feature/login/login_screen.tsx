@@ -6,6 +6,7 @@ import i18n from 'localisation'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
+import { userRequest } from 'presentation'
 
 const LoginScreen = () => {
   const [username, setUsername] = useState<string>('')
@@ -19,8 +20,9 @@ const LoginScreen = () => {
       email: username,
       password: password
     }
+    console.log('ha')
     // redux dispatch will call  here
-    // dispatch(userRequest(data))
+    dispatch(userRequest(data))
   }
   return (
     <View style={style.mainView}>

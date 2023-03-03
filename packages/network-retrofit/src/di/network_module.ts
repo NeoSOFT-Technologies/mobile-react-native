@@ -15,9 +15,9 @@ export class NetworkModule extends ObjectGraph {
   }
 
   @Provides()
-  providesNetworkAdapter(retroService: RetrofitService): NetworkPort {
+  providesNetworkAdapter(providesRetrofitNetworkService: RetrofitService): NetworkPort {
     return new NetowrkAdapter({
-      retrofitService: retroService
+      retrofitService: providesRetrofitNetworkService
     })
   }
 }
