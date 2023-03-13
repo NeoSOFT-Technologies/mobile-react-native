@@ -49,6 +49,10 @@ want to run the app locally, you will need to create a new file `app_secrets.ts`
 under [`src/secrets`](./packages/foundation/src/secrets). To help with setting up the secrets file, the template
 inclued a skeleton secrets file.
 
+## Step 3:
+  [Run Project](##RunProjects)
+
+
 # Architecture
 
 The architecture of the template facilitates separation of concerns and avoids tight coupling between it's various layers. The goal is to have the ability to make changes to individual layers without affecting the entire app. This architecture is an adaptation of concepts from ```Hexagonal Architecture``` & ```Clean Architecture```
@@ -228,13 +232,25 @@ $ pod install
 ```
 #### Start
 ```shell
-$ npx lerna run ios
+# $ cd /packages/mobile 
+# $ for dev build 
+$ scripts/run.sh ios dev
+# $ for dev qa 
+$ scripts/run.sh ios qa
+# $ for dev prod 
+$ scripts/run.sh ios prod
 ```
 
 ### 3-2. Mobile(Android)
 #### Start
 ```shell
-$ npx lerna run andorid 
+# $ cd /packages/mobile 
+# $ for dev build 
+$ scripts/run.sh android dev
+# $ for dev qa 
+$ scripts/run.sh android qa
+# $ for dev prod 
+$ scripts/run.sh android prod
 ```
 
 # Modules
