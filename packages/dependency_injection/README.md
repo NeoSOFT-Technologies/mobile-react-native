@@ -1,11 +1,12 @@
 # `dependency_injection`
 
-> TODO: description
+- A module that contains classes to achieve DI across multiple modules based on ``` injectable``` 
 
-## Usage
-
+If you want to get import di layer in another package 
+```sh
+  npx  lerna add di --scope=package_name
 ```
-const dependencyInjection = require('dependency_injection');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'di'
 ```

@@ -1,11 +1,17 @@
 # `presentation`
 
-> TODO: description
+-  redux toolkit is used for store creation 
+-  redux saga as a middleware 
 
-## Usage
-
+If you want to get import presentation layer in another package 
+```sh
+  npx  lerna add presentation --scope=package_name
 ```
-const presentation = require('presentation');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'presentation'
 ```
+## refrence 
+- https://redux-saga.js.org/docs/introduction/GettingStarted/
+- https://redux-toolkit.js.org/introduction/getting-started
+

@@ -1,11 +1,13 @@
 # `shared`
 
-> TODO: description
+- Common items for core module shared between domain & data.
 
-## Usage
 
+If you want to get import shared layer in another package 
+```sh
+  npx  lerna add shared --scope=package_name
 ```
-const shared = require('shared');
-
-// TODO: DEMONSTRATE API
+and 
+```sh
+ import {} from 'shared'
 ```

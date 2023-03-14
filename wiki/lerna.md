@@ -71,7 +71,6 @@ lerna add module-1
 lerna add babel-core
 ```
 
-
 The unfortunate limitation of the lerna add command is that it can only add one package at a time. Thus, if you need to install more dependencies at once, you can just add them to the package.json and then run the lerna bootstrap command
 
 ```lerna bootstrap``` installs and links all dependencies, both local and remote. When using ```lerna add```, the ```lerna bootstrap``` command is called automatically when adding any new packages.
@@ -87,6 +86,10 @@ npx lerna bootstrap
   lerna add package_name --scope=module_name
 # Add to all module 
    lerna add package_name 
+``
+```js
+#For example if you want to localisation package 
+ npx lerna add i18next --scope=localisation 
 ```
 
 # References
