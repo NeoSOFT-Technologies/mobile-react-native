@@ -11,7 +11,17 @@ import { NetworkPort } from 'packages/data/src/data'
 export class NetworkModule extends ObjectGraph {
   @Provides()
   providesRetrofitNetworkService(provideApiURL: string): RetrofitService {
-    return new ServiceBuilder().setEndpoint(provideApiURL).build(RetrofitService)
+    return new ServiceBuilder()
+      .setEndpoint(provideApiURL)
+      .setRequestInterceptors(req => {
+        console.log(req)
+        return req
+      })
+      .setResponseInterceptors(res => {
+        return res
+      })
+      .setStandalone(true)
+      .build(RetrofitService)
   }
 
   @Provides()
