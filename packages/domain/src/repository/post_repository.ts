@@ -1,5 +1,5 @@
-import { PostModel } from "shared";
+import { PostModel } from 'shared'
 
-export interface PostRepositorty{
-    getPostData() : Promise<PostModel>
+export interface PostRepositorty {
+  getPostData(): Promise<PostModel>
 }

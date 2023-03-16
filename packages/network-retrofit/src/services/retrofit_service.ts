@@ -1,5 +1,5 @@
 import { MyLoginResponse } from './../model/my_login_response'
-import { BasePath, BaseService, POST, Response,GET } from 'ts-retrofit'
+import { BasePath, BaseService, POST, Response, GET } from 'ts-retrofit'
 import { PostEntity } from '../model/post_entity'
 
 @BasePath('')
@@ -9,10 +9,9 @@ class RetrofitService extends BaseService {
     return <Response<MyLoginResponse>>{}
   }
   @GET('/posts')
-  async getPostData():Promise<Response<PostEntity>> {
+  async getPostData(): Promise<Response<PostEntity>> {
     return <Response<PostEntity>>{}
   }
-
 }
 
 export default RetrofitService

@@ -1,8 +1,8 @@
 class PostModel {
-    readonly title: string
+  readonly title: string
 
-    constructor(params:{title:string}){
-         this.title = params.title
-    }
+  constructor(params: { title: string }) {
+    this.title = params.title
+  }
 }
 export default PostModel

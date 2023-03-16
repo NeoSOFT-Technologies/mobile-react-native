@@ -11,14 +11,13 @@ class NetowrkAdapter implements NetworkPort {
   }
 
   async postNetworkCall(): Promise<PostModel> {
-   try{
-    const data = await this.retrofitService.getPostData()
-    console.log('15',data)
-    return data.data.transform()
-   }
-   catch(e){
-    console.log(e)
-   }
+    try {
+      const data = await this.retrofitService.getPostData()
+      console.log('15', data)
+      return data.data.transform()
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   async yourFirstNetworkCall(): Promise<MyFirstModel> {

@@ -1,9 +1,8 @@
-import { PostParams } from './../../../../domain/src/usecases/first/post_usecase';
+import { PostParams } from './../../../../domain/src/usecases/first/post_usecase'
 import { DomainModule } from './../../../../domain/src/di/domain_module'
 import { put } from 'redux-saga/effects'
-import { REQUEST_POST} from './action'
+import { REQUEST_POST } from './action'
 import { Obsidian } from 'di'
-
 
 function* postsaga() {
   console.log('saga')

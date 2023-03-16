@@ -6,4 +6,13 @@ import { UserRepository } from './repository/user_repository'
 import { PostRepositorty } from './repository/post_repository'
 import { PostParams } from './usecases/first/post_usecase'
 
-export { FirstRepository, YourFirstUseCaseParams, LoginCheckParams, LoginCheckUsecase, DomainModule, UserRepository, PostParams, PostRepositorty }
+export {
+  FirstRepository,
+  YourFirstUseCaseParams,
+  LoginCheckParams,
+  LoginCheckUsecase,
+  DomainModule,
+  UserRepository,
+  PostParams,
+  PostRepositorty
+}

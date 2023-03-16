@@ -22,7 +22,7 @@ const LoginScreen = () => {
     }
     console.log('ha')
     // redux dispatch will call  here
-     dispatch(PostRequest({}))
+    dispatch(PostRequest({}))
   }
   return (
     <View style={style.mainView}>

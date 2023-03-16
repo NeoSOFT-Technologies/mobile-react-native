@@ -1,11 +1,11 @@
-import { PostRepositorty } from './../repository/post_repository';
+import { PostRepositorty } from './../repository/post_repository'
 import { LoginCheckUsecase } from 'domain-layer'
 import { UserRepository } from './../repository/user_repository'
 import { DataModule } from 'data'
 import { FirstRepository } from '../repository/first_repository'
 import { YourFirstUseCase } from '../usecases/first/your_first_usecase'
 import { Graph, ObjectGraph, Provides, Singleton } from 'di'
-import { PostUsecase } from '../usecases/first/post_usecase';
+import { PostUsecase } from '../usecases/first/post_usecase'
 
 @Singleton()
 @Graph({ subgraphs: [DataModule] })
@@ -24,5 +24,4 @@ export class DomainModule extends ObjectGraph {
   postusecase(providepostrepo: PostRepositorty): PostUsecase {
     return new PostUsecase(providepostrepo)
   }
-  
 }

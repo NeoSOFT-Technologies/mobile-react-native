@@ -1,4 +1,4 @@
-import { PostRepositorty } from 'domain-layer';
+import { PostRepositorty } from 'domain-layer'
 import { NetworkModule } from './../../../network-retrofit/src/di/network_module'
 import { DatabaseModule } from 'database-watermelon'
 import { UserRepository } from 'domain-layer'
@@ -8,7 +8,7 @@ import { DatabasePort } from '../out/database_port'
 import { NetworkPort } from '../out/network_port'
 import { FirstRepository } from 'domain-layer'
 import { UserRepositoryImpl } from '../repositories/user_repository_impl'
-import { PostImpl } from '../repositories/post_repo_impl';
+import { PostImpl } from '../repositories/post_repo_impl'
 
 @Singleton()
 @Graph({

@@ -6,7 +6,7 @@ import userRequestReducer from './getUser/reducer'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = configureStore({
-  reducer: combineReducers({ loginData: userRequestReducer, postData:PostReducer }),
+  reducer: combineReducers({ loginData: userRequestReducer, postData: PostReducer }),
   middleware: [sagaMiddleware]
 })
 sagaMiddleware.run(rootSaga)
