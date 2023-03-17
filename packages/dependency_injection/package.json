@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "react-obsidian": "^0.0.36",
+    "react-obsidian": "^0.0.38",
     "reflect-metadata": "^0.1.13"
   }
 }
