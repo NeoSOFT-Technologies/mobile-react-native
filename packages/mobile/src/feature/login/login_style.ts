@@ -6,7 +6,6 @@ export default StyleSheet.create({
     backgroundColor: Colors.ternaryColor,
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    justifyContent: 'center'
   },
   secView: {
     width: '100%'
@@ -21,7 +20,8 @@ export default StyleSheet.create({
   imgIcon: {
     width: 150,
     height: 150,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginTop: '10%'
   },
   inputView: {
     alignItems: 'center',

@@ -16,7 +16,7 @@ export default StyleSheet.create({
     fontSize: 40,
     color: Colors.white,
     textAlign: 'center',
-    marginTop: '30%',
+    marginTop: '15%',
     fontFamily: 'Poppins-Regular'
   },
   getText: {

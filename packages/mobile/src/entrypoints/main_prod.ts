@@ -5,7 +5,7 @@ export function main() {
   FlavorConfig.initialize({
     flavor: Flavor.prod,
     values: new FlavorValues({
-      apiBaseUrl: 'https://jsonplaceholder.typicode.com',
+      apiBaseUrl: 'https://aparajitha.php-dev.in/api',
       databaseName: '',
       //secrets: AppSecrets.appSecretsDev,
       showLogs: true,
