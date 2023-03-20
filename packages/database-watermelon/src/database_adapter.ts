@@ -1,7 +1,7 @@
 import { AppDatabase } from './app_database'
 import { MyDatabaseModel } from './../../shared/src/model/mydatabasemodel'
 import { DatabasePort } from 'data'
-import { User } from 'packages/shared/src/shared'
+import { PostModel, User } from 'packages/shared/src/shared'
 
 class DatabaseAdapter implements DatabasePort {
   readonly databases: AppDatabase
@@ -9,8 +9,10 @@ class DatabaseAdapter implements DatabasePort {
   constructor(params: { databases: AppDatabase }) {
     this.databases = params.databases
   }
+  async postDatabaseCall(): Promise<PostModel> {
+    throw new Error('in database call')
+  }
   userCheck(user: User): Promise<boolean> {
-    console.log('database adapter')
     return this.databases.userDao.checkIfUserLoggedIn({ email: user.email })
   }
   yourFirstDatabaseCall(domain: MyDatabaseModel): Promise<MyDatabaseModel> {

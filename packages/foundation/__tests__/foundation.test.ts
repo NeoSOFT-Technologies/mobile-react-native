@@ -6,4 +6,3 @@ import { expect, test } from '@jest/globals'
 test('Hello from foundation', () => {
   expect(foundation()).toBe('Hello from foundation')
 })
-console.log('data tests passed')

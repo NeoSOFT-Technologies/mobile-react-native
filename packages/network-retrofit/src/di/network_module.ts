@@ -1,10 +1,10 @@
-import { FoundationModule } from './../../../foundation/src/di/foundation_module'
+import { FoundationModule } from 'foundation'
 import { ServiceBuilder } from 'ts-retrofit'
 
 import { Graph, ObjectGraph, Provides, Singleton } from 'di'
 import RetrofitService from '../services/retrofit_service'
 import NetowrkAdapter from '../network_adapter'
-import { NetworkPort } from 'packages/data/src/data'
+import { NetworkPort } from 'data'
 
 @Singleton()
 @Graph({ subgraphs: [FoundationModule] })
@@ -14,13 +14,8 @@ export class NetworkModule extends ObjectGraph {
     return new ServiceBuilder()
       .setEndpoint(provideApiURL)
       .setRequestInterceptors(req => {
-        console.log(req)
         return req
       })
-      .setResponseInterceptors(res => {
-        return res
-      })
-      .setStandalone(true)
       .build(RetrofitService)
   }
 

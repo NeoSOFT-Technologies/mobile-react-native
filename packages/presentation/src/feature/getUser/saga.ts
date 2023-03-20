@@ -6,11 +6,11 @@ import { call, put } from 'redux-saga/effects'
 import { REQUEST_USER } from './actions'
 import React from 'react'
 
-function* getUserSaga() {
+function* getUserSaga(action) {
   const data = yield Obsidian.obtain(DomainModule)
     .providesLoginCheckUseCase()
-    .execute(new LoginCheckParams({ username: 'moahn' }))
-  console.log(JSON.stringify(data))
-  put({ type: REQUEST_USER.REQUEST_USER_SUCCESS, payload: data })
+    .execute(new LoginCheckParams({ username: action?.params?.data?.email, password: action?.params?.data?.password }))
+  console.log(data)
+  yield put({ type: REQUEST_USER.REQUEST_USER_SUCCESS, payload: data })
 }
 export default getUserSaga

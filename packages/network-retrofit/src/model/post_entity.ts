@@ -3,12 +3,16 @@ import { BaseLayerDataTransformer } from './../../../shared/src/utils/tranformer
 import { MyFirstModel } from './../../../shared/src/model/myfirstmodel'
 
 export abstract class PostEntity implements BaseLayerDataTransformer<PostEntity, PostModel> {
-  title: string
+  id: number
+  created_by: number
+  name: string
+  description: string
+  status: number
 
   restore(data: PostModel): PostEntity {
     throw new Error('Method not implemented.')
   }
   transform(): PostModel {
-    return new PostModel({ title: this.title })
+    return new PostModel({ title: this.description })
   }
 }
