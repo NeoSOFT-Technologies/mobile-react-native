@@ -7,7 +7,7 @@ import i18n from 'localisation'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
-import {userRequest } from 'presentation'
+import { userRequest } from 'presentation'
 import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
 
@@ -17,24 +17,23 @@ const LoginScreen = () => {
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
-  const loginData:any = useSelector<any>(state => state.loginData)
+  const loginData: any = useSelector<any>(state => state.loginData)
   const saveData = () => {
     const data = {
       email: username,
       password: password
     }
-    dispatch(userRequest({data:data}))
+    dispatch(userRequest({ data: data }))
   }
 
-  useEffect(()=>{
-    if(loginData?.status == 1) setLodingState(true)
+  useEffect(() => {
+    if (loginData?.status == 1) setLodingState(true)
     else setLodingState(false)
-  },[loginData])
+  }, [loginData])
 
-  useEffect(()=>{
-    if(loginData?.status == 3) navigation.navigate(RoutePaths.dashboard)
-  },[loginData])
-
+  useEffect(() => {
+    if (loginData?.status == 3) navigation.navigate(RoutePaths.dashboard)
+  }, [loginData])
 
   return (
     <View style={style.mainView}>

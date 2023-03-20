@@ -5,7 +5,7 @@ export default StyleSheet.create({
   mainView: {
     backgroundColor: Colors.ternaryColor,
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
+    height: Dimensions.get('window').height
   },
   secView: {
     width: '100%'
