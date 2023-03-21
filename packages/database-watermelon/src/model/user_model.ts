@@ -1,18 +1,18 @@
-import { User } from 'shared'
-import { TableName } from '@nozbe/watermelondb'
+import { UserCheckModal } from 'shared'
 import { BaseDatabaseModel } from './database_base_model'
-import { text } from '@nozbe/watermelondb/decorators'
 import { BaseLayerDataTransformer } from 'packages/shared/src/shared'
 
-export class UserModel extends BaseDatabaseModel implements BaseLayerDataTransformer<UserModel, User> {
-  restore(data: User): UserModel {
+export class UserModel extends BaseDatabaseModel implements BaseLayerDataTransformer<UserModel, UserCheckModal> {
+   email:string 
+   password : string
+   token : string
+
+  restore(data: UserCheckModal): UserModel {
     throw new Error('Method not implemented.')
   }
-  transform(): User {
-    return new User({ email: this.email })
+  transform(): UserCheckModal {
+    return new UserCheckModal({password:this.password,username:this.email })
   }
+  static table = 'userDetails'
 
-  static table = 'User'
-
-  @text('email') email
 }

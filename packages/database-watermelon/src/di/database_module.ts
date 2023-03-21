@@ -7,9 +7,11 @@ import schema from '../schema'
 import DatabaseAdapter from '../database_adapter'
 import { DatabasePort } from 'data'
 import { FoundationModule } from 'foundation'
+import { UserModel } from '../model/user_model'
 
 @Singleton()
 @Graph({ subgraphs: [FoundationModule] })
+
 export class DatabaseModule extends ObjectGraph {
   @Provides()
   databaseservice(provideDatabaseName: string): SQLiteAdapter {
@@ -21,10 +23,10 @@ export class DatabaseModule extends ObjectGraph {
   }
 
   @Provides()
-  database(sql: SQLiteAdapter): AppDatabase {
+  database(databaseservice: SQLiteAdapter): AppDatabase {
     return new AppDatabase({
-      adapter: sql,
-      modelClasses: [MyModel]
+      adapter: databaseservice,
+      modelClasses: [MyModel,UserModel]
     })
   }
   @Provides()
