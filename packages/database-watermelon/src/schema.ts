@@ -15,8 +15,8 @@ export default appSchema({
       columns: [
         { name: 'email', type: 'string' },
         { name: 'password', type: 'string' },
-        { name: 'token', type: 'string' }       
-     ]
+        { name: 'token', type: 'string' }
+      ]
     })
   ]
 })

@@ -11,7 +11,6 @@ import { UserModel } from '../model/user_model'
 
 @Singleton()
 @Graph({ subgraphs: [FoundationModule] })
-
 export class DatabaseModule extends ObjectGraph {
   @Provides()
   databaseservice(provideDatabaseName: string): SQLiteAdapter {
@@ -26,7 +25,7 @@ export class DatabaseModule extends ObjectGraph {
   database(databaseservice: SQLiteAdapter): AppDatabase {
     return new AppDatabase({
       adapter: databaseservice,
-      modelClasses: [MyModel,UserModel]
+      modelClasses: [MyModel, UserModel]
     })
   }
   @Provides()

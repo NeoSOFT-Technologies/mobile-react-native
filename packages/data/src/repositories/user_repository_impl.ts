@@ -13,8 +13,12 @@ export class UserRepositoryImpl implements UserRepository {
   }
   async loginCheck(params?: { username: string; password: string }): Promise<UserCheckModal> {
     const loginResponse = await this.network.loginCall({ email: params.username, password: params.password })
-    if(loginResponse){
-     const databaseResponse = await this.database.userDatabaseCall({email:params.username,password:params.password,token:loginResponse})
+    if (loginResponse) {
+      const databaseResponse = await this.database.userDatabaseCall({
+        email: params.username,
+        password: params.password,
+        token: loginResponse
+      })
     }
     return loginResponse
   }

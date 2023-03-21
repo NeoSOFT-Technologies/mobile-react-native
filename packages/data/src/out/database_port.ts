@@ -1,4 +1,4 @@
-import { UserCheckModal } from 'shared';
+import { UserCheckModal } from 'shared'
 export interface DatabasePort {
-  userDatabaseCall(userData:UserCheckModal): Promise<UserCheckModal>
+  userDatabaseCall(userData: UserCheckModal): Promise<UserCheckModal>
 }

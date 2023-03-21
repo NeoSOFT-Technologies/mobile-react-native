@@ -8,17 +8,14 @@ import { DatabasePort } from '../data'
 
 @Singleton()
 @Graph({
-  subgraphs: [
-    DatabaseModule,
-    NetworkModule
-  ]
+  subgraphs: [DatabaseModule, NetworkModule]
 })
 export class DataModule extends ObjectGraph {
   constructor() {
     super()
   }
   @Provides()
-  provideUserRepository(providesNetworkAdapter: NetworkPort, databaseAdapter:DatabasePort): UserRepository {
+  provideUserRepository(providesNetworkAdapter: NetworkPort, databaseAdapter: DatabasePort): UserRepository {
     return new UserRepositoryImpl({ networkPort: providesNetworkAdapter, databasePort: databaseAdapter })
   }
 }
