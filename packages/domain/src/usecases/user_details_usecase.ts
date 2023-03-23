@@ -1,8 +1,7 @@
-import { UserDetailsModel } from "shared"
-import { UserRepository } from "../domain"
-import { FutureUseCase } from "./base/base_usecase"
-import { Params } from "./base/params"
-
+import { UserDetailsModel } from 'shared'
+import { UserRepository } from '../domain'
+import { FutureUseCase } from './base/base_usecase'
+import { Params } from './base/params'
 
 export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, boolean> {
   private readonly userRepository: UserRepository
@@ -13,7 +12,7 @@ export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, 
   async execute(params?: UserDetailsUseCaseParams): Promise<boolean> {
     if (params?.verify) {
       return await this.userRepository.getuserdata({
-       email:params.email
+        email: params.email
       })
     }
   }

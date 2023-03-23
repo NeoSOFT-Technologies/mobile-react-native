@@ -1,5 +1,5 @@
-import { Resource } from "../../presentation"
-import { REQUEST_USER_DATA } from "./action"
+import { Resource } from '../../presentation'
+import { REQUEST_USER_DATA } from './action'
 
 const UserDataRequestReduceer = (initialState = Resource.none, action) => {
   switch (action.type) {

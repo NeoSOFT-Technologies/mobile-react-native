@@ -10,6 +10,6 @@
   "uber": "Uber",
   "getThere": "Get There.",
   "getStarted": "Get Started",
-  "noInput" : "please enter data",
+  "noInput": "please enter data",
   "errorMessage": "please enter proper email and password"
 }

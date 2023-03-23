@@ -30,7 +30,7 @@ export class UserDao extends BaseDao<UserModel> {
         })
         return userData
       })
-      console.log('33',data)
+      console.log('33', data)
       return data
     } catch (e) {
       console.log(e)
@@ -38,10 +38,16 @@ export class UserDao extends BaseDao<UserModel> {
   }
 
   async getUserDetails(params: UserDetailsModel): Promise<boolean> {
-    console.log('41',params)
+    console.log('41', params)
     try {
-      const response = await this.attachedDatabase.collections.get(this.tablename).query(Q.where('email', Q.eq(params.email))).fetch()
-      const data = await this.attachedDatabase.collections.get(this.tablename).query(Q.unsafeSqlQuery(`select * from ${this.tablename}`)).fetchCount();
+      const response = await this.attachedDatabase.collections
+        .get(this.tablename)
+        .query(Q.where('email', Q.eq(params.email)))
+        .fetch()
+      const data = await this.attachedDatabase.collections
+        .get(this.tablename)
+        .query(Q.unsafeSqlQuery(`select * from ${this.tablename}`))
+        .fetchCount()
       const list = await this.attachedDatabase.collections.get(this.tablename).query().fetch()
       console.log('43', response)
       console.log('44', data)

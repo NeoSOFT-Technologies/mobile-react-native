@@ -9,18 +9,18 @@ class DatabaseAdapter implements DatabasePort {
   constructor(params: { databases: AppDatabase }) {
     this.databases = params.databases
   }
- 
+
   async userDatabaseCall(userData: UserCheckModal): Promise<UserCheckModal> {
-      return await this.databases.userDao.addUserData({
-        email: userData.email,
-        password: userData.password,
-        token: userData.token
-      })
+    return await this.databases.userDao.addUserData({
+      email: userData.email,
+      password: userData.password,
+      token: userData.token
+    })
   }
 
   async getUserDetails(data: UserDetailsModel): Promise<boolean> {
     return await this.databases.userDao.getUserDetails({
-      email:data.email
+      email: data.email
     })
   }
 }

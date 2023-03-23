@@ -10,9 +10,9 @@ import { userDataRequest } from 'presentation'
 const DashboardScreen = () => {
   const [lodingState, setLodingState] = useState(false)
   const dispatch = useDispatch()
-  useEffect(()=>{
-     dispatch(userDataRequest({}))
-  },[])
+  useEffect(() => {
+    dispatch(userDataRequest({}))
+  }, [])
   const saveData = () => {
     setLodingState(true)
     dispatch(userDataRequest({}))
