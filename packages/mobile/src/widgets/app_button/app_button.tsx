@@ -6,7 +6,7 @@ import LinearGradient from 'react-native-linear-gradient'
 import Colors from '../../utils/color'
 
 export type AppButtonProps = {
-  loadingState: boolean
+  loadingState?: boolean
   value: string
   saveData?: () => void
 }

@@ -1,8 +1,9 @@
+import { UserDetailsModel } from './../../../shared/src/model/userDetailsmodal'
 import { UserCheckModal } from 'shared'
 import { UserModel } from './../model/user_model'
 import { AppDatabase } from './../app_database'
 import { BaseDao } from './base_dao'
-import { Collection } from '@nozbe/watermelondb'
+import { Collection, Q } from '@nozbe/watermelondb'
 
 export class UserDao extends BaseDao<UserModel> {
   readonly tablename: string
@@ -16,10 +17,10 @@ export class UserDao extends BaseDao<UserModel> {
     super(appdatabase)
     this.tablename = this.tableName()
     this.databaseData = this.attachedDatabase.get(this.tablename)
-    console.log(this.databaseData)
   }
 
   async addUserData(params: UserCheckModal): Promise<UserModel> {
+    console.log('23', params)
     try {
       const data = await this.attachedDatabase.write(async () => {
         const userData = await this.databaseData.create((data: any) => {
@@ -29,7 +30,23 @@ export class UserDao extends BaseDao<UserModel> {
         })
         return userData
       })
+      console.log('33',data)
       return data
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  async getUserDetails(params: UserDetailsModel): Promise<boolean> {
+    console.log('41',params)
+    try {
+      const response = await this.attachedDatabase.collections.get(this.tablename).query(Q.where('email', Q.eq(params.email))).fetch()
+      const data = await this.attachedDatabase.collections.get(this.tablename).query(Q.unsafeSqlQuery(`select * from ${this.tablename}`)).fetchCount();
+      const list = await this.attachedDatabase.collections.get(this.tablename).query().fetch()
+      console.log('43', response)
+      console.log('44', data)
+      console.log('46', list)
+      return
     } catch (e) {
       console.log(e)
     }

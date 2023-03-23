@@ -17,7 +17,7 @@ class NetowrkAdapter implements NetworkPort {
       const loginResponse = await this.retrofitService.login({ email: user.email, password: user.password })
       return loginResponse.data.access_token
     } catch (e) {
-      return e?.message
+      return e.message
     }
   }
 }

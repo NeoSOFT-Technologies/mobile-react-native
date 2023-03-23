@@ -23,7 +23,12 @@ const LoginScreen = () => {
       email: username,
       password: password
     }
+    if(username == '' || password == ''){
+      alert(i18n.t('noInput'))
+    }
+    else{
     dispatch(userRequest({ data: data }))
+    }
   }
 
   useEffect(() => {
@@ -32,7 +37,9 @@ const LoginScreen = () => {
   }, [loginData])
 
   useEffect(() => {
-    if (loginData?.status == 3) navigation.navigate(RoutePaths.dashboard)
+    console.log(loginData)
+    // if (loginData?.status == 0) alert(i18n.t('errorMessage'))
+    if(loginData?.status == 3)  navigation.navigate(RoutePaths.dashboard)
   }, [loginData])
 
   return (
