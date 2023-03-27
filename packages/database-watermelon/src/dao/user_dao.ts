@@ -20,41 +20,29 @@ export class UserDao extends BaseDao<UserModel> {
   }
 
   async addUserData(params: UserCheckModal): Promise<UserModel> {
-    console.log('23', params)
     try {
       const data = await this.attachedDatabase.write(async () => {
-        const userData = await this.databaseData.create((data: any) => {
+        const userData = await this.databaseData.create((data: UserModel) => {
           data.email = params.email
           data.password = params.password
           data.token = params.token
         })
         return userData
       })
-      console.log('33', data)
       return data
     } catch (e) {
-      console.log(e)
+      return e
     }
   }
 
-  async getUserDetails(params: UserDetailsModel): Promise<boolean> {
-    console.log('41', params)
+  async getUserDetails(params: UserDetailsModel): Promise<UserModel> {
     try {
-      const response = await this.attachedDatabase.collections
-        .get(this.tablename)
-        .query(Q.where('email', Q.eq(params.email)))
-        .fetch()
-      const data = await this.attachedDatabase.collections
-        .get(this.tablename)
-        .query(Q.unsafeSqlQuery(`select * from ${this.tablename}`))
-        .fetchCount()
-      const list = await this.attachedDatabase.collections.get(this.tablename).query().fetch()
-      console.log('43', response)
-      console.log('44', data)
-      console.log('46', list)
-      return
+      const response:any = await this.databaseData.query(
+        Q.where("email", Q.like(params.email))
+       ).fetch()
+      return response[0]._raw.email
     } catch (e) {
-      console.log(e)
+     return e
     }
   }
 }

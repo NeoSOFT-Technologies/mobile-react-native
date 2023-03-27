@@ -13,7 +13,7 @@ export default StyleSheet.create({
     height: '75%'
   },
   uberText: {
-    fontSize: 40,
+    fontSize: 16,
     color: Colors.white,
     textAlign: 'center',
     marginTop: '15%',

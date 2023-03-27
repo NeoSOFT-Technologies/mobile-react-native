@@ -10,8 +10,7 @@ function* UserDataRequestSaga(action) {
   try {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserDetailsUseCase()
-      .execute(new UserDetailsUseCaseParams({ email: 'Systemadmin@aparajitha.com' }))
-    console.log(data)
+      .execute(new UserDetailsUseCaseParams({ email: action.params.email }))
     yield put({ type: REQUEST_USER_DATA.REQUEST_USER_DATA_SUCCESS, payload: data })
   } catch (e) {
     console.log(e)

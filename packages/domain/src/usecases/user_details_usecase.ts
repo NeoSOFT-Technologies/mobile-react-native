@@ -3,13 +3,13 @@ import { UserRepository } from '../domain'
 import { FutureUseCase } from './base/base_usecase'
 import { Params } from './base/params'
 
-export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, boolean> {
+export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, UserDetailsModel> {
   private readonly userRepository: UserRepository
   constructor(repo: UserRepository) {
     super()
     this.userRepository = repo
   }
-  async execute(params?: UserDetailsUseCaseParams): Promise<boolean> {
+  async execute(params?: UserDetailsUseCaseParams): Promise<UserDetailsModel> {
     if (params?.verify) {
       return await this.userRepository.getuserdata({
         email: params.email

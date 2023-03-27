@@ -18,15 +18,15 @@ export class UserRepositoryImpl implements UserRepository {
     if (loginResponse == message) {
       return loginResponse
     } else {
-      await this.database.userDatabaseCall({
+      const databaseResponse = await  this.database.userDatabaseCall({
         email: params.username,
         password: params.password,
         token: loginResponse
       })
-      return loginResponse
+      return databaseResponse;
     }
   }
-  async getuserdata(params?: { email: string }): Promise<boolean> {
+  async getuserdata(params?: { email: string }): Promise<UserDetailsModel> {
     return await this.database.getUserDetails({
       email: params.email
     })
