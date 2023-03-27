@@ -37,12 +37,10 @@ export class UserDao extends BaseDao<UserModel> {
 
   async getUserDetails(params: UserDetailsModel): Promise<UserModel> {
     try {
-      const response:any = await this.databaseData.query(
-        Q.where("email", Q.like(params.email))
-       ).fetch()
+      const response: any = await this.databaseData.query(Q.where('email', Q.like(params.email))).fetch()
       return response[0]._raw.email
     } catch (e) {
-     return e
+      return e
     }
   }
 }
