@@ -3,17 +3,17 @@ import { TouchableOpacity, View, Text, Image } from 'react-native'
 import Images from '../../assets/images'
 import style from './login_style'
 import i18n from 'localisation'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
 import { userRequest } from 'presentation'
 
-const LoginScreen = () => {
+const LoginScreen = (props) => {
+  const {children} = props
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
-  const data = useSelector<any>(state => state.loginData)
   const saveData = () => {
     setLodingState(true)
     const data = {

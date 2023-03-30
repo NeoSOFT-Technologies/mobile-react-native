@@ -2,6 +2,7 @@ import { TextInput } from 'react-native'
 import Colors from '../../utils/color'
 import style from './app_input_style'
 import i18n from 'localisation'
+import { useTheme } from '../../theme/themeprovider'
 export type AppInputProps = {
   placeholderText: string
   value: string
@@ -10,11 +11,12 @@ export type AppInputProps = {
 }
 
 export const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) => {
+  const {colors} = useTheme()
   return (
     <TextInput
       style={style.inputStyle}
       placeholder={i18n.t(placeholderText)}
-      placeholderTextColor={Colors.white}
+      placeholderTextColor={colors.text}
       value={value}
       onChangeText={(e: string) => setData(e)}
       secureTextEntry={secure}

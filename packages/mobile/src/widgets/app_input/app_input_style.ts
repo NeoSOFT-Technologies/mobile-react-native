@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native'
-import Colors from '../../utils/color'
+import { useTheme } from '../../theme/themeprovider'
 
+
+const {colors} = useTheme()
 export default StyleSheet.create({
   inputStyle: {
-    color: Colors.white,
+    color: colors.text,
     width: '80%',
-    borderBottomColor: Colors.white,
+    borderBottomColor: colors.text,
     borderBottomWidth: 1,
     paddingVertical: '4%',
     fontFamily: 'Poppins-Regular'
