@@ -8,8 +8,8 @@ import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
 import { userRequest } from 'presentation'
 
-const LoginScreen = (props) => {
-  const {children} = props
+const LoginScreen = props => {
+  const { children } = props
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)

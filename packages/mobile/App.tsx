@@ -24,7 +24,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <ThemeProvider>
-        <AppRouter />
+          <AppRouter />
         </ThemeProvider>
       </Provider>
     )

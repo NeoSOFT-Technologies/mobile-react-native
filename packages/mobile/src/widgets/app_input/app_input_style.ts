@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { useTheme } from '../../theme/themeprovider'
 
-
-const {colors} = useTheme()
+const { colors } = useTheme()
 export default StyleSheet.create({
   inputStyle: {
     color: colors.text,

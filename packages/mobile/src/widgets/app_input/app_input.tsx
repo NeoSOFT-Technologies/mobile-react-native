@@ -11,7 +11,7 @@ export type AppInputProps = {
 }
 
 export const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) => {
-  const {colors} = useTheme()
+  const { colors } = useTheme()
   return (
     <TextInput
       style={style.inputStyle}
