@@ -23,9 +23,9 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider>
-      <Provider store={store}>
+        <Provider store={store}>
           <AppRouter />
-      </Provider>
+        </Provider>
       </ThemeProvider>
     )
   }

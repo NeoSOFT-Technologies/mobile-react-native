@@ -15,7 +15,7 @@ export type AppButtonProps = {
 export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
   const { colors } = useTheme()
   return (
-     <LinearGradient colors={[colors.mainColor, colors.mainColor]} style={style.buttonView}>
+    <LinearGradient colors={[colors.mainColor, colors.mainColor]} style={style.buttonView}>
       <TouchableOpacity onPress={saveData}>
         {loadingState ? (
           <ActivityIndicator color={colors.text} />
@@ -23,6 +23,6 @@ export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => 
           <Text style={style.buttonText}>{i18n.t(value)}</Text>
         )}
       </TouchableOpacity>
-     </LinearGradient>
+    </LinearGradient>
   )
 }
