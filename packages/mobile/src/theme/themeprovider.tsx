@@ -14,13 +14,14 @@ export const ThemeProvider = props => {
   const [isDark, setIsDark] = React.useState(colorScheme === 'dark')
 
   React.useEffect(() => {
+    console.log(colorScheme)
+    console.log(isDark)
     setIsDark(colorScheme === 'dark')
   }, [colorScheme])
 
   const defaultTheme: any = {
     isDark,
     colors: isDark ? DarkTheme : LightTheme,
-    setScheme: scheme => setIsDark(scheme === 'dark')
   }
 
   return <ThemeContext.Provider value={defaultTheme}>{props.children}</ThemeContext.Provider>
