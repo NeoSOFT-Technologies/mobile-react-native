@@ -7,7 +7,6 @@ import React from 'react'
 import { REQUEST_USER_DATA } from './action'
 
 function* UserDataRequestSaga(action) {
-  
   try {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserDetailsUseCase()
