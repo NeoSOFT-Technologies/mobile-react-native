@@ -1,6 +1,6 @@
-import ColorConstant from './colors_constant'
+import ThemeConstant from './theme_constant'
 
-class DarkTheme implements ColorConstant {
+class DarkTheme implements ThemeConstant {
   text = '#000000'
   background = '#FFFFFF'
   mainColor = '#4048BF'

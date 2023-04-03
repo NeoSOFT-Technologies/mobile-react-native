@@ -1,6 +1,7 @@
-import ColorConstant from './colors_constant'
+import ThemeConstant from './theme_constant'
 
-class LightTheme implements ColorConstant {
+
+class LightTheme implements ThemeConstant {
   text = '#FFFFFF'
   background = '#0E1824'
   mainColor = '#4048BF'

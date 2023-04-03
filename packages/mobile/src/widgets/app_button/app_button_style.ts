@@ -2,7 +2,6 @@ import { useTheme } from './../../theme/themeprovider'
 import { StyleSheet } from 'react-native'
 import Colors from '../../utils/color'
 
-const { colors } = useTheme()
 export default StyleSheet.create({
   buttonView: {
     alignSelf: 'center',
@@ -13,7 +12,6 @@ export default StyleSheet.create({
   },
   buttonText: {
     fontSize: 24,
-    color: colors.text,
     textAlign: 'center',
     fontFamily: 'Poppins-Regular'
   }

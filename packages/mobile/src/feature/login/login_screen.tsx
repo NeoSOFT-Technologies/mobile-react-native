@@ -11,7 +11,6 @@ import { useTheme } from '../../theme/themeprovider'
 
 const LoginScreen = () => {
   const { colors, isDark } = useTheme()
-  console.log(colors)
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)

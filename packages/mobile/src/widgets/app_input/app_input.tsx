@@ -14,7 +14,7 @@ export const AppInput = ({ placeholderText, value, setData, secure }: AppInputPr
   const { colors } = useTheme()
   return (
     <TextInput
-      style={style.inputStyle}
+      style={[style.inputStyle, { color: colors.text, borderBottomColor: colors.text }]}
       placeholder={i18n.t(placeholderText)}
       placeholderTextColor={colors.text}
       value={value}

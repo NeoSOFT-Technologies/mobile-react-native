@@ -20,7 +20,7 @@ export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => 
         {loadingState ? (
           <ActivityIndicator color={colors.text} />
         ) : (
-          <Text style={style.buttonText}>{i18n.t(value)}</Text>
+          <Text style={[style.buttonText, { color: colors.text }]}>{i18n.t(value)}</Text>
         )}
       </TouchableOpacity>
     </LinearGradient>
