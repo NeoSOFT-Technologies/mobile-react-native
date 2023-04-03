@@ -1,4 +1,4 @@
-export class UserCheckModal {
+export class UserCheckModel {
   readonly email?: string
   readonly password?: string
   readonly token?: any

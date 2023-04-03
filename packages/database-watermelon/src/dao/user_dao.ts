@@ -1,5 +1,5 @@
 import { UserDetailsModel } from './../../../shared/src/model/userDetailsmodal'
-import { UserCheckModal } from 'shared'
+import { UserCheckModel } from 'shared'
 import { UserModel } from './../model/user_model'
 import { AppDatabase } from './../app_database'
 import { BaseDao } from './base_dao'
@@ -19,7 +19,7 @@ export class UserDao extends BaseDao<UserModel> {
     this.databaseData = this.attachedDatabase.get(this.tablename)
   }
 
-  async addUserData(params: UserCheckModal): Promise<UserModel> {
+  async addUserData(params: UserCheckModel): Promise<UserModel> {
     try {
       const data = await this.attachedDatabase.write(async () => {
         const userData = await this.databaseData.create((data: UserModel) => {

@@ -10,6 +10,7 @@ import { AppInput } from '../../widgets/app_input/app_input'
 import { userRequest } from 'presentation'
 import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
+import Status from '../../utils/status'
 
 const LoginScreen = () => {
   const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
@@ -31,12 +32,12 @@ const LoginScreen = () => {
   }
 
   useEffect(() => {
-    if (loginData?.status == 1) setLodingState(true)
+    if (loginData?.status == Status.loding) setLodingState(true)
     else setLodingState(false)
   }, [loginData])
 
   useEffect(() => {
-    if (loginData?.status == 3) navigation.navigate(RoutePaths.dashboard)
+    if (loginData?.status == Status.success) navigation.navigate(RoutePaths.dashboard)
   }, [loginData])
 
   return (

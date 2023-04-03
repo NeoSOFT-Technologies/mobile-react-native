@@ -1,6 +1,6 @@
-import { MyFirstModel, UserCheckModal } from 'shared'
+import { MyFirstModel, UserCheckModel } from 'shared'
 
 export interface NetworkPort {
   yourFirstNetworkCall(): Promise<MyFirstModel>
-  loginCall(user: UserCheckModal): Promise<UserCheckModal>
+  loginCall(user: UserCheckModel): Promise<UserCheckModel>
 }

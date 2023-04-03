@@ -1,6 +1,6 @@
 import { UserDetailsModel } from './../../../shared/src/model/userDetailsmodal'
-import { UserCheckModal } from 'shared'
+import { UserCheckModel } from 'shared'
 export interface DatabasePort {
-  userDatabaseCall(userData: UserCheckModal): Promise<UserCheckModal>
+  userDatabaseCall(userData: UserCheckModel): Promise<UserCheckModel>
   getUserDetails(data: UserDetailsModel): Promise<UserDetailsModel>
 }

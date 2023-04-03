@@ -1,6 +1,6 @@
 import { AppDatabase } from './app_database'
 import { DatabasePort } from 'data'
-import { UserCheckModal, UserDetailsModel } from 'packages/shared/src/shared'
+import { UserCheckModel, UserDetailsModel } from 'packages/shared/src/shared'
 import { UserModel } from './model/user_model'
 
 class DatabaseAdapter implements DatabasePort {
@@ -10,7 +10,7 @@ class DatabaseAdapter implements DatabasePort {
     this.databases = params.databases
   }
 
-  async userDatabaseCall(userData: UserCheckModal): Promise<UserCheckModal> {
+  async userDatabaseCall(userData: UserCheckModel): Promise<UserCheckModel> {
     return await this.databases.userDao.addUserData({
       email: userData.email,
       password: userData.password,

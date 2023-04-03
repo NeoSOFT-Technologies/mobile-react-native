@@ -1,15 +1,15 @@
-import { UserCheckModal } from 'shared'
+import { UserCheckModel } from 'shared'
 import { UserRepository } from '../../repository/user_repository'
 import { FutureUseCase } from '../base/base_usecase'
 import { Params } from '../base/params'
 
-export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, UserCheckModal> {
+export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, UserCheckModel> {
   private readonly userRepository: UserRepository
   constructor(repo: UserRepository) {
     super()
     this.userRepository = repo
   }
-  async execute(params?: LoginCheckParams): Promise<UserCheckModal> {
+  async execute(params?: LoginCheckParams): Promise<UserCheckModel> {
     if (params?.verify) {
       return await this.userRepository.loginCheck({
         username: params.username,

@@ -1,6 +1,6 @@
 import RetrofitService from './services/retrofit_service'
 import { NetworkPort } from 'data'
-import { MyFirstModel, UserCheckModal } from 'packages/shared/src/shared'
+import { MyFirstModel, UserCheckModel } from 'packages/shared/src/shared'
 
 class NetowrkAdapter implements NetworkPort {
   readonly retrofitService: RetrofitService
@@ -12,7 +12,7 @@ class NetowrkAdapter implements NetworkPort {
     throw new Error('Method not implemented.')
   }
 
-  async loginCall(user: UserCheckModal): Promise<UserCheckModal> {
+  async loginCall(user: UserCheckModel): Promise<UserCheckModel> {
     try {
       const loginResponse = await this.retrofitService.login({ email: user.email, password: user.password })
       return loginResponse.data.access_token
