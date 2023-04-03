@@ -12,7 +12,6 @@ export default StyleSheet.create({
     width: '100%'
   },
   loginText: {
-
     fontSize: 24,
     alignSelf: 'center',
     marginTop: '5%',
