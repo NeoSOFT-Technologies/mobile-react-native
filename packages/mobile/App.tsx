@@ -22,11 +22,11 @@ class App extends Component {
 
   render() {
     return (
+      <ThemeProvider>
       <Provider store={store}>
-        <ThemeProvider>
           <AppRouter />
-        </ThemeProvider>
       </Provider>
+      </ThemeProvider>
     )
   }
 }
