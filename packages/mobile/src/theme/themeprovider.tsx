@@ -2,13 +2,11 @@ import * as React from 'react'
 import { useColorScheme } from 'react-native'
 import DarkTheme from './darktheme'
 import LightTheme from './lighttheme'
+import ThemeBase from './theme_base'
 
 const lightTheme = new LightTheme()
 const darkTheme = new DarkTheme()
-export const ThemeContext = React.createContext({
-  isDark: false,
-  colors: lightTheme
-})
+export const ThemeContext = React.createContext(new ThemeBase({ isdark: false, colors: lightTheme }))
 
 export const ThemeProvider = props => {
   const colorScheme = useColorScheme()
