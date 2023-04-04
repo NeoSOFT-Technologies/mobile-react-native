@@ -1,4 +1,3 @@
-
 async function SafeCall<T>(apicall: Promise<T>): Promise<T> {
   try {
     const loginResponse = await apicall
