@@ -12,9 +12,9 @@ export class UserRepositoryImpl implements UserRepository {
     this.network = params.networkPort
   }
 
-  async loginCheck(params?: { email: string, password: string }): Promise<boolean> {
+  async loginCheck(params?: { email: string; password: string }): Promise<boolean> {
     const usermodel: any = await this.network.loginCall({ email: params.email, password: params.password })
-    if (usermodel ==  'Request failed with status code 403') {
+    if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
       const databaseResponse = await this.database.userDatabaseCall({

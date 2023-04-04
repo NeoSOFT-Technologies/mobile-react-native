@@ -9,9 +9,7 @@ function* getUserSaga(action) {
   try {
     const data: any = yield Obsidian.obtain(DomainModule)
       .providesLoginCheckUseCase()
-      .execute(
-        new LoginCheckParams({ email: action?.params?.data?.email, password: action?.params?.data?.password })
-      )
+      .execute(new LoginCheckParams({ email: action?.params?.data?.email, password: action?.params?.data?.password }))
     if (data == mesage) {
       yield put({ type: REQUEST_USER.REQUEST_USER_FAILURE, payload: data })
     } else {

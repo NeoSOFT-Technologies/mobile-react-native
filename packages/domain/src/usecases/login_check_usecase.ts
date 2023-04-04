@@ -21,7 +21,7 @@ export class LoginCheckParams extends Params {
   readonly email?: string
   readonly password?: string
 
-  constructor(params?: { email: string, password: string }) {
+  constructor(params?: { email: string; password: string }) {
     super({})
     this.email = params.email
     this.password = params.password

@@ -1,5 +1,5 @@
 import { BaseLayerDataTransformer } from './../../../shared/src/utils/tranformer/base_layer_transformer'
-import {UserModel } from 'shared'
+import { UserModel } from 'shared'
 
 export abstract class MyLoginResponse implements BaseLayerDataTransformer<MyLoginResponse, UserModel> {
   access_token: any

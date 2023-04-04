@@ -17,7 +17,7 @@ export class UserDao extends BaseDao<DbUserModel> {
     this.databaseData = this.attachedDatabase.get(this.tableName())
   }
 
-  async addUserData(params?: { email: string, password: string,token:string }): Promise<UserModel> {
+  async addUserData(params?: { email: string; password: string; token: string }): Promise<UserModel> {
     return safeDbCall(
       this.attachedDatabase.write(async () => {
         const userData = await this.databaseData.create((data: UserModel) => {
