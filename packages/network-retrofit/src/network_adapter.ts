@@ -2,6 +2,8 @@ import RetrofitService from './services/retrofit_service'
 import { NetworkPort } from 'data'
 import { MyFirstModel, UserCheckModel } from 'packages/shared/src/shared'
 import SafeApiCall from './safe_api_call'
+import { MyLoginResponse } from './model/my_login_response'
+import { Response } from 'ts-retrofit'
 
 class NetowrkAdapter implements NetworkPort {
   readonly retrofitService: RetrofitService
@@ -13,7 +15,9 @@ class NetowrkAdapter implements NetworkPort {
   }
 
   async loginCall(user: UserCheckModel): Promise<UserCheckModel> {
-    return SafeApiCall(this.retrofitService.login({ email: user.email, password: user.password }))
+   const data = await SafeApiCall(this.retrofitService.login({ email: user.email, password: user.password }))
+    console.log(data.data)
+    return data.data.access_token
   }
 }
 

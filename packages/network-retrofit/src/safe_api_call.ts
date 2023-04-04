@@ -1,9 +1,8 @@
-import { UserCheckModel } from 'shared'
-import RetrofitService from './services/retrofit_service'
-async function SafeCall(apicall: any) {
+
+async function SafeCall<T>(apicall: Promise<T>): Promise<T> {
   try {
     const loginResponse = await apicall
-    console.log(loginResponse)
+    return loginResponse
   } catch (e) {
     return e.message
   }
