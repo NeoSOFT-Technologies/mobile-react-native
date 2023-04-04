@@ -1,7 +1,7 @@
-import { UserCheckModel, UserDetailsModel } from 'shared'
 import { NetworkPort } from './../out/network_port'
 import { UserRepository } from './../../../domain/src/repository/user_repository'
 import { DatabasePort } from '../out/database_port'
+import { UserModel } from 'shared'
 
 export class UserRepositoryImpl implements UserRepository {
   readonly database: DatabasePort
@@ -12,21 +12,20 @@ export class UserRepositoryImpl implements UserRepository {
     this.network = params.networkPort
   }
 
-  async loginCheck(params?: { username: string; password: string }): Promise<UserCheckModel> {
-    const message = 'Request failed with status code 403'
-    const loginResponse: any = await this.network.loginCall({ email: params.username, password: params.password })
-    if (loginResponse == message) {
-      return loginResponse
+  async loginCheck(params?: { email: string, password: string }): Promise<boolean> {
+    const usermodel: any = await this.network.loginCall({ email: params.email, password: params.password })
+    if (usermodel ==  'Request failed with status code 403') {
+      return usermodel
     } else {
       const databaseResponse = await this.database.userDatabaseCall({
-        email: params.username,
+        email: params.email,
         password: params.password,
-        token: loginResponse
+        token: usermodel
       })
       return databaseResponse
     }
   }
-  async getuserdata(params?: { email: string }): Promise<UserDetailsModel> {
+  async getuserdata(params?: { email: string }): Promise<UserModel> {
     return await this.database.getUserDetails({
       email: params.email
     })

@@ -1,5 +1,6 @@
-import { UserCheckModel, UserDetailsModel } from 'shared'
+import { UserModel } from "shared";
+
 export interface UserRepository {
-  loginCheck(params?: { username: string; password: string }): Promise<UserCheckModel>
-  getuserdata(params?: { email: string }): Promise<UserDetailsModel>
+  loginCheck(params?: { email: string, password: string }): Promise<boolean>
+  getuserdata(params?: { email: string }): Promise<UserModel>
 }

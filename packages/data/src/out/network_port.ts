@@ -1,6 +1,5 @@
-import { MyFirstModel, UserCheckModel } from 'shared'
+import {UserModel } from 'shared'
 
 export interface NetworkPort {
-  yourFirstNetworkCall(): Promise<MyFirstModel>
-  loginCall(user: UserCheckModel): Promise<UserCheckModel>
+  loginCall(params?: { email: string, password: string }): Promise<UserModel>
 }

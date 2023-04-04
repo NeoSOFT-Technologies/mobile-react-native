@@ -1,6 +1,6 @@
-import { UserDetailsModel } from './../../../shared/src/model/userDetailsmodal'
-import { UserCheckModel } from 'shared'
+import { UserModel } from "shared"
+
 export interface DatabasePort {
-  userDatabaseCall(userData: UserCheckModel): Promise<UserCheckModel>
-  getUserDetails(data: UserDetailsModel): Promise<UserDetailsModel>
+  userDatabaseCall(params?: { email: string, password: string,token:string }): Promise<boolean>
+  getUserDetails(data: UserModel): Promise<UserModel>
 }

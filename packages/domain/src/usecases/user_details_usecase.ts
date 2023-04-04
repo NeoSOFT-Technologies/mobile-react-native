@@ -1,15 +1,15 @@
-import { UserDetailsModel } from 'shared'
+import { UserModel } from 'packages/shared/src/shared'
 import { UserRepository } from '../domain'
 import { FutureUseCase } from './base/base_usecase'
 import { Params } from './base/params'
 
-export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, UserDetailsModel> {
+export class UserDetailsUseCase extends FutureUseCase<UserDetailsUseCaseParams, UserModel> {
   private readonly userRepository: UserRepository
   constructor(repo: UserRepository) {
     super()
     this.userRepository = repo
   }
-  async execute(params?: UserDetailsUseCaseParams): Promise<UserDetailsModel> {
+  async execute(params?: UserDetailsUseCaseParams): Promise<UserModel> {
     if (params?.verify) {
       return await this.userRepository.getuserdata({
         email: params.email

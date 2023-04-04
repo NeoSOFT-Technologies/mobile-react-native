@@ -9,11 +9,10 @@ import { userDataRequest } from 'presentation'
 
 const DashboardScreen = () => {
   const [lodingState, setLodingState] = useState(false)
-  const email: any = useSelector((state: any) => state?.loginData?.data?.payload)
   const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(userDataRequest({ email }))
+    dispatch(userDataRequest({}))
   }, [])
   const saveData = () => {
     setLodingState(true)

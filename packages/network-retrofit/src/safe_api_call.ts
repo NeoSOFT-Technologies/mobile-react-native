@@ -1,4 +1,4 @@
-async function SafeCall<T>(apicall: Promise<T>): Promise<T> {
+async function safeCall<T>(apicall: Promise<T>): Promise<T> {
   try {
     const loginResponse = await apicall
     return loginResponse
@@ -7,4 +7,4 @@ async function SafeCall<T>(apicall: Promise<T>): Promise<T> {
   }
 }
 
-export default SafeCall
+export default safeCall

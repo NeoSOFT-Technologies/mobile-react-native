@@ -1,4 +1,4 @@
-async function SafeDbCall<T>(dbcall: Promise<T>): Promise<T> {
+async function safeDbCall<T>(dbcall: Promise<T>): Promise<T> {
   try {
     const databaseResponse = await dbcall
     return databaseResponse
@@ -7,4 +7,4 @@ async function SafeDbCall<T>(dbcall: Promise<T>): Promise<T> {
   }
 }
 
-export default SafeDbCall
+export default safeDbCall

@@ -1,5 +1,4 @@
 import { UserDetailsUseCaseParams } from './../../../../domain/src/usecases/user_details_usecase'
-import { LoginCheckParams } from 'domain-layer/src/usecases/first/login_check_usecase'
 import { DomainModule } from 'domain-layer/src/di/domain_module'
 import { Obsidian } from 'di'
 import { call, put } from 'redux-saga/effects'

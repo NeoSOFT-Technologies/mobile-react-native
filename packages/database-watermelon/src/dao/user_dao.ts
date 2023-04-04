@@ -1,27 +1,24 @@
-import { UserDetailsModel } from './../../../shared/src/model/userDetailsmodal'
-import { UserCheckModel } from 'shared'
-import { UserModel } from './../model/user_model'
+import { DbUserModel } from './../model/user_model'
 import { AppDatabase } from './../app_database'
 import { BaseDao } from './base_dao'
 import { Collection, Q } from '@nozbe/watermelondb'
-import SafeDbCall from '../safe_db_call'
+import { UserModel } from 'packages/shared/src/shared'
+import safeDbCall from '../safe_db_call'
 
-export class UserDao extends BaseDao<UserModel> {
-  readonly tablename: string
-  readonly databaseData: Collection<UserModel>
+export class UserDao extends BaseDao<DbUserModel> {
+  readonly databaseData: Collection<DbUserModel>
 
   tableName(): string {
-    return UserModel.table
+    return DbUserModel.table
   }
 
   constructor(appdatabase: AppDatabase) {
     super(appdatabase)
-    this.tablename = this.tableName()
-    this.databaseData = this.attachedDatabase.get(this.tablename)
+    this.databaseData = this.attachedDatabase.get(this.tableName())
   }
 
-  async addUserData(params: UserCheckModel): Promise<UserModel> {
-    return SafeDbCall(
+  async addUserData(params?: { email: string, password: string,token:string }): Promise<UserModel> {
+    return safeDbCall(
       this.attachedDatabase.write(async () => {
         const userData = await this.databaseData.create((data: UserModel) => {
           data.email = params.email
@@ -33,8 +30,8 @@ export class UserDao extends BaseDao<UserModel> {
     )
   }
 
-  async getUserDetails(params: UserDetailsModel): Promise<UserModel> {
-    const response: any = SafeDbCall(this.databaseData.query(Q.where('email', Q.like(params.email))).fetch())
+  async getUserDetails(params: UserModel): Promise<DbUserModel> {
+    const response: any = await safeDbCall(this.databaseData.query().fetch())
     return response[0]._raw.email
   }
 }
