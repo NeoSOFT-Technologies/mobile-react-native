@@ -9,7 +9,7 @@ function* UserDataPresentSaga(action) {
   try {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserDetailsUseCase()
-      .execute(new UserDetailsUseCaseParams({ email: action.params.email }))
+      .execute(new UserDetailsUseCaseParams({email:''}))
     yield put({ type: REQUEST_USER_PRESENT_DATA.REQUEST_USER_DATA_PRESENT_SUCCESS, payload: data })
   } catch (e) {
     console.log(e)

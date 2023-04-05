@@ -32,6 +32,6 @@ export class UserDao extends BaseDao<DbUserModel> {
 
   async getUser(data: { email: string }): Promise<DbUserModel> {
     const response: any = await safeDbCall(this.databaseData.query().fetch())
-    return !response ? [] : response[0]?._raw?.email
+    return  response[0]?._raw?.email
   }
 }

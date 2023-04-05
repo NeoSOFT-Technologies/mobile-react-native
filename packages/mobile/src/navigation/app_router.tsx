@@ -6,14 +6,14 @@ import LoginScreen from '../feature/login/login_screen'
 import Screen from '../screen'
 import RoutePaths from './router_path'
 import { useDispatch, useSelector } from 'react-redux'
-import { userDataRequest } from 'presentation'
+import { UserPresentRequest } from 'presentation'
 
 const AppRouter = () => {
   const Stack = createNativeStackNavigator()
-  const databaseemail: any = useSelector((state: any) => state?.userPresent?.data?.payload)
+  let databaseemail: any = useSelector((state: any) => state?.userPresent?.data?.payload)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(userDataRequest({}))
+    dispatch(UserPresentRequest({}))
   }, [])
   return (
     <NavigationContainer>
@@ -22,11 +22,8 @@ const AppRouter = () => {
           headerShown: false
         }}
       >
-        {databaseemail != undefined ? (
-          <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
-        ) : (
-          <Stack.Screen name={RoutePaths.login} component={LoginScreen} />
-        )}
+        {databaseemail == undefined &&
+          <Stack.Screen name={RoutePaths.login} component={LoginScreen} />}
         <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>

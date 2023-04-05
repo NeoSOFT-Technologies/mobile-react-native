@@ -26,7 +26,6 @@ const LoginScreen = () => {
     }
     dispatch(userRequest({ data: data }))
   }
-  console.log(loginData)
   useEffect(() => {
     if (loginData?.status == Status.loading) setLodingState(true)
     else setLodingState(false)
