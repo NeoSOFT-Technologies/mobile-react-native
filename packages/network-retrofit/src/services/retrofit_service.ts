@@ -5,7 +5,7 @@ import { UserModel } from 'shared'
 @BasePath('')
 class RetrofitService extends BaseService {
   @POST('/login')
-  async login(@Body item: UserModel): Promise<Response<MyLoginResponse>> {
+  async login(@Body item: { email: string; password: string }): Promise<Response<MyLoginResponse>> {
     return <Response<MyLoginResponse>>{}
   }
 }
