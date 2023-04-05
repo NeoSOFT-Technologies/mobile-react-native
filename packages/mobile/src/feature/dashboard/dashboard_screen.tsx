@@ -10,7 +10,6 @@ import { userDataRequest } from 'presentation'
 
 const DashboardScreen = () => {
   const { colors, isDark } = useTheme()
-  console.log(isDark)
   const [lodingState, setLodingState] = useState(false)
   const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
   const dispatch = useDispatch()
