@@ -1,3 +1,3 @@
-import NetowrkAdapter from './network_adapter'
+import NetworkAdapter from './network_adapter'
 import { NetworkModule } from './di/network_module'
-export default { NetowrkAdapter, NetworkModule }
+export default { NetworkAdapter, NetworkModule }

@@ -1,20 +1,37 @@
-import { UserModel } from './../model/user_model'
-import { MyDatabaseModel } from 'packages/shared/src/model/mydatabasemodel'
-import { MyModel } from '../model/my_model'
+import { DbUserModel } from './../model/user_model'
 import { AppDatabase } from './../app_database'
 import { BaseDao } from './base_dao'
-import { Q } from '@nozbe/watermelondb'
+import { Collection, Q } from '@nozbe/watermelondb'
+import { UserModel } from 'packages/shared/src/shared'
+import safeDbCall from '../safe_db_call'
 
-export class UserDao extends BaseDao<UserModel> {
-  tableName() {
-    return UserModel.table
+export class UserDao extends BaseDao<DbUserModel> {
+  readonly databaseData: Collection<DbUserModel>
+
+  tableName(): string {
+    return DbUserModel.table
   }
 
   constructor(appdatabase: AppDatabase) {
     super(appdatabase)
+    this.databaseData = this.attachedDatabase.get(this.tableName())
   }
 
-  async checkIfUserLoggedIn(params: { email: string }): Promise<boolean> {
-    return (await this.getTable().query().fetchCount()) > 0
+  async insertOrUpdate(params?: { email: string; password: string; token: string }): Promise<DbUserModel> {
+    return safeDbCall(
+      this.attachedDatabase.write(async () => {
+        const userData = await this.databaseData.create((data: UserModel) => {
+          data.email = params.email
+          data.password = params.password
+          data.access_token = params.token
+        })
+        return userData
+      })
+    )
+  }
+
+  async getUser(data: { email: string }): Promise<DbUserModel> {
+    const response: any = await safeDbCall(this.databaseData.query().fetch())
+    return !response ? [] : response[0]?._raw?.email
   }
 }

@@ -4,7 +4,6 @@ module.exports = {
   plugins: [
     'react-obsidian/dist/transformers/babel-plugin-obsidian',
     ['@babel/plugin-proposal-decorators', { legacy: true }],
-    ['@babel/plugin-proposal-class-properties', { legacy: true }],
     'babel-plugin-parameter-decorator'
   ]
 }

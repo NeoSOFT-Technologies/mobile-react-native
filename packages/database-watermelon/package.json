@@ -27,6 +27,8 @@
   "dependencies": {
     "@nozbe/watermelondb": "^0.25.3",
     "data": "^0.0.1",
-    "di": "^0.0.1"
+    "di": "^0.0.1",
+    "react": "^18.2.0",
+    "react-native": "^0.71.4"
   }
 }
