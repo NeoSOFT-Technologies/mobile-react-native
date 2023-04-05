@@ -5,8 +5,7 @@ import Colors from '../../utils/color'
 export default StyleSheet.create({
   mainView: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height,
-    justifyContent: 'center'
+    height: Dimensions.get('window').height
   },
   secView: {
     width: '100%'
@@ -20,7 +19,8 @@ export default StyleSheet.create({
   imgIcon: {
     width: 150,
     height: 150,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    marginTop: '10%'
   },
   inputView: {
     alignItems: 'center',

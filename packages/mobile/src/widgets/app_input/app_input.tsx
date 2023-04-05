@@ -1,4 +1,4 @@
-import { TextInput } from 'react-native'
+import { KeyboardAvoidingView, TextInput } from 'react-native'
 import Colors from '../../utils/color'
 import style from './app_input_style'
 import i18n from 'localisation'

@@ -7,7 +7,7 @@ import Colors from '../../utils/color'
 import { useTheme } from '../../theme/themeprovider'
 
 export type AppButtonProps = {
-  loadingState: boolean
+  loadingState?: boolean
   value: string
   saveData?: () => void
 }

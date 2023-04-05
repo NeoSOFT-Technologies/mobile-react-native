@@ -3,15 +3,23 @@ import Images from '../../assets/images'
 import i18n from 'localisation'
 import style from './dashboard_style'
 import { AppButton } from '../../widgets/app_button/app_button'
-import { useState } from 'react'
 import { useTheme } from '../../theme/themeprovider'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { userDataRequest } from 'presentation'
 
 const DashboardScreen = () => {
   const { colors, isDark } = useTheme()
   console.log(isDark)
   const [lodingState, setLodingState] = useState(false)
+  const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(userDataRequest({}))
+  }, [])
   const saveData = () => {
     setLodingState(true)
+    dispatch(userDataRequest({}))
   }
   return (
     <View style={style.mainView}>
@@ -22,7 +30,7 @@ const DashboardScreen = () => {
         <Image source={isDark ? Images.carBlack : Images.car} style={style.carStyle} resizeMode="contain" />
       </View>
       <View style={style.thirdView}>
-        <AppButton loadingState={lodingState} value={'getStarted'} saveData={() => saveData()} />
+        <AppButton value={'getStarted'} saveData={() => saveData()} />
       </View>
     </View>
   )

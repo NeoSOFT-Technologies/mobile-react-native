@@ -14,7 +14,7 @@ export default StyleSheet.create({
   uberText: {
     fontSize: 40,
     textAlign: 'center',
-    marginTop: '30%',
+    marginTop: '15%',
     fontFamily: 'Poppins-Regular'
   },
   getText: {

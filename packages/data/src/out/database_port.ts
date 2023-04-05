@@ -1,5 +1,6 @@
-import { MyDatabaseModel, User } from 'packages/shared/src/shared'
+import { UserModel } from 'shared'
+
 export interface DatabasePort {
-  yourFirstDatabaseCall(domain: MyDatabaseModel): Promise<MyDatabaseModel>
-  userCheck(user: User): Promise<boolean>
+  adduser(params?: { email: string; password: string; token: string }): Promise<boolean>
+  getUserDetails(data: UserModel): Promise<UserModel>
 }

@@ -9,5 +9,7 @@
   "hi": "Hello",
   "uber": "Uber",
   "getThere": "Get There.",
-  "getStarted": "Get Started"
+  "getStarted": "Get Started",
+  "noInput": "please enter data or a valid data",
+  "errorMessage": "please enter proper email and password"
 }
