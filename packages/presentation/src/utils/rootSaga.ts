@@ -9,5 +9,5 @@ import UserDataPresentSaga from '../feature/userpresent/saga'
 export default function* rootSaga() {
   yield takeLatest(REQUEST_USER.MAKE_REQUEST, getUserSaga)
   yield takeLatest(REQUEST_USER_DATA.MAKE_USER_REQUEST, UserDataRequestSaga)
-  yield takeLatest(REQUEST_USER_PRESENT_DATA.MAKE_USER_PRESENT_REQUEST,UserDataPresentSaga )
+  yield takeLatest(REQUEST_USER_PRESENT_DATA.MAKE_USER_PRESENT_REQUEST, UserDataPresentSaga)
 }

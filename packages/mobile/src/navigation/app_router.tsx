@@ -27,7 +27,7 @@ const AppRouter = () => {
         ) : (
           <Stack.Screen name={RoutePaths.login} component={LoginScreen} />
         )}
-         <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
+        <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
