@@ -10,12 +10,12 @@ import { AppInput } from '../../widgets/app_input/app_input'
 import { userRequest } from 'presentation'
 import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
-import Status from '../../utils/status'
+import { Status } from 'presentation'
 
 const LoginScreen = () => {
-  const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
+  const [username, setUsername] = useState<string>('')
   const navigation = useNavigation<any>()
-  const [password, setPassword] = useState<string>('admin@123')
+  const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
   const loginData: any = useSelector<any>(state => state.loginData)
@@ -24,19 +24,17 @@ const LoginScreen = () => {
       email: username,
       password: password
     }
-    if (username == '' || password == '') {
-      alert(i18n.t('noInput'))
-    } else {
       dispatch(userRequest({ data: data }))
-    }
   }
+  console.log(loginData)
   useEffect(() => {
-    if (loginData?.status == Status.loding) setLodingState(true)
+    if (loginData?.status == Status.loading) setLodingState(true)
     else setLodingState(false)
   }, [loginData])
 
   useEffect(() => {
     if (loginData?.status == Status.success) navigation.navigate(RoutePaths.dashboard)
+    else if (loginData?.status == Status.error) alert(i18n.t('noInput'))
   }, [loginData])
 
   return (

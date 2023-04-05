@@ -9,12 +9,14 @@ export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, boolean> 
     this.userRepository = repo
   }
   async execute(params?: LoginCheckParams): Promise<boolean> {
-    if (params?.verify) {
+    if (params?.verify()) {
+      console.log('in verify ')
       return await this.userRepository.loginCheck({
         email: params.email,
         password: params.password
       })
     }
+    else return false
   }
 }
 export class LoginCheckParams extends Params {
@@ -28,6 +30,7 @@ export class LoginCheckParams extends Params {
   }
 
   verify(): boolean {
-    return true
+    if(this.email == '' ||  this.password == '') return false
+    else return true
   }
 }
