@@ -1,4 +1,4 @@
-async function safeCall<T>(apicall: Promise<T>): Promise<T> {
+async function safeApiCall<T>(apicall: Promise<T>): Promise<T> {
   try {
     const networkResponse = await apicall
     return networkResponse
@@ -7,4 +7,4 @@ async function safeCall<T>(apicall: Promise<T>): Promise<T> {
   }
 }
 
-export default safeCall
+export default safeApiCall

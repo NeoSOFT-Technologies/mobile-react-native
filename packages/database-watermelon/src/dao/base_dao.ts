@@ -21,9 +21,6 @@ export abstract class BaseDao<T extends BaseDatabaseModel> extends DaoBase<T, Ap
   deleteAll(): Promise<boolean> {
     throw new Error('Method not implemented.')
   }
-  getRecord(record: T): Promise<T> {
-    throw new Error('Method not implemented.')
-  }
   constructor(database: AppDatabase) {
     super(database)
   }

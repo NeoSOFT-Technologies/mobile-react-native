@@ -19,7 +19,7 @@ class DatabaseAdapter implements DatabasePort {
   }
 
   async getUserDetails(data: UserModel): Promise<UserModel> {
-    return await this.databases.userDao.getRecord({
+    return await this.databases.userDao.getUser({
       email: data.email
     })
   }

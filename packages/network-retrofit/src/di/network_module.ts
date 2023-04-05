@@ -3,7 +3,7 @@ import { ServiceBuilder } from 'ts-retrofit'
 
 import { Graph, ObjectGraph, Provides, Singleton } from 'di'
 import RetrofitService from '../services/retrofit_service'
-import NetowrkAdapter from '../network_adapter'
+import NetworkAdapter from '../network_adapter'
 import { NetworkPort } from 'data'
 
 @Singleton()
@@ -21,7 +21,7 @@ export class NetworkModule extends ObjectGraph {
 
   @Provides()
   providesNetworkAdapter(providesRetrofitNetworkService: RetrofitService): NetworkPort {
-    return new NetowrkAdapter({
+    return new NetworkAdapter({
       retrofitService: providesRetrofitNetworkService
     })
   }
