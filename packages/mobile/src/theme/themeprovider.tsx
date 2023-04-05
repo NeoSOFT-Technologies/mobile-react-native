@@ -18,7 +18,7 @@ export const ThemeProvider = props => {
 
   const defaultTheme: any = {
     isDark,
-    theme : isDark ? darkTheme : lightTheme
+    theme: isDark ? darkTheme : lightTheme
   }
   return <ThemeContext.Provider value={defaultTheme}>{props.children}</ThemeContext.Provider>
 }
