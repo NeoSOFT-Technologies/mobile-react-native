@@ -10,7 +10,7 @@ import { UserPresentRequest } from 'presentation'
 
 const AppRouter = () => {
   const Stack = createNativeStackNavigator()
-  let databaseemail: any = useSelector((state: any) => state?.userPresent?.data?.payload)
+  const databaseemail: any = useSelector((state: any) => state?.userPresent?.data?.payload)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(UserPresentRequest({}))
@@ -22,8 +22,7 @@ const AppRouter = () => {
           headerShown: false
         }}
       >
-        {databaseemail == undefined &&
-          <Stack.Screen name={RoutePaths.login} component={LoginScreen} />}
+        {databaseemail == undefined && <Stack.Screen name={RoutePaths.login} component={LoginScreen} />}
         <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
       </Stack.Navigator>
     </NavigationContainer>
