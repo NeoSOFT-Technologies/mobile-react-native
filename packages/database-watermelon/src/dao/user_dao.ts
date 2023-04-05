@@ -17,7 +17,7 @@ export class UserDao extends BaseDao<DbUserModel> {
     this.databaseData = this.attachedDatabase.get(this.tableName())
   }
 
-  async addUserData(params?: { email: string; password: string; token: string }): Promise<UserModel> {
+  async insertOrUpdate(params?: { email: string; password: string; token: string }): Promise<DbUserModel> {
     return safeDbCall(
       this.attachedDatabase.write(async () => {
         const userData = await this.databaseData.create((data: UserModel) => {
@@ -30,8 +30,9 @@ export class UserDao extends BaseDao<DbUserModel> {
     )
   }
 
-  async getUserDetails(params: UserModel): Promise<DbUserModel> {
+  async getRecord(data: {email:string}): Promise<DbUserModel> {
     const response: any = await safeDbCall(this.databaseData.query().fetch())
     return response[0]._raw.email
   }
+
 }

@@ -17,7 +17,7 @@ export class UserRepositoryImpl implements UserRepository {
     if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
-      const databaseResponse = await this.database.userDatabaseCall({
+      const databaseResponse = await this.database.adduser({
         email: params.email,
         password: params.password,
         token: usermodel

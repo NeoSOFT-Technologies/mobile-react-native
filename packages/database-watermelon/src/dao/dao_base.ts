@@ -12,4 +12,5 @@ export abstract class DaoBase<T extends BaseDatabaseModel, P extends Database> {
   abstract delete(record: T): Promise<T>
   abstract insertOrUpdate(record: T): Promise<T>
   abstract deleteAll(): Promise<boolean>
+  abstract getRecord(record: T): Promise<T>
 }
