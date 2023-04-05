@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { userDataRequest } from 'presentation'
 
 const DashboardScreen = () => {
-  const { colors, isDark } = useTheme()
+  const { theme, isDark } = useTheme()
   const [lodingState, setLodingState] = useState(false)
   const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
   const dispatch = useDispatch()
@@ -22,9 +22,9 @@ const DashboardScreen = () => {
   }
   return (
     <View style={style.mainView}>
-      <View style={[style.secView, { backgroundColor: colors.secondaryColor }]}>
-        <Text style={[style.uberText, { color: colors.text }]}>{i18n.t('uber')}</Text>
-        <Text style={[style.getText, { color: colors.text }]}>{i18n.t('getThere')}</Text>
+      <View style={[style.secView, { backgroundColor: theme.secondaryColor }]}>
+        <Text style={[style.uberText, { color: theme.textColor }]}>{i18n.t('uber')}</Text>
+        <Text style={[style.getText, { color: theme.textColor }]}>{i18n.t('getThere')}</Text>
 
         <Image source={isDark ? Images.carBlack : Images.car} style={style.carStyle} resizeMode="contain" />
       </View>

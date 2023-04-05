@@ -1,11 +1,11 @@
-import LightTheme from './lighttheme'
+import ThemeData from './theme_constant';
 
 class ThemeBase {
   readonly isDark: boolean
-  readonly colors: LightTheme
-  constructor(params: { isdark: boolean; colors: LightTheme }) {
+  readonly theme:ThemeData
+  constructor(params: { isdark: boolean, theme: ThemeData }) {
     this.isDark = params.isdark
-    this.colors = params.colors
+    this.theme = params.theme
   }
 }
 

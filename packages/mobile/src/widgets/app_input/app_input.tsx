@@ -11,12 +11,12 @@ export type AppInputProps = {
 }
 
 export const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) => {
-  const { colors } = useTheme()
+  const { theme } = useTheme()
   return (
     <TextInput
-      style={[style.inputStyle, { color: colors.text, borderBottomColor: colors.text }]}
+      style={[style.inputStyle, { color: theme.textColor, borderBottomColor: theme.borderColor }]}
       placeholder={i18n.t(placeholderText)}
-      placeholderTextColor={colors.text}
+      placeholderTextColor={theme.textColor}
       value={value}
       onChangeText={(e: string) => setData(e)}
       secureTextEntry={secure}

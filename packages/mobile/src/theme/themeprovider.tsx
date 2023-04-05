@@ -6,7 +6,7 @@ import ThemeBase from './theme_base'
 
 const lightTheme = new LightTheme()
 const darkTheme = new DarkTheme()
-export const ThemeContext = React.createContext(new ThemeBase({ isdark: false, colors: lightTheme }))
+export const ThemeContext = React.createContext(new ThemeBase({ isdark: false, theme: lightTheme }))
 
 export const ThemeProvider = props => {
   const colorScheme = useColorScheme()
@@ -18,9 +18,8 @@ export const ThemeProvider = props => {
 
   const defaultTheme: any = {
     isDark,
-    colors: isDark ? darkTheme : lightTheme
+    theme : isDark ? darkTheme : lightTheme
   }
-
   return <ThemeContext.Provider value={defaultTheme}>{props.children}</ThemeContext.Provider>
 }
 

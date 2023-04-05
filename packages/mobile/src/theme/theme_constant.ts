@@ -1,6 +1,8 @@
-export default interface ThemeConstant {
-  readonly text: string
-  readonly background: string
-  readonly mainColor: string
+export default interface ThemeData {
+  readonly textColor: string
+  readonly backgroundCOlor: string
+  readonly primaryColor: string
   readonly secondaryColor: string
+  readonly activityColor: string
+  readonly borderColor: string
 }
