@@ -3,7 +3,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 import DashboardScreen from '../feature/dashboard/dashboard_screen'
 import LoginScreen from '../feature/login/login_screen'
-import Screen from '../screen'
 import RoutePaths from './router_path'
 
 const AppRouter = () => {

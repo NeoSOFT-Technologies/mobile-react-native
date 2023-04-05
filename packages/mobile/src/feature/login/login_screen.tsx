@@ -8,14 +8,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
 import { userRequest } from 'presentation'
+import { useTheme } from '../../theme/themeprovider'
 import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
 import { Status } from 'presentation'
 
 const LoginScreen = () => {
-  const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
+  const { theme, isDark } = useTheme()
+  const [username, setUsername] = useState<string>('')
   const navigation = useNavigation<any>()
-  const [password, setPassword] = useState<string>('admin@123')
+  const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
   const loginData: any = useSelector<any>(state => state.loginData)
@@ -26,7 +28,6 @@ const LoginScreen = () => {
     }
     dispatch(userRequest({ data: data }))
   }
-  console.log(loginData)
   useEffect(() => {
     if (loginData?.status == Status.loading) setLodingState(true)
     else setLodingState(false)
@@ -38,10 +39,10 @@ const LoginScreen = () => {
   }, [loginData])
 
   return (
-    <View style={style.mainView}>
+    <View style={[style.mainView, { backgroundColor: theme.backgroundCOlor }]}>
       <View style={style.secView}>
-        <Image source={Images.icon} style={style.imgIcon} resizeMode="contain" />
-        <Text style={style.loginText}>{i18n.t('logIn')}</Text>
+        <Image source={isDark ? Images.iconBlack : Images.icon} style={style.imgIcon} resizeMode="contain" />
+        <Text style={[style.loginText, { color: theme.textColor }]}>{i18n.t('logIn')}</Text>
         <View style={style.inputView}>
           <AppInput placeholderText={'username'} value={username} setData={e => setUsername(e)} />
           <AppInput placeholderText={'password'} value={password} setData={e => setPassword(e)} secure={true} />
@@ -51,7 +52,7 @@ const LoginScreen = () => {
         <AppButton loadingState={loadingState} value={'login'} saveData={() => saveData()} />
       </View>
       <TouchableOpacity>
-        <Text style={style.forgetpass}>{i18n.t('forgetPassword')}</Text>
+        <Text style={[style.forgetpass, { color: theme.textColor }]}>{i18n.t('forgetPassword')}</Text>
       </TouchableOpacity>
     </View>
   )

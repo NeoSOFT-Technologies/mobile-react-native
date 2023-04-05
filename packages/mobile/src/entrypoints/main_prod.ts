@@ -5,7 +5,7 @@ export function main() {
   FlavorConfig.initialize({
     flavor: Flavor.prod,
     values: new FlavorValues({
-      apiBaseUrl: 'https://aparajitha.php-dev.in/api',
+      apiBaseUrl: '',
       databaseName: 'boilerplate',
       //secrets: AppSecrets.appSecretsDev,
       showLogs: true,

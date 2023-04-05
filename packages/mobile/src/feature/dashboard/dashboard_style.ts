@@ -8,20 +8,17 @@ export default StyleSheet.create({
     backgroundColor: Colors.ternaryColor
   },
   secView: {
-    backgroundColor: Colors.secondaryColor,
     borderRadius: 45,
     height: '75%'
   },
   uberText: {
-    fontSize: 16,
-    color: Colors.white,
+    fontSize: 40,
     textAlign: 'center',
     marginTop: '15%',
     fontFamily: 'Poppins-Regular'
   },
   getText: {
     fontSize: 22,
-    color: Colors.white,
     textAlign: 'center',
     marginTop: '2%',
     fontFamily: 'Poppins-Regular'
