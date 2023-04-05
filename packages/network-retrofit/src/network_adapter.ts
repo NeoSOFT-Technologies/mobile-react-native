@@ -10,8 +10,8 @@ class NetowrkAdapter implements NetworkPort {
   }
 
   async loginCall(params?: { email: string; password: string }): Promise<UserModel> {
-    const data = await safecall(this.retrofitService.login({ email: params.email, password: params.password }))
-    return data.data.access_token
+    const response = await safecall(this.retrofitService.login({email:params.email,password:params.password}))
+    return response.data
   }
 }
 

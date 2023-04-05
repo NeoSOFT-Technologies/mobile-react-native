@@ -23,7 +23,7 @@ export class UserDao extends BaseDao<DbUserModel> {
         const userData = await this.databaseData.create((data: UserModel) => {
           data.email = params.email
           data.password = params.password
-          data.token = params.token
+          data.access_token = params.token
         })
         return userData
       })

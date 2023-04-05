@@ -13,9 +13,9 @@ import RoutePaths from '../../navigation/router_path'
 import { Status } from 'presentation'
 
 const LoginScreen = () => {
-  const [username, setUsername] = useState<string>('')
+  const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
   const navigation = useNavigation<any>()
-  const [password, setPassword] = useState<string>('')
+  const [password, setPassword] = useState<string>('admin@123')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
   const loginData: any = useSelector<any>(state => state.loginData)
