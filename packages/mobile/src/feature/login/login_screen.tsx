@@ -24,7 +24,7 @@ const LoginScreen = () => {
       email: username,
       password: password
     }
-      dispatch(userRequest({ data: data }))
+    dispatch(userRequest({ data: data }))
   }
   console.log(loginData)
   useEffect(() => {

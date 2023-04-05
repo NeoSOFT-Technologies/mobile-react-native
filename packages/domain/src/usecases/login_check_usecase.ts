@@ -15,8 +15,7 @@ export class LoginCheckUsecase extends FutureUseCase<LoginCheckParams, boolean> 
         email: params.email,
         password: params.password
       })
-    }
-    else return false
+    } else return false
   }
 }
 export class LoginCheckParams extends Params {
@@ -30,7 +29,7 @@ export class LoginCheckParams extends Params {
   }
 
   verify(): boolean {
-    if(this.email == '' ||  this.password == '') return false
+    if (this.email == '' || this.password == '') return false
     else return true
   }
 }
