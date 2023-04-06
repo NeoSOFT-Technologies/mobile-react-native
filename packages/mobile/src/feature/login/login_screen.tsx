@@ -15,9 +15,9 @@ import { Status } from 'presentation'
 
 const LoginScreen = () => {
   const { theme, isDark } = useTheme()
-  const [username, setUsername] = useState<string>('')
+  const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
   const navigation = useNavigation<any>()
-  const [password, setPassword] = useState<string>('')
+  const [password, setPassword] = useState<string>('admin@123')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
   const loginData: any = useSelector<any>(state => state.loginData)
@@ -26,16 +26,17 @@ const LoginScreen = () => {
       email: username,
       password: password
     }
+    setLodingState(true)
     dispatch(userRequest({ data: data }))
   }
   useEffect(() => {
-    if (loginData?.status == Status.loading) setLodingState(true)
-    else setLodingState(false)
-  }, [loginData])
-
-  useEffect(() => {
-    if (loginData?.status == Status.success) navigation.navigate(RoutePaths.dashboard)
-    else if (loginData?.status == Status.error) alert(i18n.t('noInput'))
+    if (loginData?.status == Status.success) {
+      navigation.navigate(RoutePaths.dashboard)
+      setLodingState(false)
+    } else if (loginData?.status == Status.error) {
+      alert(i18n.t('noInput'))
+      setLodingState(false)
+    }
   }, [loginData])
 
   return (

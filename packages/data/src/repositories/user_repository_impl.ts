@@ -17,7 +17,6 @@ export class UserRepositoryImpl implements UserRepository {
     if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
-      console.log(usermodel.access_token)
       const databaseResponse = await this.database.adduser({
         email: params.email,
         password: params.password,
@@ -28,6 +27,12 @@ export class UserRepositoryImpl implements UserRepository {
   }
   async getuserdata(params?: { email: string }): Promise<UserModel> {
     return await this.database.getUserDetails({
+      email: params.email
+    })
+  }
+
+  async logoutUser(params?: { email: string }): Promise<boolean> {
+    return await this.database.removeUser({
       email: params.email
     })
   }

@@ -3,7 +3,7 @@ import { REQUEST_USER_DATA } from './action'
 
 const UserDataRequestReduceer = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case REQUEST_USER_DATA.MAKE_REQUEST:
+    case REQUEST_USER_DATA.MAKE_USER_REQUEST:
       return Resource.loading()
 
     case REQUEST_USER_DATA.REQUEST_USER_DATA_SUCCESS:
