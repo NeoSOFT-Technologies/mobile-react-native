@@ -12,7 +12,7 @@ import RoutePaths from '../../navigation/router_path'
 
 const DashboardScreen = () => {
   const { theme, isDark } = useTheme()
-  const navigation:any = useNavigation()
+  const navigation: any = useNavigation()
   const [lodingState, setLodingState] = useState(false)
   const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
   const logoutData: any = useSelector((state: any) => state?.logoutData?.data?.payload)

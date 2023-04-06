@@ -11,7 +11,7 @@ export class LogoutUsecase extends FutureUseCase<LogoutParams, boolean> {
   async execute(params?: LogoutParams): Promise<boolean> {
     if (params?.verify()) {
       return await this.userRepository.logoutUser({
-        email: params.email,
+        email: params.email
       })
     } else return false
   }

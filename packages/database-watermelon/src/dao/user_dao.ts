@@ -35,10 +35,12 @@ export class UserDao extends BaseDao<DbUserModel> {
     return !response ? [] : response[0]?._raw?.email
   }
 
-  async deleteRecord(data : {email:string}) : Promise<boolean>{
+  async deleteRecord(data: { email: string }): Promise<boolean> {
     await this.attachedDatabase.write(async () => {
-    const response: any =  await  this.databaseData.query(Q.where("email", Q.like(`${data.email}`))).destroyAllPermanently()
-    return response
+      const response: any = await this.databaseData
+        .query(Q.where('email', Q.like(`${data.email}`)))
+        .destroyAllPermanently()
+      return response
     })
     return true
   }

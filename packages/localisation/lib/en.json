@@ -12,5 +12,5 @@
   "getStarted": "Get Started",
   "noInput": "please enter data or a valid data",
   "errorMessage": "please enter proper email and password",
-  "logout":"Logout"
+  "logout": "Logout"
 }
