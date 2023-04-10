@@ -11,7 +11,7 @@ function* USER_PRESENT_DATA_SAGA(action) {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserPresentDataUseCase()
       .execute(new UserPresentDataUsecaseParams({ email: '' }))
-     yield put({ type: USER_PRESENT_DATA.USER_PRESENT_DATA_SUCCESS, payload: data })
+    yield put({ type: USER_PRESENT_DATA.USER_PRESENT_DATA_SUCCESS, payload: data })
   } catch (e) {
     console.log(e)
   }

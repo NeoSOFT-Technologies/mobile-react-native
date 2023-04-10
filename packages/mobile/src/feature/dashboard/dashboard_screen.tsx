@@ -23,7 +23,7 @@ const DashboardScreen = () => {
         <Image source={Images.car} style={style.carStyle} resizeMode="contain" />
       </View>
       <View style={style.thirdView}>
-        <AppButton value={'getStarted'}  />
+        <AppButton value={'getStarted'} />
       </View>
     </View>
   )

@@ -5,7 +5,6 @@ import LOGIN_USER_REDUCER from './login/reducer'
 import USER_DATA_REDUCER from './userDetail/reducer'
 import USER_PRESENT_DATA_REDUCER from './userpresent/reducer'
 
-
 const sagaMiddleware = createSagaMiddleware()
 const store = configureStore({
   reducer: combineReducers({

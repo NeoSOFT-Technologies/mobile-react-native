@@ -7,7 +7,7 @@ import { USER_PRESENT_DATA } from '../feature/userpresent/action'
 import USER_PRESENT_DATA_SAGA from '../feature/userpresent/saga'
 
 export default function* rootSaga() {
-  yield takeLatest(LOGIN_USER.LOGIN_USER_REQUEST , LOGIN_USER_SAGA)
+  yield takeLatest(LOGIN_USER.LOGIN_USER_REQUEST, LOGIN_USER_SAGA)
   yield takeLatest(USER_DATA.USER_DATA_REQUEST, USER_DATA_SAGA)
   yield takeLatest(USER_PRESENT_DATA.USER_PRESENT_DATA_REQUEST, USER_PRESENT_DATA_SAGA)
 }
