@@ -1,5 +1,5 @@
 export enum LOGIN {
-  request= 'LOGIN_REQUEST',
+  request = 'LOGIN_REQUEST',
   success = 'LOGIN_SUCCESS',
   failure = 'LOGIN_FAILURE'
 }

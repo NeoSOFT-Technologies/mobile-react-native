@@ -6,7 +6,6 @@ import fetchUserSaga from '../feature/userDetail/saga'
 import { FETCH_USER_EXISTS } from '../feature/userpresent/action'
 import fetchUserExistsSaga from '../feature/userpresent/saga'
 
-
 export default function* rootSaga() {
   yield takeLatest(LOGIN.request, loginSaga)
   yield takeLatest(FETCH_USER_DATA.request, fetchUserSaga)

@@ -19,4 +19,4 @@ function* loginSaga(action) {
     console.log(e)
   }
 }
-export default loginSaga;
+export default loginSaga
