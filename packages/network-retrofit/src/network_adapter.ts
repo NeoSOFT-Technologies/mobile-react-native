@@ -9,7 +9,7 @@ class NetworkAdapter implements NetworkPort {
     this.retrofitService = params.retrofitService
   }
 
-  async loginCall(params?: { email: string; password: string }): Promise<UserModel> {
+  async login(params?: { email: string; password: string }): Promise<UserModel> {
     const response = await safeApiCall(this.retrofitService.login({ email: params.email, password: params.password }))
     return response.data
   }

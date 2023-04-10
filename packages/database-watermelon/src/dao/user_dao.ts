@@ -30,12 +30,12 @@ export class UserDao extends BaseDao<DbUserModel> {
     )
   }
 
-  async getUser(data: { email: string }): Promise<DbUserModel> {
+  async fetchUserData(data: { email: string }): Promise<DbUserModel> {
     const response: any = await safeDbCall(this.databaseData.query().fetch())
-    return response[0]?._raw?.email
+    return response[0]? response[0]?._raw?.email : []
   }
-  async userPresentData(data: { email: string }): Promise<boolean> {
-    const userCount: any = await safeDbCall(this.databaseData.query().fetchCount())
+  async fetchUserExists(data: { email: string }): Promise<boolean> {
+    const userCount: number = await safeDbCall(this.databaseData.query().fetchCount())
     if (userCount > 0) return true
     else return false
   }

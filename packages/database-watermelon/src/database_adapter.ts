@@ -18,13 +18,13 @@ class DatabaseAdapter implements DatabasePort {
     if (response) return true
   }
 
-  async userDetails(data: UserModel): Promise<UserModel> {
-    return await this.databases.userDao.getUser({
+  async fetchUserData(data: UserModel): Promise<UserModel> {
+    return await this.databases.userDao.fetchUserData({
       email: data.email
     })
   }
-  async getuserPresentData(data: UserModel): Promise<boolean> {
-    return await this.databases.userDao.userPresentData({
+  async fetchUserExists(data: UserModel): Promise<boolean> {
+    return await this.databases.userDao.fetchUserExists({
       email: data.email
     })
   }

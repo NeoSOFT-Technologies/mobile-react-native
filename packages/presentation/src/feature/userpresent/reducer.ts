@@ -1,14 +1,14 @@
 import { Resource } from '../../presentation'
-import { USER_PRESENT_DATA } from './action'
+import { FETCH_USER_EXISTS } from './action'
 
-const USER_PRESENT_DATA_REDUCER = (initialState = Resource.none, action) => {
+const fetchUserExistsReducer = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case USER_PRESENT_DATA.USER_PRESENT_DATA_SUCCESS:
+    case FETCH_USER_EXISTS.success:
       return Resource.success({
         data: action
       })
 
-    case USER_PRESENT_DATA.USER_PRESENT_DATA_FAILURE:
+    case FETCH_USER_EXISTS.failure:
       return Resource.error({
         error: 'User Not logged in'
       })
@@ -16,4 +16,4 @@ const USER_PRESENT_DATA_REDUCER = (initialState = Resource.none, action) => {
       return initialState
   }
 }
-export default USER_PRESENT_DATA_REDUCER
+export default fetchUserExistsReducer

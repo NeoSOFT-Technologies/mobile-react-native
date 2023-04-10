@@ -1,10 +1,10 @@
-export enum LOGIN_USER {
-  LOGIN_USER_REQUEST = 'LOGIN_USER_REQUEST',
-  LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS',
-  LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE'
+export enum LOGIN {
+  request= 'LOGIN_REQUEST',
+  success = 'LOGIN_SUCCESS',
+  failure = 'LOGIN_FAILURE'
 }
 
-export const LOGIN_USER_ACTION = params => ({
-  type: LOGIN_USER.LOGIN_USER_REQUEST,
+export const loginAction = params => ({
+  type: LOGIN.request,
   params
 })

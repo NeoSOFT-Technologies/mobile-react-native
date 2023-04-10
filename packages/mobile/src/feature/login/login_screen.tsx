@@ -7,7 +7,7 @@ import i18n from 'localisation'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppButton } from '../../widgets/app_button/app_button'
 import { AppInput } from '../../widgets/app_input/app_input'
-import { LOGIN_USER_ACTION } from 'presentation'
+import { loginAction } from 'presentation'
 import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
 import { Status } from 'presentation'
@@ -18,13 +18,13 @@ const LoginScreen = () => {
   const [password, setPassword] = useState<string>('admin@123')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
-  const loginData: any = useSelector<any>(state => state?.loginUser)
+  const loginData: any = useSelector<any>(state => state?.login)
   const saveData = () => {
     const data = {
       email: username,
       password: password
     }
-    dispatch(LOGIN_USER_ACTION({ data: data }))
+    dispatch(loginAction({ data: data }))
   }
   useEffect(() => {
     if (loginData?.status == Status?.loading) setLodingState(true)

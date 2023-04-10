@@ -1,17 +1,17 @@
 import { Resource } from '../../presentation'
-import { USER_DATA } from './action'
+import { FETCH_USER_DATA } from './action'
 
-const USER_DATA_REDUCER = (initialState = Resource.none, action) => {
+const fetchUserReducer = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case USER_DATA.USER_DATA_REQUEST:
+    case FETCH_USER_DATA.request:
       return Resource.loading()
 
-    case USER_DATA.USER_DATA_SUCCESS:
+    case FETCH_USER_DATA.success:
       return Resource.success({
         data: action
       })
 
-    case USER_DATA.USER_DATA_FAILURE:
+    case FETCH_USER_DATA.failure:
       return Resource.error({
         error: 'User Not logged in'
       })
@@ -19,4 +19,4 @@ const USER_DATA_REDUCER = (initialState = Resource.none, action) => {
       return initialState
   }
 }
-export default USER_DATA_REDUCER
+export default fetchUserReducer
