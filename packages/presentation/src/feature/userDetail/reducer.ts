@@ -1,17 +1,17 @@
 import { Resource } from '../../presentation'
-import { REQUEST_USER_DATA } from './action'
+import { USER_DATA } from './action'
 
-const UserDataRequestReduceer = (initialState = Resource.none, action) => {
+const USER_DATA_REDUCER = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case REQUEST_USER_DATA.MAKE_USER_REQUEST:
+    case USER_DATA.USER_DATA_REQUEST:
       return Resource.loading()
 
-    case REQUEST_USER_DATA.REQUEST_USER_DATA_SUCCESS:
+    case USER_DATA.USER_DATA_SUCCESS:
       return Resource.success({
         data: action
       })
 
-    case REQUEST_USER_DATA.REQUEST_USER_DATA_FAILURE:
+    case USER_DATA.USER_DATA_FAILURE:
       return Resource.error({
         error: 'User Not logged in'
       })
@@ -19,4 +19,4 @@ const UserDataRequestReduceer = (initialState = Resource.none, action) => {
       return initialState
   }
 }
-export default UserDataRequestReduceer
+export default USER_DATA_REDUCER

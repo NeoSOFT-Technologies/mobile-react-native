@@ -9,7 +9,7 @@ class DatabaseAdapter implements DatabasePort {
     this.databases = params.databases
   }
 
-  async adduser(params?: { email: string; password: string; token: string }): Promise<boolean> {
+  async addUser(params?: { email: string; password: string; token: string }): Promise<boolean> {
     const response = await this.databases.userDao.insertOrUpdate({
       email: params.email,
       password: params.password,
@@ -18,8 +18,13 @@ class DatabaseAdapter implements DatabasePort {
     if (response) return true
   }
 
-  async getUserDetails(data: UserModel): Promise<UserModel> {
+  async userDetails(data: UserModel): Promise<UserModel> {
     return await this.databases.userDao.getUser({
+      email: data.email
+    })
+  }
+  async getuserPresentData(data: UserModel): Promise<boolean> {
+    return await this.databases.userDao.userPresentData({
       email: data.email
     })
   }

@@ -1,6 +1,7 @@
 import { UserModel } from 'shared'
 
 export interface DatabasePort {
-  adduser(params?: { email: string; password: string; token: string }): Promise<boolean>
-  getUserDetails(data: UserModel): Promise<UserModel>
+  addUser(params?: { email: string; password: string; token: string }): Promise<boolean>
+  userDetails(data: UserModel): Promise<UserModel>
+  getuserPresentData(data: UserModel): Promise<boolean>
 }

@@ -12,12 +12,12 @@ export class UserRepositoryImpl implements UserRepository {
     this.network = params.networkPort
   }
 
-  async loginCheck(params?: { email: string; password: string }): Promise<boolean> {
+  async loginUser(params?: { email: string; password: string }): Promise<boolean> {
     const usermodel: any = await this.network.loginCall({ email: params.email, password: params.password })
     if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
-      const databaseResponse = await this.database.adduser({
+      const databaseResponse = await this.database.addUser({
         email: params.email,
         password: params.password,
         token: usermodel.access_token
@@ -25,8 +25,13 @@ export class UserRepositoryImpl implements UserRepository {
       return databaseResponse
     }
   }
-  async getuserdata(params?: { email: string }): Promise<UserModel> {
-    return await this.database.getUserDetails({
+  async UserData(params?: { email: string }): Promise<UserModel> {
+    return await this.database.userDetails({
+      email: params.email
+    })
+  }
+  async UserPresentData(params?: { email: string }): Promise<boolean> {
+    return await this.database.getuserPresentData({
       email: params.email
     })
   }

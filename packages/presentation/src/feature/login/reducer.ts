@@ -1,18 +1,18 @@
 import data from 'packages/data/lib/data'
 import { Resource } from '../../utils/resource'
-import { REQUEST_USER } from './actions'
+import { LOGIN_USER } from './actions'
 
-const userRequestReducer = (initialState = Resource.none, action) => {
+const LOGIN_USER_REDUCER = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case REQUEST_USER.MAKE_REQUEST:
+    case LOGIN_USER.LOGIN_USER_REQUEST:
       return Resource.loading()
 
-    case REQUEST_USER.REQUEST_USER_SUCCESS:
+    case LOGIN_USER.LOGIN_USER_SUCCESS:
       return Resource.success({
         data: action
       })
 
-    case REQUEST_USER.REQUEST_USER_FAILURE:
+    case LOGIN_USER.LOGIN_USER_FAILURE:
       return Resource.error({
         error: 'User Not logged in'
       })
@@ -20,4 +20,4 @@ const userRequestReducer = (initialState = Resource.none, action) => {
       return initialState
   }
 }
-export default userRequestReducer
+export default LOGIN_USER_REDUCER

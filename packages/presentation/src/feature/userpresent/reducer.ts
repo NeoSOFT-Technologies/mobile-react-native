@@ -1,14 +1,14 @@
 import { Resource } from '../../presentation'
-import { REQUEST_USER_PRESENT_DATA } from './action'
+import { USER_PRESENT_DATA } from './action'
 
-const UserPresentReducer = (initialState = Resource.none, action) => {
+const USER_PRESENT_DATA_REDUCER = (initialState = Resource.none, action) => {
   switch (action.type) {
-    case REQUEST_USER_PRESENT_DATA.REQUEST_USER_DATA_PRESENT_SUCCESS:
+    case USER_PRESENT_DATA.USER_PRESENT_DATA_SUCCESS:
       return Resource.success({
         data: action
       })
 
-    case REQUEST_USER_PRESENT_DATA.REQUEST_USER_DATA_PRESENT_FAILURE:
+    case USER_PRESENT_DATA.USER_PRESENT_DATA_FAILURE:
       return Resource.error({
         error: 'User Not logged in'
       })
@@ -16,4 +16,4 @@ const UserPresentReducer = (initialState = Resource.none, action) => {
       return initialState
   }
 }
-export default UserPresentReducer
+export default USER_PRESENT_DATA_REDUCER

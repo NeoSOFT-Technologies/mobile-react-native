@@ -3,16 +3,16 @@ import { DomainModule } from 'domain-layer/src/di/domain_module'
 import { Obsidian } from 'di'
 import { call, put } from 'redux-saga/effects'
 import React from 'react'
-import { REQUEST_USER_DATA } from './action'
+import { USER_DATA } from './action'
 
-function* UserDataRequestSaga(action) {
+function* USER_DATA_SAGA(action) {
   try {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserDetailsUseCase()
       .execute(new UserDetailsUseCaseParams({ email: action.params.email }))
-    yield put({ type: REQUEST_USER_DATA.REQUEST_USER_DATA_SUCCESS, payload: data })
+    yield put({ type: USER_DATA.USER_DATA_SUCCESS, payload: data })
   } catch (e) {
     console.log(e)
   }
 }
-export default UserDataRequestSaga
+export default USER_DATA_SAGA
