@@ -6,7 +6,7 @@ import firstRequestReducer from './first/reducer'
 const sagaMiddleware = createSagaMiddleware()
 const store = configureStore({
   reducer: combineReducers({
-    first : firstRequestReducer
+    first: firstRequestReducer
   }),
   middleware: [sagaMiddleware]
 })
