@@ -9,7 +9,7 @@ export default StyleSheet.create({
   },
   secView: {
     width: '100%',
-    marginTop:'10%'
+    marginTop: '10%'
   },
   loginText: {
     fontSize: 24,
