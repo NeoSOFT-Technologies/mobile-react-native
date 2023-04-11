@@ -1,10 +1,10 @@
-export enum REQUEST_USER_DATA {
-  MAKE_REQUEST = 'MAKE_REQUEST',
-  REQUEST_USER_DATA_SUCCESS = 'REQUEST_USER_DATA_SUCCESS',
-  REQUEST_USER_DATA_FAILURE = 'REQUEST_USER_DATA_FAILURE'
+export enum FETCH_USER_DATA {
+  request = 'FETCH_USER_DATA_REQUEST',
+  success = 'FETCH_USER_DATA_SUCCESS',
+  failure = 'FETCH_USER_DATA_FAILURE'
 }
 
-export const userDataRequest = params => ({
-  type: REQUEST_USER_DATA.MAKE_REQUEST,
+export const fetchUserAction = params => ({
+  type: FETCH_USER_DATA.request,
   params
 })

@@ -1,6 +1,7 @@
 import { UserModel } from 'shared'
 
 export interface UserRepository {
-  loginCheck(params?: { email: string; password: string }): Promise<boolean>
-  getuserdata(params?: { email: string }): Promise<UserModel>
+  login(params?: { email: string; password: string }): Promise<boolean>
+  fetchUserData(params?: { email: string }): Promise<UserModel>
+  fetchUserExists(params?: { email: string }): Promise<boolean>
 }

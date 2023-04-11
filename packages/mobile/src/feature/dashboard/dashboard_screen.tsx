@@ -6,30 +6,26 @@ import { AppButton } from '../../widgets/app_button/app_button'
 import { useTheme } from '../../theme/themeprovider'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { userDataRequest } from 'presentation'
+import { fetchUserAction } from 'presentation'
 
 const DashboardScreen = () => {
   const { theme, isDark } = useTheme()
   const [lodingState, setLodingState] = useState(false)
-  const databaseemail: any = useSelector((state: any) => state?.userData?.data?.payload)
+  const databaseEmail: any = useSelector((state: any) => state?.userData?.data?.payload)
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(userDataRequest({}))
+    dispatch(fetchUserAction({}))
   }, [])
-  const saveData = () => {
-    setLodingState(true)
-    dispatch(userDataRequest({}))
-  }
   return (
     <View style={style.mainView}>
       <View style={[style.secView, { backgroundColor: theme.secondaryColor }]}>
-        <Text style={[style.uberText, { color: theme.textColor }]}>{i18n.t('uber')}</Text>
+        <Text style={[style.uberText, { color: theme.textColor }]}>{`${i18n.t('uber')} -  ${databaseEmail}`}</Text>
         <Text style={[style.getText, { color: theme.textColor }]}>{i18n.t('getThere')}</Text>
 
         <Image source={isDark ? Images.carBlack : Images.car} style={style.carStyle} resizeMode="contain" />
       </View>
       <View style={style.thirdView}>
-        <AppButton value={'getStarted'} saveData={() => saveData()} />
+        <AppButton value={'getStarted'} />
       </View>
     </View>
   )
