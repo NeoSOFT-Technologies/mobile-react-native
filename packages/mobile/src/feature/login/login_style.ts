@@ -1,9 +1,9 @@
 import { Dimensions, StyleSheet } from 'react-native'
+import { useTheme } from '../../theme/themeprovider'
 import Colors from '../../utils/color'
 
 export default StyleSheet.create({
   mainView: {
-    backgroundColor: Colors.ternaryColor,
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height
   },
@@ -11,7 +11,6 @@ export default StyleSheet.create({
     width: '100%'
   },
   loginText: {
-    color: Colors.white,
     fontSize: 24,
     alignSelf: 'center',
     marginTop: '5%',
@@ -28,7 +27,6 @@ export default StyleSheet.create({
     width: '100%'
   },
   forgetpass: {
-    color: Colors.white,
     textAlign: 'center',
     marginTop: '5%',
     fontFamily: 'Poppins-Regular'

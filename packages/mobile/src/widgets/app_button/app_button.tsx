@@ -4,6 +4,7 @@ import style from './app_button_style'
 import i18n from 'localisation'
 import LinearGradient from 'react-native-linear-gradient'
 import Colors from '../../utils/color'
+import { useTheme } from '../../theme/themeprovider'
 
 export type AppButtonProps = {
   loadingState?: boolean
@@ -12,13 +13,14 @@ export type AppButtonProps = {
 }
 
 export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
+  const { theme } = useTheme()
   return (
-    <LinearGradient colors={[Colors.mainColor, Colors.secondaryColor]} style={style.buttonView}>
+    <LinearGradient colors={[theme.primaryColor, theme.primaryColor]} style={style.buttonView}>
       <TouchableOpacity onPress={saveData}>
         {loadingState ? (
-          <ActivityIndicator color={Colors.white} />
+          <ActivityIndicator color={theme.activityColor} />
         ) : (
-          <Text style={style.buttonText}>{i18n.t(value)}</Text>
+          <Text style={[style.buttonText, { color: theme.textColor }]}>{i18n.t(value)}</Text>
         )}
       </TouchableOpacity>
     </LinearGradient>
