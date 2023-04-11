@@ -1,9 +1,8 @@
-import { DomainModule } from 'domain-layer/src/di/domain_module'
+import { DomainModule, FetchUserDataUseCaseParams } from 'domain-layer'
 import { Obsidian } from 'di'
 import { call, put } from 'redux-saga/effects'
 import React from 'react'
 import { FETCH_USER_DATA } from './action'
-import { FetchUserDataUseCaseParams } from 'packages/domain/src/domain'
 
 function* fetchUserSaga(action) {
   try {

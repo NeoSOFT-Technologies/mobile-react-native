@@ -33,11 +33,6 @@ const LoginScreen = () => {
     else setLodingState(false)
   }, [loginData])
 
-  useEffect(() => {
-    if (loginData?.status == Status?.success) navigation.navigate(RoutePaths.dashboard)
-    else if (loginData?.status == Status?.error) alert(i18n.t('noInput'))
-  }, [loginData])
-
   return (
     <View style={[style.mainView, { backgroundColor: theme.backgroundCOlor }]}>
       <View style={style.secView}>
@@ -51,9 +46,6 @@ const LoginScreen = () => {
       <View style={style.buttonVIew}>
         <AppButton loadingState={loadingState} value={'login'} saveData={() => saveData()} />
       </View>
-      <TouchableOpacity>
-        <Text style={[style.forgetpass, { color: theme.textColor }]}>{i18n.t('forgetPassword')}</Text>
-      </TouchableOpacity>
     </View>
   )
 }

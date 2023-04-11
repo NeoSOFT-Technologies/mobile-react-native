@@ -8,7 +8,8 @@ export default StyleSheet.create({
     height: Dimensions.get('window').height
   },
   secView: {
-    width: '100%'
+    width: '100%',
+    marginTop: '10%'
   },
   loginText: {
     fontSize: 24,

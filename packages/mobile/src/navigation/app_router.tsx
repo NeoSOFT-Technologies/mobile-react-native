@@ -5,15 +5,24 @@ import DashboardScreen from '../feature/dashboard/dashboard_screen'
 import LoginScreen from '../feature/login/login_screen'
 import RoutePaths from './router_path'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchUserExistsAction } from 'presentation'
+import { Status, fetchUserExistsAction } from 'presentation'
+import SplashScreen from 'react-native-splash-screen'
 
 const AppRouter = () => {
   const Stack = createNativeStackNavigator()
-  const databaseEmail: any = useSelector((state: any) => state?.userPresentData?.data?.payload)
+  const databaseEmail: any = useSelector((state: any) => state?.userExistsData)
+  const logoutData: any = useSelector((state: any) => state?.logout?.data?.payload)
+
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchUserExistsAction({}))
   }, [])
+
+  useEffect(() => {
+    if (databaseEmail?.status == Status.success) {
+      SplashScreen.hide()
+    }
+  }, [databaseEmail?.status])
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -21,8 +30,11 @@ const AppRouter = () => {
           headerShown: false
         }}
       >
-        {!databaseEmail && <Stack.Screen name={RoutePaths.login} component={LoginScreen} />}
-        <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
+        {(!databaseEmail?.data?.payload && databaseEmail?.status == Status.success) || logoutData ? (
+          <Stack.Screen name={RoutePaths.login} component={LoginScreen} />
+        ) : (
+          <Stack.Screen name={RoutePaths.dashboard} component={DashboardScreen} />
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   )

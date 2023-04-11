@@ -14,7 +14,6 @@ export class UserRepositoryImpl implements UserRepository {
 
   async login(params?: { email: string; password: string }): Promise<boolean> {
     const usermodel: any = await this.network.login({ email: params.email, password: params.password })
-    console.log(usermodel)
     if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
@@ -31,8 +30,15 @@ export class UserRepositoryImpl implements UserRepository {
       email: params.email
     })
   }
+
   async fetchUserExists(params?: { email: string }): Promise<boolean> {
     return await this.database.fetchUserExists({
+      email: params.email
+    })
+  }
+
+  async logout(params?: { email: string }): Promise<boolean> {
+    return await this.database.removeUser({
       email: params.email
     })
   }

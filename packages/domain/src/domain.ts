@@ -3,6 +3,7 @@ import { FetchUserDataUseCase, FetchUserDataUseCaseParams } from './usecases/use
 import { LoginUseCase, LoginParams } from './usecases/login_user_usecase'
 import { DomainModule } from './di/domain_module'
 import { UserRepository } from './repository/user_repository'
+import { LogoutUseCase, LogoutParams } from './usecases/logout_usecase'
 
 export {
   DomainModule,
@@ -12,5 +13,7 @@ export {
   FetchUserDataUseCase,
   FetchUserDataUseCaseParams,
   FetchUserExistsUseCase,
-  FetchUserExistsUseCaseParams
+  FetchUserExistsUseCaseParams,
+  LogoutUseCase,
+  LogoutParams
 }

@@ -12,9 +12,9 @@ export default StyleSheet.create({
     height: '75%'
   },
   uberText: {
-    fontSize: 40,
+    fontSize: 28,
     textAlign: 'center',
-    marginTop: '15%',
+    marginTop: '10%',
     fontFamily: 'Poppins-Regular'
   },
   getText: {
@@ -33,7 +33,18 @@ export default StyleSheet.create({
     height: 350,
     alignSelf: 'center',
     position: 'absolute',
-    bottom: 20,
+    bottom: 30,
     right: -100
+  },
+  logoutStyle: {
+    marginTop: 10,
+    width: 30,
+    height: 30,
+    alignSelf: 'flex-end'
+  },
+  logoutButton: {
+    width: 30,
+    height: 30,
+    alignSelf: 'flex-end'
   }
 })

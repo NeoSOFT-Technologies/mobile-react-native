@@ -39,4 +39,14 @@ export class UserDao extends BaseDao<DbUserModel> {
     if (userCount > 0) return true
     else return false
   }
+
+  async deleteUser(data: { email: string }): Promise<boolean> {
+    await safeDbCall(
+      this.attachedDatabase.write(async () => {
+        const response: any = await this.databaseData.query(Q.where('email', Q.eq(data.email))).destroyAllPermanently()
+        return response
+      })
+    )
+    return true
+  }
 }
