@@ -33,11 +33,6 @@ const LoginScreen = () => {
     else setLodingState(false)
   }, [loginData])
 
-  useEffect(() => {
-    if (loginData?.status == Status?.success) navigation.navigate(RoutePaths.dashboard)
-    else if (loginData?.status == Status?.error) alert(i18n.t('noInput'))
-  }, [loginData])
-
   return (
     <View style={[style.mainView, { backgroundColor: theme.backgroundCOlor }]}>
       <View style={style.secView}>

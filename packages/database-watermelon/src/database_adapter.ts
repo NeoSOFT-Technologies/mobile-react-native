@@ -29,7 +29,7 @@ class DatabaseAdapter implements DatabasePort {
     })
   }
   async removeUser(params: { email: string }): Promise<boolean> {
-    return await this.databases.userDao.deleteRecord({
+    return await this.databases.userDao.deleteUser({
       email: params.email
     })
   }

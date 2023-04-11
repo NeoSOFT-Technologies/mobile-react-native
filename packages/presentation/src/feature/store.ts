@@ -4,13 +4,15 @@ import rootSaga from '../utils/rootSaga'
 import loginReducer from './login/reducer'
 import fetchUserReducer from './userDetail/reducer'
 import fetchUserExistsReducer from './userpresent/reducer'
+import logoutReducer from './logout/reducer'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = configureStore({
   reducer: combineReducers({
     login: loginReducer,
     userData: fetchUserReducer,
-    userExistsData: fetchUserExistsReducer
+    userExistsData: fetchUserExistsReducer,
+    logout:logoutReducer
   }),
   middleware: [sagaMiddleware]
 })

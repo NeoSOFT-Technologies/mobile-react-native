@@ -2,7 +2,7 @@ import { UserRepository } from '../repository/user_repository'
 import { FutureUseCase } from './base/base_usecase'
 import { Params } from './base/params'
 
-export class LogoutUsecase extends FutureUseCase<LogoutParams, boolean> {
+export class LogoutUseCase extends FutureUseCase<LogoutParams, boolean> {
   private readonly userRepository: UserRepository
   constructor(repo: UserRepository) {
     super()
@@ -10,7 +10,7 @@ export class LogoutUsecase extends FutureUseCase<LogoutParams, boolean> {
   }
   async execute(params?: LogoutParams): Promise<boolean> {
     if (params?.verify()) {
-      return await this.userRepository.logoutUser({
+      return await this.userRepository.logout({
         email: params.email
       })
     } else return false

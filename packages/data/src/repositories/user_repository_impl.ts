@@ -11,13 +11,9 @@ export class UserRepositoryImpl implements UserRepository {
     this.database = params.databasePort
     this.network = params.networkPort
   }
-  getuserdata(params?: { email: string }): Promise<UserModel> {
-    throw new Error('Method not implemented.')
-  }
 
   async login(params?: { email: string; password: string }): Promise<boolean> {
     const usermodel: any = await this.network.login({ email: params.email, password: params.password })
-    console.log(usermodel)
     if (usermodel == 'Request failed with status code 403') {
       return usermodel
     } else {
@@ -34,13 +30,14 @@ export class UserRepositoryImpl implements UserRepository {
       email: params.email
     })
   }
+
   async fetchUserExists(params?: { email: string }): Promise<boolean> {
     return await this.database.fetchUserExists({
       email: params.email
     })
   }
 
-  async logoutUser(params?: { email: string }): Promise<boolean> {
+  async logout(params?: { email: string }): Promise<boolean> {
     return await this.database.removeUser({
       email: params.email
     })
