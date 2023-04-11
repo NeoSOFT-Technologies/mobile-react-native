@@ -6,4 +6,3 @@ import { expect, test } from '@jest/globals'
 test('Hello from shared', () => {
   expect(shared()).toBe('Hello from shared')
 })
-console.log('data tests passed')

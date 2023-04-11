@@ -1,4 +1,10 @@
-import { FirstRepository } from './repository/first_repository'
-import { YourFirstUseCaseParams } from './usecases/first/your_first_usecase'
+import { YourFirstUseCase, YourFirstUseCaseParams } from './usecases/your_first_usecase';
+import { DomainModule } from 'domain-layer/src/di/domain_module';
+import { FirstRepository } from './repository/first_repository';
 
-export { FirstRepository, YourFirstUseCaseParams }
+export {
+  DomainModule,
+  YourFirstUseCase,
+  YourFirstUseCaseParams,
+  FirstRepository
+}

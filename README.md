@@ -278,4 +278,3 @@ upcoming [enhancements](https://github.com/NeoSOFT-Technologies/mobile-react-nat
 
 Contributions are welcome from anyone and everyone. We encourage you to review
 the [Guiding principles for contributing](./wiki//contribute.md)
-

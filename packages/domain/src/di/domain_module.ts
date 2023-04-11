@@ -1,13 +1,13 @@
-import { DataModule } from 'data'
-import { FirstRepository } from '../repository/first_repository'
-import { YourFirstUseCase } from '../usecases/first/your_first_usecase'
-import { Graph, ObjectGraph, Provides, Singleton } from 'di'
+import { DataModule } from 'data';
+import { Graph, ObjectGraph, Provides, Singleton } from "packages/dependency_injection/src/dependency_injection";
+import { FirstRepository } from '../repository/first_repository';
+import { YourFirstUseCase } from '../usecases/your_first_usecase';
 
 @Singleton()
 @Graph({ subgraphs: [DataModule] })
 export class DomainModule extends ObjectGraph {
   @Provides()
-  providesYourFirstUseCase(repo: FirstRepository): YourFirstUseCase {
-    return new YourFirstUseCase(repo)
+  providesYourFirstUseCase(provideUserRepository: FirstRepository): YourFirstUseCase {
+    return new YourFirstUseCase(provideUserRepository)
   }
 }

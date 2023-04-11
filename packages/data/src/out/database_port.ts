@@ -1,4 +1,4 @@
-import { MyDatabaseModel } from 'packages/shared/src/shared'
+import { FirstModel } from 'packages/shared/src/shared'
 export interface DatabasePort {
-  yourFirstDatabaseCall(domain: MyDatabaseModel): Promise<MyDatabaseModel>
+  yourFirstDatabaseCall(domain: FirstModel): Promise<FirstModel>
 }

@@ -9,6 +9,14 @@ export default appSchema({
         { name: 'title', type: 'string' },
         { name: 'body', type: 'string' }
       ]
+    }),
+    tableSchema({
+      name: 'userDetails',
+      columns: [
+        { name: 'email', type: 'string' },
+        { name: 'password', type: 'string' },
+        { name: 'token', type: 'string' }
+      ]
     })
   ]
 })
