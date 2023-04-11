@@ -1,19 +1,25 @@
-import { LoginCheckUsecase, UserDetailsUseCase } from 'domain-layer'
 import { UserRepository } from './../repository/user_repository'
 import { DataModule } from 'data'
 import { Graph, ObjectGraph, Provides, Singleton } from 'di'
+import { LoginUseCase } from '../usecases/login_user_usecase'
+import { FetchUserDataUseCase, FetchUserExistsUseCase } from '../domain'
 import { LogoutUsecase } from '../usecases/logout_usecase'
+
 
 @Singleton()
 @Graph({ subgraphs: [DataModule] })
 export class DomainModule extends ObjectGraph {
   @Provides()
-  providesLoginCheckUseCase(provideUserRepository: UserRepository): LoginCheckUsecase {
-    return new LoginCheckUsecase(provideUserRepository)
+  providesLoginUseCase(provideUserRepository: UserRepository): LoginUseCase {
+    return new LoginUseCase(provideUserRepository)
   }
   @Provides()
-  provideUserDetailsUseCase(provideUserRepository: UserRepository): UserDetailsUseCase {
-    return new UserDetailsUseCase(provideUserRepository)
+  provideUserDataUseCase(provideUserRepository: UserRepository): FetchUserDataUseCase {
+    return new FetchUserDataUseCase(provideUserRepository)
+  }
+  @Provides()
+  provideUserExistsUseCase(provideUserRepository: UserRepository): FetchUserExistsUseCase {
+    return new FetchUserExistsUseCase(provideUserRepository)
   }
   @Provides()
   providesLogoutUseCase(provideUserRepository: UserRepository): LogoutUsecase {
