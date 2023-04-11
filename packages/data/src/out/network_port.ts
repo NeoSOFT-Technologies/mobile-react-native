@@ -1,5 +1,5 @@
-import { FirstModel} from 'shared'
+import { FirstModel } from 'shared'
 
 export interface NetworkPort {
-  login(params?: { email: string, password: string }): Promise<FirstModel>
+  login(params?: { email: string; password: string }): Promise<FirstModel>
 }

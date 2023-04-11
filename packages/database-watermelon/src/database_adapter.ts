@@ -1,4 +1,4 @@
-import { FirstModel } from 'packages/shared/src/shared';
+import { FirstModel } from 'packages/shared/src/shared'
 import { AppDatabase } from './app_database'
 import { DatabasePort } from 'data'
 

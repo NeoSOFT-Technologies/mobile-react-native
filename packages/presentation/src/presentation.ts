@@ -1,4 +1,4 @@
-import { firstRequestAction } from './feature/first/actions';
+import { firstRequestAction } from './feature/first/actions'
 
 import { Resource } from './utils/resource'
 import store from './feature/store'

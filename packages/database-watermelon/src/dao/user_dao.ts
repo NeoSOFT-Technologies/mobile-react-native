@@ -28,6 +28,4 @@ export class UserDao extends BaseDao<DbUserModel> {
       })
     )
   }
-
-  
 }

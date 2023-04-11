@@ -1,4 +1,3 @@
-
 export enum FIRST_REQUEST {
   request = 'FIRST_REQUEST',
   success = ' FIRST_REQUEST_SUCCESS',

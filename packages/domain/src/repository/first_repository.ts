@@ -1,5 +1,5 @@
-import { FirstModel } from "shared";
+import { FirstModel } from 'shared'
 
 export interface FirstRepository {
-    yourFirstFunction(params: { userName: string; password: string }): Promise<FirstModel>
-  }
+  yourFirstFunction(params: { userName: string; password: string }): Promise<FirstModel>
+}

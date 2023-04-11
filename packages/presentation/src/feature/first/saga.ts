@@ -8,7 +8,7 @@ function* firstRequestSaga(action) {
     const data: any = yield Obsidian.obtain(DomainModule)
       .providesYourFirstUseCase()
       .execute(new YourFirstUseCaseParams({ emailOrPhone: '', password: '' }))
-      yield put({ type: FIRST_REQUEST.request, payload: data })
+    yield put({ type: FIRST_REQUEST.request, payload: data })
   } catch (e) {
     console.log(e)
   }
