@@ -5,7 +5,6 @@ import { LoginUseCase } from '../usecases/login_user_usecase'
 import { FetchUserDataUseCase, FetchUserExistsUseCase } from '../domain'
 import { LogoutUsecase } from '../usecases/logout_usecase'
 
-
 @Singleton()
 @Graph({ subgraphs: [DataModule] })
 export class DomainModule extends ObjectGraph {
