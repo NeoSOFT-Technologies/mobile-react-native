@@ -1,6 +1,6 @@
 import { Obsidian } from 'di'
 import { put } from 'redux-saga/effects'
-import {LogoutParams,DomainModule } from 'domain-layer'
+import { LogoutParams, DomainModule } from 'domain-layer'
 import { LOGOUT } from './action'
 import { FETCH_USER_EXISTS } from '../userpresent/action'
 
@@ -14,7 +14,6 @@ function* logoutSaga(action) {
     } else {
       yield put({ type: LOGOUT.success, payload: data })
       yield put({ type: FETCH_USER_EXISTS.success, payload: false })
-
     }
   } catch (e) {
     console.log(e)

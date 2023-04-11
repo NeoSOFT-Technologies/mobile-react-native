@@ -37,15 +37,14 @@ export default StyleSheet.create({
     right: -100
   },
   logoutStyle: {
-    marginTop:10,
+    marginTop: 10,
     width: 30,
     height: 30,
-    alignSelf: 'flex-end',
-    
+    alignSelf: 'flex-end'
   },
-  logoutButton:{
+  logoutButton: {
     width: 30,
     height: 30,
-    alignSelf: 'flex-end',
+    alignSelf: 'flex-end'
   }
 })

@@ -12,7 +12,7 @@ const store = configureStore({
     login: loginReducer,
     userData: fetchUserReducer,
     userExistsData: fetchUserExistsReducer,
-    logout:logoutReducer
+    logout: logoutReducer
   }),
   middleware: [sagaMiddleware]
 })
