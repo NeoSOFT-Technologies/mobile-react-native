@@ -8,7 +8,7 @@ function* logoutSaga(action) {
   try {
     const data: any = yield Obsidian.obtain(DomainModule)
       .provideLogoutUseCase()
-      .execute(new LogoutParams({ email: action?.params?.email }))
+      .execute(new LogoutParams({ email: action?.params?.databaseEmail }))
     if (data == false) {
       yield put({ type: LOGOUT.failure, payload: data })
     } else {

@@ -23,8 +23,6 @@ const AppRouter = () => {
       SplashScreen.hide()
     }
   }, [databaseEmail?.status])
-
-  console.log(logoutData, databaseEmail)
   return (
     <NavigationContainer>
       <Stack.Navigator

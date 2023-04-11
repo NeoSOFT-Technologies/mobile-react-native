@@ -21,7 +21,7 @@ const DashboardScreen = () => {
     dispatch(fetchUserAction({}))
   }, [])
   const onLogoutClick = () => {
-    dispatch(logoutAction({}))
+    dispatch(logoutAction({databaseEmail}))
   }
   return (
     <View style={style.mainView}>
