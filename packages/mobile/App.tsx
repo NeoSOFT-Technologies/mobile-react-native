@@ -16,6 +16,9 @@ import SplashScreen from 'react-native-splash-screen'
 import { ThemeProvider } from './src/theme/themeprovider'
 
 class App extends Component {
+  componentDidMount(): void {
+    SplashScreen.hide()
+  }
   render() {
     return (
       <ThemeProvider>

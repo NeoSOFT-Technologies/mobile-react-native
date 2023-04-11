@@ -15,6 +15,9 @@ const firstRequestReducer = (initialState = Resource.none, action) => {
       return Resource.error({
         error: 'User Not logged in'
       })
+     
+      default:
+        return initialState
   }
 }
 

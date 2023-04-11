@@ -1,5 +1,5 @@
 import { DataModule } from 'data'
-import { Graph, ObjectGraph, Provides, Singleton } from 'packages/dependency_injection/src/dependency_injection'
+import { Graph, ObjectGraph, Provides, Singleton } from 'di'
 import { FirstRepository } from '../repository/first_repository'
 import { YourFirstUseCase } from '../usecases/your_first_usecase'
 
