@@ -15,9 +15,9 @@ import { Status } from 'presentation'
 
 const LoginScreen = () => {
   const { theme, isDark } = useTheme()
-  const [username, setUsername] = useState<string>('systemadmin@aparajitha.com')
+  const [username, setUsername] = useState<string>('')
   const navigation = useNavigation<any>()
-  const [password, setPassword] = useState<string>('admin@123')
+  const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
   const loginData: any = useSelector<any>(state => state?.login)
@@ -46,9 +46,6 @@ const LoginScreen = () => {
       <View style={style.buttonVIew}>
         <AppButton loadingState={loadingState} value={'login'} saveData={() => saveData()} />
       </View>
-      <TouchableOpacity>
-        <Text style={[style.forgetpass, { color: theme.textColor }]}>{i18n.t('forgetPassword')}</Text>
-      </TouchableOpacity>
     </View>
   )
 }

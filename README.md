@@ -8,4 +8,4 @@ This is a micro-framework for React Native which is designed to help simplify de
 
 # Screenshots
 
-​   <img src="screenshots/splashScreen.png" alt="splash" title="Splash Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="screenshots/dashboardscreen.png" alt="dashboard" title="Dashboard Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshots/loginscreen.png" alt="login" title="Login Screen"  width="150" />
+​   <img src="screenshots/splashScreen.png" alt="splash" title="Splash Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="screenshots/lightTheme.JPEG" alt="dashboard" title="Dashboard Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshots/darkTheme.JPEG" alt="login" title="Login Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="screenshots/dash-lightTheme.JPEG" alt="dashboard" title="Dashboard Screen"  width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="screenshots/dash-darktheme.JPEG" alt="login" title="Login Screen"  width="150" />
