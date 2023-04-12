@@ -26,9 +26,11 @@
   },
   "dependencies": {
     "@jest/globals": "^29.4.2",
+    "database-watermelon": "^0.0.1",
     "di": "^0.0.1",
     "domain-layer": "^0.0.1",
     "jest": "^29.4.2",
+    "network-retrofit": "^0.0.1",
     "shared": "^0.0.1"
   }
 }

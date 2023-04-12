@@ -12,13 +12,20 @@ import { store } from 'presentation'
 import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import AppRouter from './src/navigation/app_router'
+import SplashScreen from 'react-native-splash-screen'
+import { ThemeProvider } from './src/theme/themeprovider'
 
 class App extends Component {
+  componentDidMount(): void {
+    SplashScreen.hide()
+  }
   render() {
     return (
-      <Provider store={store}>
-        <AppRouter />
-      </Provider>
+      <ThemeProvider>
+        <Provider store={store}>
+          <AppRouter />
+        </Provider>
+      </ThemeProvider>
     )
   }
 }

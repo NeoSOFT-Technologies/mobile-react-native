@@ -5,7 +5,7 @@
   "author": "Mohan29997 <kotakmohan33@gmail.com>",
   "homepage": "https://github.com/NeoSOFT-Technologies/mobile-react-native#readme",
   "license": "ISC",
-  "main": "lib/database-watermelon.js",
+  "main": "src/index.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -26,6 +26,9 @@
   },
   "dependencies": {
     "@nozbe/watermelondb": "^0.25.3",
-    "data": "^0.0.1"
+    "data": "^0.0.1",
+    "di": "^0.0.1",
+    "react": "^18.2.0",
+    "react-native": "^0.71.4"
   }
 }

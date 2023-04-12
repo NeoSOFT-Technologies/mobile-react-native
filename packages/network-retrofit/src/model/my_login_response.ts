@@ -1,16 +1,13 @@
 import { BaseLayerDataTransformer } from './../../../shared/src/utils/tranformer/base_layer_transformer'
-import { MyFirstModel } from './../../../shared/src/model/myfirstmodel'
+import { UserModel } from 'shared'
 
-export abstract class MyLoginResponse implements BaseLayerDataTransformer<MyLoginResponse, MyFirstModel> {
-  userId: number
-  id: number
-  title: string
-  completed: boolean
+export abstract class MyLoginResponse implements BaseLayerDataTransformer<MyLoginResponse, UserModel> {
+  access_token: string
 
-  restore(data: MyFirstModel): MyLoginResponse {
+  restore(data: UserModel): MyLoginResponse {
     throw new Error('Method not implemented.')
   }
-  transform(): MyFirstModel {
-    return new MyFirstModel({ loginStatus: this.completed })
+  transform(): UserModel {
+    return new UserModel({ access_token: this.access_token })
   }
 }

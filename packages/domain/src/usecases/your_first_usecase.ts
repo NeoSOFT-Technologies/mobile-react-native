@@ -1,8 +1,9 @@
-import { FirstRepository } from '../../repository/first_repository'
-import { FutureUseCase } from '../base/base_usecase'
-import { Params } from '../base/params'
+import { FirstModel } from 'shared'
+import { FirstRepository } from '../repository/first_repository'
+import { FutureUseCase } from './base/base_usecase'
+import { Params } from './base/params'
 
-export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, boolean> {
+export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, FirstModel> {
   private readonly yourFirstRepository: FirstRepository
 
   constructor(yourFirstRepository: FirstRepository) {
@@ -10,7 +11,7 @@ export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, bool
     this.yourFirstRepository = yourFirstRepository
   }
 
-  async execute(params: YourFirstUseCaseParams): Promise<boolean> {
+  async execute(params: YourFirstUseCaseParams): Promise<FirstModel> {
     if (params.verify) {
       return await this.yourFirstRepository.yourFirstFunction({
         userName: params.emailOrPhone,

@@ -1,23 +1,28 @@
-import { FoundationModule } from './../../../foundation/src/di/foundation_module'
+import { FoundationModule } from 'foundation'
 import { ServiceBuilder } from 'ts-retrofit'
 
 import { Graph, ObjectGraph, Provides, Singleton } from 'di'
 import RetrofitService from '../services/retrofit_service'
-import NetowrkAdapter from '../network_adapter'
-import { NetworkPort } from 'packages/data/src/data'
+import NetworkAdapter from '../network_adapter'
+import { NetworkPort } from 'data'
 
 @Singleton()
 @Graph({ subgraphs: [FoundationModule] })
 export class NetworkModule extends ObjectGraph {
   @Provides()
   providesRetrofitNetworkService(provideApiURL: string): RetrofitService {
-    return new ServiceBuilder().setEndpoint(provideApiURL).build(RetrofitService)
+    return new ServiceBuilder()
+      .setEndpoint(provideApiURL)
+      .setRequestInterceptors(req => {
+        return req
+      })
+      .build(RetrofitService)
   }
 
   @Provides()
-  providesNetworkAdapter(retroService: RetrofitService): NetworkPort {
-    return new NetowrkAdapter({
-      retrofitService: retroService
+  providesNetworkAdapter(providesRetrofitNetworkService: RetrofitService): NetworkPort {
+    return new NetworkAdapter({
+      retrofitService: providesRetrofitNetworkService
     })
   }
 }

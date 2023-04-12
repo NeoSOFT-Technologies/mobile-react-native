@@ -1,5 +1,5 @@
+import { FirstModel } from 'packages/shared/src/shared'
 import { AppDatabase } from './app_database'
-import { MyDatabaseModel } from './../../shared/src/model/mydatabasemodel'
 import { DatabasePort } from 'data'
 
 class DatabaseAdapter implements DatabasePort {
@@ -8,8 +8,13 @@ class DatabaseAdapter implements DatabasePort {
   constructor(params: { databases: AppDatabase }) {
     this.databases = params.databases
   }
-  yourFirstDatabaseCall(domain: MyDatabaseModel): Promise<MyDatabaseModel> {
-    return this.databases.myModelDao.add(domain)
+
+  async yourFirstDatabaseCall(domain: FirstModel): Promise<FirstModel> {
+    const response = await this.databases.userDao.insertOrUpdate({
+      email: domain.email,
+      password: domain.password
+    })
+    return response
   }
 }
 export default DatabaseAdapter
