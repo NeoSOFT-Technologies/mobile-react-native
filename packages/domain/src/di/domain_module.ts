@@ -7,7 +7,7 @@ import { YourFirstUseCase } from '../usecases/your_first_usecase'
 @Graph({ subgraphs: [DataModule] })
 export class DomainModule extends ObjectGraph {
   @Provides()
-  providesYourFirstUseCase(provideUserRepository: FirstRepository): YourFirstUseCase {
-    return new YourFirstUseCase(provideUserRepository)
+  providesYourFirstUseCase(provideFirstRepository: FirstRepository): YourFirstUseCase {
+    return new YourFirstUseCase(provideFirstRepository)
   }
 }

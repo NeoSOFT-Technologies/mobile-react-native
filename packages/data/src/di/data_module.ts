@@ -15,7 +15,7 @@ export class DataModule extends ObjectGraph {
     super()
   }
   @Provides()
-  provideUserRepository(providesNetworkAdapter: NetworkPort, databaseAdapter: DatabasePort): FirstRepository {
+  provideFirstRepository(providesNetworkAdapter: NetworkPort, databaseAdapter: DatabasePort): FirstRepository {
     return new FirstRepositoryImpl({ networkPort: providesNetworkAdapter, databasePort: databaseAdapter })
   }
 }

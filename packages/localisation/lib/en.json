@@ -1,16 +1,4 @@
 {
   "appName": "MY APP",
-  "anotherString": "Hello",
-  "logIn": "Log In",
-  "username": "Username",
-  "password": "Password",
-  "Login": "Login",
-  "forgetPassword": "Forget Password ?",
-  "hi": "Hello",
-  "uber": "Uber",
-  "getThere": "Get There.",
-  "getStarted": "Get Started",
-  "noInput": "please enter data or a valid data",
-  "errorMessage": "please enter proper email and password",
-  "logout": "Logout"
+  "anotherString": "Hello"
 }
