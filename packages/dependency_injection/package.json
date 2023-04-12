@@ -25,7 +25,7 @@
     "url": "https://github.com/NeoSOFT-Technologies/mobile-react-native/issues"
   },
   "dependencies": {
-    "react-obsidian": "^0.0.36",
+    "react-obsidian": "^0.0.41",
     "reflect-metadata": "^0.1.13",
     "lodash": "^4.17.21"
   }
