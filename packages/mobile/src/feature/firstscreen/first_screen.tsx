@@ -2,7 +2,7 @@ import { View, Image, Text, TouchableOpacity } from 'react-native'
 import Images from '../../assets/images'
 import i18n from 'localisation'
 import style from './first_screen_style'
-import { AppButton } from '../../widgets/app_button/app_button'
+import AppButton from '../../widgets/app_button/app_button'
 import { useTheme } from '../../theme/themeprovider'
 
 const FirstScreen = () => {
