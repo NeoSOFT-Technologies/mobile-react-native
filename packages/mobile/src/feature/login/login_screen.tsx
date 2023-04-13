@@ -5,18 +5,17 @@ import Images from '../../assets/images'
 import style from './login_style'
 import i18n from 'localisation'
 import { useDispatch, useSelector } from 'react-redux'
-import { AppButton } from '../../widgets/app_button/app_button'
-import { AppInput } from '../../widgets/app_input/app_input'
+import AppButton from '../../widgets/app_button/app_button'
+import AppInput from '../../widgets/app_input/app_input'
 import { loginAction } from 'presentation'
 import { useTheme } from '../../theme/themeprovider'
-import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
 import { Status } from 'presentation'
+import AppImage from '../../widgets/app_image/app_image'
 
 const LoginScreen = () => {
   const { theme, isDark } = useTheme()
   const [username, setUsername] = useState<string>('')
-  const navigation = useNavigation<any>()
   const [password, setPassword] = useState<string>('')
   const [loadingState, setLodingState] = useState<boolean>(false)
   const dispatch = useDispatch()
@@ -30,13 +29,16 @@ const LoginScreen = () => {
   }
   useEffect(() => {
     if (loginData?.status == Status?.loading) setLodingState(true)
-    else setLodingState(false)
+    else if (loginData?.status == Status.error) {
+      setLodingState(false)
+      alert(i18n.t('noInput'))
+    } else setLodingState(false)
   }, [loginData])
 
   return (
     <View style={[style.mainView, { backgroundColor: theme.backgroundCOlor }]}>
       <View style={style.secView}>
-        <Image source={isDark ? Images.iconBlack : Images.icon} style={style.imgIcon} resizeMode="contain" />
+        <AppImage path={isDark ? Images.iconBlack : Images.icon} style={style.imgIcon} />
         <Text style={[style.loginText, { color: theme.textColor }]}>{i18n.t('logIn')}</Text>
         <View style={style.inputView}>
           <AppInput placeholderText={'username'} value={username} setData={e => setUsername(e)} />

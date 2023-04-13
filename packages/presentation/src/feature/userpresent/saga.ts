@@ -10,7 +10,6 @@ function* fetchUserExistsSaga(action) {
     const data = yield Obsidian.obtain(DomainModule)
       .provideUserExistsUseCase()
       .execute(new FetchUserExistsUseCaseParams({ email: '' }))
-    console.log(data)
     yield put({ type: FETCH_USER_EXISTS.success, payload: data })
     yield put({ type: LOGOUT.success, payload: false })
   } catch (e) {
