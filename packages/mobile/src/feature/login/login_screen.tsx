@@ -9,10 +9,9 @@ import AppButton from '../../widgets/app_button/app_button'
 import AppInput from '../../widgets/app_input/app_input'
 import { loginAction } from 'presentation'
 import { useTheme } from '../../theme/themeprovider'
-import { useNavigation } from '@react-navigation/native'
 import RoutePaths from '../../navigation/router_path'
 import { Status } from 'presentation'
-import App_image from '../../widgets/app_image/app_image'
+import AppImage from '../../widgets/app_image/app_image'
 
 const LoginScreen = () => {
   const { theme, isDark } = useTheme()
@@ -39,7 +38,7 @@ const LoginScreen = () => {
   return (
     <View style={[style.mainView, { backgroundColor: theme.backgroundCOlor }]}>
       <View style={style.secView}>
-        <App_image path={isDark ? Images.iconBlack : Images.icon} style={style.imgIcon} />
+        <AppImage path={isDark ? Images.iconBlack : Images.icon} style={style.imgIcon} />
         <Text style={[style.loginText, { color: theme.textColor }]}>{i18n.t('logIn')}</Text>
         <View style={style.inputView}>
           <AppInput placeholderText={'username'} value={username} setData={e => setUsername(e)} />

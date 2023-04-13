@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logoutAction } from 'presentation'
 import { fetchUserAction } from 'presentation'
-import App_image from '../../widgets/app_image/app_image'
+import AppImage from '../../widgets/app_image/app_image'
 
 const DashboardScreen = () => {
   const { theme, isDark } = useTheme()
@@ -24,11 +24,11 @@ const DashboardScreen = () => {
     <View style={style.mainView}>
       <View style={[style.secView, { backgroundColor: theme.secondaryColor }]}>
         <TouchableOpacity style={style.logoutButton} onPress={() => onLogoutClick()}>
-          <App_image path={isDark ? Images.blackLogout : Images.whiteLogout} style={style.logoutStyle} />
+          <AppImage path={isDark ? Images.blackLogout : Images.whiteLogout} style={style.logoutStyle} />
         </TouchableOpacity>
         <Text style={[style.uberText, { color: theme.textColor }]}>{`${i18n.t('uber')} -  ${databaseEmail}`}</Text>
         <Text style={[style.getText, { color: theme.textColor }]}>{i18n.t('getThere')}</Text>
-        <App_image path={isDark ? Images.carBlack : Images.car} style={style.carStyle} />
+        <AppImage path={isDark ? Images.carBlack : Images.car} style={style.carStyle} />
       </View>
       <View style={style.thirdView}>
         <AppButton value={'getStarted'} />
