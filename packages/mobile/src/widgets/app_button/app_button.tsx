@@ -13,7 +13,7 @@ export type AppButtonProps = {
   saveData?: () => void
 }
 
- const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
+const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
   const { theme } = useTheme()
   return (
     <LinearGradient colors={[theme.primaryColor, theme.primaryColor]} style={style.buttonView}>
@@ -28,4 +28,3 @@ export type AppButtonProps = {
   )
 }
 export default memo(AppButton, (prev, next) => prev.loadingState == next.loadingState)
-
