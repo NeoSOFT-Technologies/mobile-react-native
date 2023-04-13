@@ -5,6 +5,7 @@ import i18n from 'localisation'
 import LinearGradient from 'react-native-linear-gradient'
 import Colors from '../../utils/color'
 import { useTheme } from '../../theme/themeprovider'
+import { memo } from 'react'
 
 export type AppButtonProps = {
   loadingState?: boolean
@@ -12,7 +13,7 @@ export type AppButtonProps = {
   saveData?: () => void
 }
 
-export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
+ const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => {
   const { theme } = useTheme()
   return (
     <LinearGradient colors={[theme.primaryColor, theme.primaryColor]} style={style.buttonView}>
@@ -26,3 +27,5 @@ export const AppButton = ({ loadingState, value, saveData }: AppButtonProps) => 
     </LinearGradient>
   )
 }
+export default memo(AppButton, (prev, next) => prev.loadingState == next.loadingState)
+

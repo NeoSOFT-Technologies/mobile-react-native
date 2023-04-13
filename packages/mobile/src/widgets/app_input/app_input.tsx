@@ -3,6 +3,7 @@ import Colors from '../../utils/color'
 import style from './app_input_style'
 import i18n from 'localisation'
 import { useTheme } from '../../theme/themeprovider'
+import { memo } from 'react'
 export type AppInputProps = {
   placeholderText: string
   value: string
@@ -10,7 +11,7 @@ export type AppInputProps = {
   secure?: boolean
 }
 
-export const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) => {
+const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) => {
   const { theme } = useTheme()
   return (
     <TextInput
@@ -23,3 +24,5 @@ export const AppInput = ({ placeholderText, value, setData, secure }: AppInputPr
     />
   )
 }
+
+export default memo(AppInput, (prev, next) => prev.value == next.value)
