@@ -18,7 +18,6 @@
 - [Flavors](#flavors)
 - [Entities](#entities)
 - [Dependabot](#dependabot)
-- [Features](#features)
 - [Libraries & Tools Used](#libraries--tools-used)
 - [Run Projects](#run-projects)
 - [Modules](#modules)
@@ -244,6 +243,10 @@ $ npx lerna bootstrap
 ### start metro 
 ```shell
 $ npx lerna run start
+```
+## command for legacy dependency 
+```shell
+$ npm i --legacy-peer-deps
 ```
 
 ### 3-1. Mobile(iOS)
