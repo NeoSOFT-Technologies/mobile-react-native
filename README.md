@@ -1,5 +1,29 @@
 # mobile-react-native
 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/NeoSOFT-Technologies/mobile-react-native) [![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/NeoSOFT-Technologies/mobile-react-native)
+
+## Table Of Content
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+    * [Setup](#setup)
+    * [App Secrets](#app-secrets)
+- [Architecture](#architecture) 
+   * [Hexagonal Architecture](#hexagonal-architecture)
+   * [Clean Architecture](#clean-architecture)
+   * [Monorepo](#monorepo)
+- [Features](#Features)
+- [packages](#package)
+- [Layers](#layers)
+- [Flavors](#flavors)
+- [Entities](#entities)
+- [Dependabot](#dependabot)
+- [Features](#features)
+- [Libraries & Tools Used](#libraries--tools-used)
+- [Run Projects](#run-projects)
+- [Modules](#modules)
+
+
 # Overview 
 
 [React Native](https://reactnative.dev/) - is Facebook's UI toolkit for building beautiful, natively compiled applications for Android and ios from a single codebase.
@@ -113,7 +137,6 @@ in 'Components', 'Entity' data or 'View Model' encapsulated data is stored in th
 <img src="wiki/images/inversion-of-control-v2.png" alt="inversion-of-control" title="inversion-of-control"   />
 In the case of 'Repository', it is an adapter layer, so you should not know about 'Repository' in 'Use Case'. Therefore, in 'Use Case', it is implemented through the Repository Interface located in the domain layer, which is then operated through Dependency Injection.
 
-## Settings
 ### Package
 #### Lerna
 ```Lerna ```is "a tool for managing JavaScript projects with multiple packages", as the official website says, which is a tool to manage multiple npm packages in a single repository.
