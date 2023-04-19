@@ -15,9 +15,9 @@ const AppInput = ({ placeholderText, value, setData, secure }: AppInputProps) =>
   const { theme } = useTheme()
   return (
     <TextInput
-      style={[style.inputStyle, { color: theme.textColor, borderBottomColor: theme.borderColor }]}
+      style={[style.inputStyle, { color: theme?.textColor, borderBottomColor: theme?.borderColor }]}
       placeholder={i18n.t(placeholderText)}
-      placeholderTextColor={theme.textColor}
+      placeholderTextColor={theme?.textColor}
       value={value}
       onChangeText={(e: string) => setData(e)}
       secureTextEntry={secure}

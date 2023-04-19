@@ -9,13 +9,13 @@ const FirstScreen = () => {
   const { theme, isDark } = useTheme()
   return (
     <View style={style.mainView}>
-      <View style={[style.secView, { backgroundColor: theme.secondaryColor }]}>
-        <Text style={[style.uberText, { color: theme.textColor }]}>{`${i18n.t('anotherString')}`}</Text>
-        <Text style={[style.getText, { color: theme.textColor }]}>{i18n.t('appName')}</Text>
+      <View style={[style.secView, { backgroundColor: theme?.secondaryColor }]}>
+        <Text style={[style.uberText, { color: theme?.textColor }]} testID='Login_Hello_String'>{`${i18n.t('anotherString')}`}</Text>
+        <Text style={[style.getText, { color: theme?.textColor }]}>{i18n.t('appName')}</Text>
         <Image source={isDark ? Images.carBlack : Images.car} style={style.carStyle} resizeMode="contain" />
       </View>
       <View style={style.thirdView}>
-        <AppButton value={'getStarted'} />
+        <AppButton value={'getStarted'}  />
       </View>
     </View>
   )
