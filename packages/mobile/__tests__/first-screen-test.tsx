@@ -26,4 +26,3 @@ test('on render of the app there should be a text hello on top', () => {
   const res = tree.root.children
   expect(res).toBeTruthy()
 })
-
