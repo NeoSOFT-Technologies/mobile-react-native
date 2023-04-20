@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#0E1824",
+      "height": 1334,
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "borderRadius": 45,
+          "height": "75%",
+        },
+        {
+          "backgroundColor": undefined,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 28,
+            "marginTop": "10%",
+            "textAlign": "center",
+          },
+          {
+            "color": undefined,
+          },
+        ]
+      }
+      testID="Login_Hello_String"
+    >
+      Hello
+    </Text>
+    <Text
+      style={
+        [
+          {
+            "fontFamily": "Poppins-Regular",
+            "fontSize": 22,
+            "marginTop": "2%",
+            "textAlign": "center",
+          },
+          {
+            "color": undefined,
+          },
+        ]
+      }
+    >
+      MY APP
+    </Text>
+    <Image
+      resizeMode="contain"
+      source={
+        {
+          "testUri": "../../../src/assets/images/car.png",
+        }
+      }
+      style={
+        {
+          "alignSelf": "center",
+          "bottom": 30,
+          "height": 350,
+          "position": "absolute",
+          "right": -100,
+          "width": 350,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      {
+        "height": "25%",
+        "justifyContent": "flex-end",
+        "paddingBottom": 40,
+      }
+    }
+  >
+    <LinearGradient
+      colors={
+        [
+          undefined,
+          undefined,
+        ]
+      }
+      style={
+        {
+          "alignSelf": "center",
+          "borderRadius": 15,
+          "height": 50,
+          "justifyContent": "center",
+          "width": "80%",
+        }
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "opacity": 1,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontFamily": "Poppins-Regular",
+                "fontSize": 24,
+                "textAlign": "center",
+              },
+              {
+                "color": undefined,
+              },
+            ]
+          }
+        >
+          getStarted
+        </Text>
+      </View>
+    </LinearGradient>
+  </View>
+</View>
+`;

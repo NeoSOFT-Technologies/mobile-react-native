@@ -16,7 +16,8 @@
     "lint:quiet": "eslint . --ext js,jsx,mjs,ts,tsx --quiet",
     "prepare": "husky install",
     "precommit": "npm run lint:fix && npm run format",
-    "prepush": "npm run lint"
+    "prepush": "npm run lint",
+    "test": "yarn workspace mobile test"
   },
   "workspaces": {
     "packages": [
@@ -44,6 +45,6 @@
     "@types/react": "^18.0.27",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lerna": "^6.5.1"
+    "lerna": "^6.6.1"
   }
 }

@@ -12,7 +12,7 @@ export class YourFirstUseCase extends FutureUseCase<YourFirstUseCaseParams, Firs
   }
 
   async execute(params: YourFirstUseCaseParams): Promise<FirstModel> {
-    if (params.verify) {
+    if (params.verify()) {
       return await this.yourFirstRepository.yourFirstFunction({
         userName: params.emailOrPhone,
         password: params.password
@@ -25,18 +25,19 @@ export class YourFirstUseCaseParams extends Params {
   readonly emailOrPhone: string
   readonly password: string
 
-  constructor(params: IYourFirstParams) {
+  constructor(params?: IYourFirstParams) {
     super({})
     this.emailOrPhone = params.emailOrPhone
     this.password = params.password
   }
 
   verify(): boolean {
-    return true
+    if (this.emailOrPhone == '' || this.password == '') return false
+    else return true
   }
 }
 
 export interface IYourFirstParams {
-  emailOrPhone: string
-  password: string
+  emailOrPhone?: string
+  password?: string
 }
