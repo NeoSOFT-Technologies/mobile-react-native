@@ -4,7 +4,6 @@ import { Obsidian } from 'di'
 import { FirstModel } from 'shared'
 
 describe('YourFirstUseCase', () => {
- 
   describe('Testing verify method', () => {
     it('should return true if emailOrPhone and password are provided', () => {
       const params = new YourFirstUseCaseParams({ emailOrPhone: 'mailto:test@example.com', password: 'password' })
